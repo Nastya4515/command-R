@@ -5,17 +5,19 @@ import { extend } from '@react-three/fiber';
 import * as THREE from 'three';
 import { EffectComposer, Bloom } from '@react-three/postprocessing';
 
-// 1. Создаем шейдер для дыма
+// 1. Добавили uDistortion (сила хаоса)
 const SmokeParticlesMaterial = shaderMaterial(
   {
     uTime: 0,
-    uColor: new THREE.Color('#00D2FF'), // Базовый цвет (синий)
-    uSize: 25.0, // УВЕЛИЧИЛИ РАЗМЕР ЧАСТИЦ
+    uColor: new THREE.Color('#00D2FF'),
+    uSize: 25.0,
+    uDistortion: 0.8, // Базовое значение (спокойный дым)
   },
-  // Вершинный шейдер (движение)
+  // Вершинный шейдер
   `
   uniform float uTime;
   uniform float uSize;
+  uniform float uDistortion; // Получаем силу хаоса
   varying float vAlpha;
 
   vec3 mod289(vec3 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
@@ -68,13 +70,14 @@ const SmokeParticlesMaterial = shaderMaterial(
   void main() {
     vec3 pos = position;
     
+    // Умножаем шум на uDistortion (при инциденте частицы улетают дальше)
     float noiseX = snoise(vec3(pos.x * 0.5 + uTime * 0.1, pos.y * 0.5, pos.z * 0.5));
     float noiseY = snoise(vec3(pos.y * 0.5 + uTime * 0.1, pos.z * 0.5, pos.x * 0.5));
     float noiseZ = snoise(vec3(pos.z * 0.5 + uTime * 0.1, pos.x * 0.5, pos.y * 0.5));
     
-    pos.x += noiseX * 0.8;
-    pos.y += noiseY * 0.8;
-    pos.z += noiseZ * 0.8;
+    pos.x += noiseX * uDistortion;
+    pos.y += noiseY * uDistortion;
+    pos.z += noiseZ * uDistortion;
 
     float dist = length(pos);
     vAlpha = smoothstep(3.5, 1.0, dist); 
@@ -85,7 +88,7 @@ const SmokeParticlesMaterial = shaderMaterial(
     gl_Position = projectionMatrix * mvPosition;
   }
   `,
-  // Фрагментный шейдер (цвет и форма)
+  // Фрагментный шейдер
   `
   uniform vec3 uColor;
   varying float vAlpha;
@@ -103,12 +106,13 @@ const SmokeParticlesMaterial = shaderMaterial(
 
 extend({ SmokeParticlesMaterial });
 
-function ParticleSmoke({ statusColor }) {
+function ParticleSmoke({ statusColor, isCritical }) {
   const materialRef = useRef();
   const particleCount = 15000;
   
-  // Создаем объект цвета для плавного перехода
   const targetColor = useMemo(() => new THREE.Color(statusColor), [statusColor]);
+  // Целевое искажение: 2.5 при ошибке, 0.8 в норме
+  const targetDistortion = isCritical ? 2.5 : 0.8;
 
   const particlesPosition = useMemo(() => {
     const positions = new Float32Array(particleCount * 3);
@@ -126,9 +130,14 @@ function ParticleSmoke({ statusColor }) {
 
   useFrame((state) => {
     if (materialRef.current) {
-      materialRef.current.uTime = state.clock.getElapsedTime() * 2.0;
-      // Плавно перекрашиваем сферу в нужный цвет
+      // Ускоряем время при критическом статусе, чтобы дым "кипел" быстрее
+      materialRef.current.uTime += isCritical ? 0.05 : 0.02;
+      
+      // Плавно меняем цвет
       materialRef.current.uColor.lerp(targetColor, 0.05);
+      
+      // Плавно меняем степень хаоса (искажение)
+      materialRef.current.uDistortion += (targetDistortion - materialRef.current.uDistortion) * 0.05;
     }
   });
 
@@ -153,24 +162,24 @@ function ParticleSmoke({ statusColor }) {
 }
 
 export default function NetworkGraph3D({ status = 'normal' }) {
-  // Определяем цвет на основе статуса
-  const color = status === 'critical' ? '#E30611' : '#00D2FF';
+  const isCritical = status === 'critical';
+  const color = isCritical ? '#E30611' : '#00D2FF';
 
   return (
     <div className="w-full h-full absolute inset-0 cursor-grab active:cursor-grabbing bg-[#000000]">
       <Canvas camera={{ position: [0, 0, 7], fov: 60 }}>
         <ambientLight intensity={0.5} />
         
-        <ParticleSmoke statusColor={color} />
+        {/* Передаем isCritical в компонент */}
+        <ParticleSmoke statusColor={color} isCritical={isCritical} />
         
-        <OrbitControls enableZoom={true} enablePan={false} autoRotate autoRotateSpeed={0.5} />
+        <OrbitControls enableZoom={true} enablePan={false} autoRotate autoRotateSpeed={isCritical ? 1.5 : 0.5} />
 
-        {/* Яркость Bloom увеличивается при ошибке */}
         <EffectComposer>
           <Bloom 
             luminanceThreshold={0.2} 
             mipmapBlur 
-            intensity={status === 'critical' ? 3.0 : 1.5} 
+            intensity={isCritical ? 3.0 : 1.5} 
             radius={0.6}
           />
         </EffectComposer>
