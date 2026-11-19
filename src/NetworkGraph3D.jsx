@@ -5,20 +5,19 @@ import { extend } from '@react-three/fiber';
 import * as THREE from 'three';
 import { EffectComposer, Bloom } from '@react-three/postprocessing';
 
-// 1. Создаем шейдер для дыма (частиц, летящих по шуму)
+// 1. Создаем шейдер для дыма
 const SmokeParticlesMaterial = shaderMaterial(
   {
     uTime: 0,
-    uColor: new THREE.Color('#00D2FF'), // Голубой цвет
-    uSize: 15.0, // Размер частиц
+    uColor: new THREE.Color('#00D2FF'), // Базовый цвет (синий)
+    uSize: 25.0, // УВЕЛИЧИЛИ РАЗМЕР ЧАСТИЦ
   },
-  // Вершинный шейдер (движение частиц)
+  // Вершинный шейдер (движение)
   `
   uniform float uTime;
   uniform float uSize;
   varying float vAlpha;
 
-  // 3D Simplex Noise (для создания вихрей)
   vec3 mod289(vec3 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
   vec4 mod289(vec4 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
   vec4 permute(vec4 x) { return mod289(((x*34.0)+1.0)*x); }
@@ -69,7 +68,6 @@ const SmokeParticlesMaterial = shaderMaterial(
   void main() {
     vec3 pos = position;
     
-    // Анимация: частицы движутся по полю шума (как дым)
     float noiseX = snoise(vec3(pos.x * 0.5 + uTime * 0.1, pos.y * 0.5, pos.z * 0.5));
     float noiseY = snoise(vec3(pos.y * 0.5 + uTime * 0.1, pos.z * 0.5, pos.x * 0.5));
     float noiseZ = snoise(vec3(pos.z * 0.5 + uTime * 0.1, pos.x * 0.5, pos.y * 0.5));
@@ -78,28 +76,24 @@ const SmokeParticlesMaterial = shaderMaterial(
     pos.y += noiseY * 0.8;
     pos.z += noiseZ * 0.8;
 
-    // Плавное исчезновение частиц на краях
     float dist = length(pos);
-    vAlpha = smoothstep(3.5, 1.0, dist); // Чем дальше от центра, тем прозрачнее
+    vAlpha = smoothstep(3.5, 1.0, dist); 
 
     vec4 mvPosition = modelViewMatrix * vec4(pos, 1.0);
     
-    // Размер частицы зависит от расстояния до камеры
     gl_PointSize = uSize * (1.0 / -mvPosition.z);
     gl_Position = projectionMatrix * mvPosition;
   }
   `,
-  // Фрагментный шейдер (форма частиц)
+  // Фрагментный шейдер (цвет и форма)
   `
   uniform vec3 uColor;
   varying float vAlpha;
 
   void main() {
-    // Рисуем круглые частицы с мягкими краями
     float dist = length(gl_PointCoord - vec2(0.5));
-    if (dist > 0.5) discard; // Обрезаем квадраты, делаем круги
+    if (dist > 0.5) discard; 
 
-    // Мягкое свечение внутри частицы
     float alpha = smoothstep(0.5, 0.1, dist) * vAlpha;
     
     gl_FragColor = vec4(uColor, alpha);
@@ -109,15 +103,16 @@ const SmokeParticlesMaterial = shaderMaterial(
 
 extend({ SmokeParticlesMaterial });
 
-function ParticleSmoke() {
+function ParticleSmoke({ statusColor }) {
   const materialRef = useRef();
-  const particleCount = 15000; // 15 000 частиц создадут эффект дыма
+  const particleCount = 15000;
+  
+  // Создаем объект цвета для плавного перехода
+  const targetColor = useMemo(() => new THREE.Color(statusColor), [statusColor]);
 
-  // Генерируем случайные координаты для частиц
   const particlesPosition = useMemo(() => {
     const positions = new Float32Array(particleCount * 3);
     for (let i = 0; i < particleCount; i++) {
-      // Равномерно распределяем в сфере радиусом 3
       const r = Math.cbrt(Math.random()) * 3.0;
       const theta = Math.random() * Math.PI * 2;
       const phi = Math.acos((Math.random() * 2) - 1);
@@ -132,6 +127,8 @@ function ParticleSmoke() {
   useFrame((state) => {
     if (materialRef.current) {
       materialRef.current.uTime = state.clock.getElapsedTime() * 2.0;
+      // Плавно перекрашиваем сферу в нужный цвет
+      materialRef.current.uColor.lerp(targetColor, 0.05);
     }
   });
 
@@ -155,22 +152,25 @@ function ParticleSmoke() {
   );
 }
 
-export default function NetworkGraph3D() {
+export default function NetworkGraph3D({ status = 'normal' }) {
+  // Определяем цвет на основе статуса
+  const color = status === 'critical' ? '#E30611' : '#00D2FF';
+
   return (
     <div className="w-full h-full absolute inset-0 cursor-grab active:cursor-grabbing bg-[#000000]">
       <Canvas camera={{ position: [0, 0, 7], fov: 60 }}>
         <ambientLight intensity={0.5} />
         
-        <ParticleSmoke />
+        <ParticleSmoke statusColor={color} />
         
         <OrbitControls enableZoom={true} enablePan={false} autoRotate autoRotateSpeed={0.5} />
 
-        {/* Очень легкий Bloom, так как частицы уже светятся */}
+        {/* Яркость Bloom увеличивается при ошибке */}
         <EffectComposer>
           <Bloom 
             luminanceThreshold={0.2} 
             mipmapBlur 
-            intensity={1.2} 
+            intensity={status === 'critical' ? 3.0 : 1.5} 
             radius={0.6}
           />
         </EffectComposer>

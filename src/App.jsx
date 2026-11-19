@@ -1,12 +1,13 @@
-import logo from './assets/logo.png'; 
-import NetworkGraph3D from './NetworkGraph3D';
 import React, { useState } from 'react';
 import { 
   LayoutDashboard, AlertTriangle, Users, Settings, 
   Search, Bot, Clock, ShieldAlert, ArrowRight, X, Send
 } from 'lucide-react';
+// Не забудь про свой логотип, если он у тебя есть:
+// import logo from './assets/logo.png'; 
 
-// Моковые данные для карточек инцидентов
+import NetworkGraph3D from './NetworkGraph3D';
+
 const mockIncidents = [
   {
     id: 'INC-1042',
@@ -16,7 +17,6 @@ const mockIncidents = [
     progress: 75,
     team: 'Backend Team',
     status: 'В работе',
-    // НОВОЕ: Моковые сообщения для чата
     messages: [
       { sender: 'Система', text: 'Инцидент создан автоматически.', time: '10:00', isMe: false },
       { sender: 'Иван (Backend)', text: 'Принял в работу, смотрю логи.', time: '10:02', isMe: false },
@@ -46,21 +46,34 @@ const mockIncidents = [
 ];
 
 export default function IncidentDashboard() {
-  // НОВОЕ: Состояние для выбранного инцидента (если null - панель закрыта)
   const [selectedIncident, setSelectedIncident] = useState(null);
   const [chatInput, setChatInput] = useState('');
+  // Состояние для сферы
+  const [systemStatus, setSystemStatus] = useState('normal');
+
+  // Обработчик клика по карточке
+  const handleIncidentClick = (incident) => {
+    setSelectedIncident(incident);
+    // Если инцидент критический - сфера краснеет, иначе синяя
+    setSystemStatus(incident.severity === 'critical' ? 'critical' : 'normal');
+  };
+
+  // Обработчик закрытия панели
+  const handleClosePanel = () => {
+    setSelectedIncident(null);
+    // Возвращаем сферу в спокойное состояние при закрытии
+    setSystemStatus('normal');
+  };
 
   return (
     <div className="flex h-screen bg-[#0B0E14] text-gray-200 font-sans overflow-hidden selection:bg-[#E30611] selection:text-white relative">
       
       {/* 1. ЛЕВЫЙ САЙДБАР */}
       <aside className="w-20 flex flex-col items-center py-6 border-r border-white/5 bg-[#0B0E14]/50 backdrop-blur-md z-20">
-                <div className="w-12 h-12 mb-10 flex items-center justify-center cursor-pointer transition-transform hover:scale-105">
-          <img 
-            src={logo} 
-            alt="Logo" 
-            className="w-full h-full object-contain drop-shadow-[0_0_15px_rgba(227,6,17,0.5)]" 
-          />
+        <div className="w-12 h-12 mb-10 flex items-center justify-center cursor-pointer transition-transform hover:scale-105">
+           {/* Если используешь логотип, раскомментируй img ниже */}
+           {/* <img src={logo} alt="Logo" className="w-full h-full object-contain drop-shadow-[0_0_15px_rgba(227,6,17,0.5)]" /> */}
+           <div className="w-10 h-10 bg-[#E30611] rounded-xl flex items-center justify-center font-bold text-white text-xl shadow-[0_0_20px_rgba(227,6,17,0.4)]">R</div>
         </div>
         <nav className="flex flex-col gap-6 flex-1 w-full">
           <button className="w-full flex justify-center py-3 relative group">
@@ -114,19 +127,17 @@ export default function IncidentDashboard() {
               </div>
             </div>
 
-            {/* ЗАГЛУШКА 3D */}
-                        {/* 3D СЦЕНА */}
+            {/* 3D СЦЕНА */}
             <div className="flex-1 bg-[#151A24]/50 border border-white/5 rounded-2xl relative overflow-hidden">
               <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px]"></div>
               
-              {/* Наш 3D компонент */}
-              <NetworkGraph3D />
+              <NetworkGraph3D status={systemStatus} />
               
               {/* Плашка поверх 3D */}
               <div className="absolute top-4 left-4 z-10 bg-[#0B0E14]/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10">
                 <span className="text-xs text-gray-300 font-medium flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#00D2FF] animate-pulse"></div>
-                  Live Топология
+                  <div className={`w-2 h-2 rounded-full animate-pulse ${systemStatus === 'critical' ? 'bg-[#E30611]' : 'bg-[#00D2FF]'}`}></div>
+                  {systemStatus === 'critical' ? 'Внимание: Критический инцидент' : 'Все системы в норме'}
                 </span>
               </div>
             </div>
@@ -139,12 +150,11 @@ export default function IncidentDashboard() {
               <span className="bg-[#E30611] text-white text-xs font-bold px-2 py-1 rounded-md">3</span>
             </div>
 
-            <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-4">
+            <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-4 custom-scrollbar">
               {mockIncidents.map((incident) => (
                 <div 
                   key={incident.id} 
-                  // НОВОЕ: Добавили onClick
-                  onClick={() => setSelectedIncident(incident)}
+                  onClick={() => handleIncidentClick(incident)}
                   className={`p-4 rounded-xl border transition-all cursor-pointer hover:bg-white/5 hover:scale-[1.02]
                     ${incident.severity === 'critical' ? 'border-[#FF4D4D]/50 bg-[#FF4D4D]/5 shadow-[0_0_15px_rgba(255,77,77,0.1)]' : 'border-[#FFB000]/30 bg-[#FFB000]/5'}
                   `}
@@ -174,23 +184,19 @@ export default function IncidentDashboard() {
         </div>
       </main>
 
-      {/* ========================================================= */}
-      {/* НОВОЕ: ВЫЕЗЖАЮЩАЯ ПАНЕЛЬ (DRAWER) И ЗАТЕМНЕНИЕ          */}
-      {/* ========================================================= */}
+      {/* ВЫЕЗЖАЮЩАЯ ПАНЕЛЬ (DRAWER) */}
       
-      {/* Затемнение фона (клик закрывает панель) */}
+      {/* УМЕНЬШИЛИ РАЗМЫТИЕ ФОНА, чтобы сфера была видна! */}
       <div 
-        className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-40 transition-opacity duration-300 ${selectedIncident ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
-        onClick={() => setSelectedIncident(null)}
+        className={`fixed inset-0 bg-black/40 backdrop-blur-[2px] z-40 transition-opacity duration-300 ${selectedIncident ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+        onClick={handleClosePanel}
       ></div>
 
-      {/* Сама панель */}
       <div 
         className={`fixed inset-y-0 right-0 w-[450px] bg-[#151A24] border-l border-white/10 z-50 shadow-2xl flex flex-col transition-transform duration-300 ease-in-out ${selectedIncident ? 'translate-x-0' : 'translate-x-full'}`}
       >
         {selectedIncident && (
           <>
-            {/* Шапка панели */}
             <div className="p-6 border-b border-white/10 flex justify-between items-start bg-[#0B0E14]/50">
               <div>
                 <div className="flex items-center gap-3 mb-2">
@@ -201,14 +207,13 @@ export default function IncidentDashboard() {
                 <p className="text-sm text-gray-400 mt-1">Ответственная команда: <span className="text-white">{selectedIncident.team}</span></p>
               </div>
               <button 
-                onClick={() => setSelectedIncident(null)}
+                onClick={handleClosePanel}
                 className="p-2 hover:bg-white/10 rounded-full transition-colors text-gray-400 hover:text-white"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
 
-            {/* Чат */}
             <div className="flex-1 overflow-y-auto p-6 flex flex-col gap-4 bg-[#0B0E14]/30">
               {selectedIncident.messages.map((msg, index) => (
                 <div key={index} className={`flex flex-col ${msg.isMe ? 'items-end' : 'items-start'}`}>
@@ -220,7 +225,6 @@ export default function IncidentDashboard() {
               ))}
             </div>
 
-            {/* Поле ввода */}
             <div className="p-4 border-t border-white/10 bg-[#151A24]">
               <div className="relative flex items-center">
                 <input 
