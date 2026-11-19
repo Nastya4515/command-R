@@ -1,4 +1,5 @@
 import logo from './assets/logo.png'; 
+import NetworkGraph3D from './NetworkGraph3D';
 import React, { useState } from 'react';
 import { 
   LayoutDashboard, AlertTriangle, Users, Settings, 
@@ -114,13 +115,19 @@ export default function IncidentDashboard() {
             </div>
 
             {/* ЗАГЛУШКА 3D */}
-            <div className="flex-1 bg-[#151A24]/50 border border-white/5 rounded-2xl relative overflow-hidden flex flex-col items-center justify-center">
+                        {/* 3D СЦЕНА */}
+            <div className="flex-1 bg-[#151A24]/50 border border-white/5 rounded-2xl relative overflow-hidden">
               <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px]"></div>
-              <div className="z-10 flex flex-col items-center text-center">
-                <div className="w-32 h-32 rounded-full border border-[#E30611]/30 border-t-[#E30611] animate-spin mb-6 flex items-center justify-center">
-                  <div className="w-24 h-24 rounded-full border border-gray-700/50 border-b-gray-400 animate-spin-reverse"></div>
-                </div>
-                <h3 className="text-lg font-medium text-gray-300 mb-2">3D Топология сети</h3>
+              
+              {/* Наш 3D компонент */}
+              <NetworkGraph3D />
+              
+              {/* Плашка поверх 3D */}
+              <div className="absolute top-4 left-4 z-10 bg-[#0B0E14]/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10">
+                <span className="text-xs text-gray-300 font-medium flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-[#00D2FF] animate-pulse"></div>
+                  Live Топология
+                </span>
               </div>
             </div>
           </div>
