@@ -2,11 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { 
   LayoutDashboard, Database, ShieldAlert, Settings, 
   Search, FileText, X, ArrowUpRight, CheckCircle2, 
-  AlertTriangle, Filter, UploadCloud, Loader2, FileSearch, Cpu, Terminal
+  AlertTriangle, Filter, UploadCloud, Loader2, Terminal
 } from 'lucide-react';
 import NetworkGraph3D from './NetworkGraph3D';
 
-// Моковые данные для таблицы (RAG)
 const mockResults = [
   { id: 'R001', config: 'C01', dataset: 'HotpotQA', metric: 'NDCG@10', value: '0.85', origin: 'primary', status: 'valid', issue: null, source: { page: 7, text: 'Our system achieves an NDCG@10 of 0.85, outperforming the baseline by 12%.' } },
   { id: 'R002', config: 'C01', dataset: 'Natural Questions', metric: 'Recall@5', value: '0.92', origin: 'primary', status: 'valid', issue: null, source: { page: 8, text: 'The recall at 5 documents reached 0.92 for the GraphRAG setup.' } },
@@ -18,12 +17,9 @@ const mockResults = [
 export default function RAGDashboard() {
   const [activeTab, setActiveTab] = useState('overview'); 
   const [selectedResult, setSelectedResult] = useState(null);
-  
-  // Состояния для конвейера загрузки
-  const [uploadStatus, setUploadStatus] = useState('idle'); // idle, processing, extracting, validating, done
+  const [uploadStatus, setUploadStatus] = useState('idle'); 
   const [logs, setLogs] = useState([]);
 
-  // Имитация работы конвейера ИИ
   useEffect(() => {
     if (uploadStatus === 'processing') {
       const addLog = (text) => setLogs(prev => [...prev, `[${new Date().toLocaleTimeString()}] ${text}`]);
@@ -121,18 +117,53 @@ export default function RAGDashboard() {
         {/* КОНТЕНТ (Переключение экранов) */}
         <div className="flex-1 relative overflow-hidden">
           
-          {/* ЭКРАН 1: ОБЗОР (С 3D-шаром) */}
+          {/* ЭКРАН 1: ОБЗОР (С 3D-шаром и кинематографичным текстом) */}
           {activeTab === 'overview' && (
             <div className="absolute inset-0 flex">
-              <NetworkGraph3D status="normal" />
-              <div className="absolute top-12 left-12 z-10 max-w-sm pointer-events-none">
-                <div className="text-[#00D2FF] text-xs font-mono tracking-widest mb-2">SYSTEM OVERVIEW</div>
-                <h2 className="text-4xl font-light text-white leading-tight mb-4">EXTRACTED<br /><span className="font-bold">KNOWLEDGE.</span></h2>
-                <p className="text-sm text-gray-400 leading-relaxed mb-8 pointer-events-auto">Автоматическое извлечение конфигураций RAG, наборов данных и метрик из 90 научных публикаций. Проверка валидности цитат.</p>
-                <div className="flex gap-8 border-t border-white/10 pt-6 pointer-events-auto">
-                  <div><div className="text-3xl font-mono text-white">90</div><div className="text-[10px] text-gray-500 uppercase mt-1">PDF Docs</div></div>
-                  <div><div className="text-3xl font-mono text-[#00D2FF]">2.4K</div><div className="text-[10px] text-gray-500 uppercase mt-1">Metrics</div></div>
-                  <div><div className="text-3xl font-mono text-[#FF0032]">12</div><div className="text-[10px] text-gray-500 uppercase mt-1">Issues</div></div>
+              <NetworkGraph3D status="normal" onClick={() => setActiveTab('data')} />
+              
+              {/* КИНЕМАТОГРАФИЧНЫЙ ГРАДИЕНТ (перекрывает левую часть для читаемости) */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#05080F] via-[#05080F]/70 to-transparent w-[60%] pointer-events-none z-10"></div>
+
+              {/* Текстовый блок БЕЗ уродливой рамки */}
+              <div className="absolute top-16 left-16 z-20 max-w-md pointer-events-auto">
+                
+                {/* Декоративная линия */}
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="h-[2px] w-12 bg-[#00D2FF]"></div>
+                  <div className="text-[#00D2FF] text-xs font-mono tracking-[0.2em]">SYSTEM OVERVIEW</div>
+                </div>
+
+                <h2 className="text-5xl font-light text-white leading-tight mb-6">
+                  EXTRACTED<br /><span className="font-bold">KNOWLEDGE.</span>
+                </h2>
+                
+                <p className="text-base text-gray-400 leading-relaxed mb-8">
+                  Автоматическое извлечение конфигураций RAG, наборов данных и метрик из 90 научных публикаций. Проверка валидности цитат.
+                </p>
+                
+                <div 
+                  className="flex items-center gap-3 bg-white/5 border border-white/10 p-3 rounded-lg w-fit cursor-pointer hover:bg-white/10 hover:border-[#00D2FF]/50 transition-all group" 
+                  onClick={() => setActiveTab('data')}
+                >
+                   <div className="w-2 h-2 bg-[#00D2FF] rounded-full animate-pulse"></div>
+                   <span className="text-xs text-gray-300 font-medium tracking-wide group-hover:text-white transition-colors">Кликните на ядро, чтобы открыть данные</span>
+                   <ArrowUpRight className="w-3 h-3 text-gray-500 group-hover:text-[#00D2FF] transition-colors" />
+                </div>
+
+                <div className="flex gap-10 border-t border-white/10 pt-8 mt-8">
+                  <div>
+                    <div className="text-3xl font-mono text-white mb-1">90</div>
+                    <div className="text-[10px] text-gray-500 uppercase tracking-widest">PDF Docs</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-mono text-[#00D2FF] mb-1">2.4K</div>
+                    <div className="text-[10px] text-gray-500 uppercase tracking-widest">Metrics</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-mono text-[#FF0032] mb-1">12</div>
+                    <div className="text-[10px] text-gray-500 uppercase tracking-widest">Issues</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -141,7 +172,6 @@ export default function RAGDashboard() {
           {/* ЭКРАН 2: ЗАГРУЗКА И ОБРАБОТКА (Upload) */}
           {activeTab === 'upload' && (
             <div className="absolute inset-0 p-8 flex gap-8 bg-[#0B0E14]">
-              {/* Левая часть: Drag & Drop */}
               <div className="w-1/3 flex flex-col gap-6">
                 <div className="bg-[#151A24] border border-white/10 rounded-2xl p-8 flex flex-col items-center justify-center text-center h-64 border-dashed hover:border-[#00D2FF]/50 transition-colors cursor-pointer" onClick={startUpload}>
                   <div className="w-16 h-16 bg-[#00D2FF]/10 rounded-full flex items-center justify-center mb-4">
@@ -162,7 +192,6 @@ export default function RAGDashboard() {
                 </div>
               </div>
 
-              {/* Правая часть: Лог ИИ и статус */}
               <div className="flex-1 bg-[#050505] border border-white/10 rounded-2xl flex flex-col overflow-hidden relative">
                 <div className="h-12 border-b border-white/10 flex items-center px-4 gap-2 bg-[#151A24]">
                   <Terminal className="w-4 h-4 text-gray-500" />
@@ -191,7 +220,6 @@ export default function RAGDashboard() {
                   )}
                 </div>
 
-                {/* Прогресс бар снизу */}
                 {uploadStatus !== 'idle' && (
                   <div className="h-1 w-full bg-gray-800">
                     <div 

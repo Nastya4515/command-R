@@ -10,7 +10,7 @@ const WireframeSphereMaterial = shaderMaterial(
     uTime: 0,
     uColor: new THREE.Color('#00D2FF'),
     uDistortion: 0.5,
-    uHover: 0, // Новый параметр для анимации наведения
+    uHover: 0,
   },
   `
   uniform float uTime;
@@ -68,8 +68,7 @@ const WireframeSphereMaterial = shaderMaterial(
 
   void main() {
     vNormal = normal;
-    // При наведении (uHover = 1) шум (искажение) усиливается
-    float currentDistortion = uDistortion + (uHover * 0.8);
+    float currentDistortion = uDistortion + (uHover * 0.6);
     float noise = snoise(vec3(position * 2.0 + uTime * 0.2)) * currentDistortion;
     vec3 newPosition = position + normal * noise;
     vPosition = newPosition;
@@ -89,10 +88,7 @@ const WireframeSphereMaterial = shaderMaterial(
     vec3 viewDir = normalize(vPosition);
     float fresnel = pow(1.0 - abs(dot(vNormal, viewDir)), 3.0);
 
-    // При наведении линии становятся ярче
     float alpha = (linePattern * (0.8 + uHover * 0.2)) + (fresnel * 0.5);
-    
-    // Если наведено, цвет сдвигается в сторону белого для яркости
     vec3 finalColor = mix(uColor, vec3(1.0), uHover * 0.5);
     
     gl_FragColor = vec4(finalColor, alpha);
@@ -108,7 +104,6 @@ function Sphere({ statusColor, onClick }) {
   const [hovered, setHovered] = useState(false);
   const targetColor = useMemo(() => new THREE.Color(statusColor), [statusColor]);
 
-  // Меняем курсор мышки при наведении
   React.useEffect(() => {
     document.body.style.cursor = hovered ? 'pointer' : 'auto';
     return () => { document.body.style.cursor = 'auto'; };
@@ -118,15 +113,12 @@ function Sphere({ statusColor, onClick }) {
     if (materialRef.current) {
       materialRef.current.uTime = state.clock.getElapsedTime();
       materialRef.current.uColor.lerp(targetColor, 0.05);
-      
-      // Плавно включаем/выключаем эффект наведения
       const targetHover = hovered ? 1.0 : 0.0;
       materialRef.current.uHover += (targetHover - materialRef.current.uHover) * 0.1;
     }
     
     if (meshRef.current) {
-      // При наведении шар немного увеличивается и вращается быстрее
-      const targetScale = hovered ? 1.1 : 1.0;
+      const targetScale = hovered ? 1.05 : 1.0;
       meshRef.current.scale.lerp(new THREE.Vector3(targetScale, targetScale, targetScale), 0.1);
       meshRef.current.rotation.y += delta * (hovered ? 0.5 : 0.2);
     }
@@ -138,8 +130,9 @@ function Sphere({ statusColor, onClick }) {
       onClick={(e) => { e.stopPropagation(); if(onClick) onClick(); }}
       onPointerOver={(e) => { e.stopPropagation(); setHovered(true); }}
       onPointerOut={(e) => { e.stopPropagation(); setHovered(false); }}
+      position={[0.8, 0, 0]} // Чуть смещен вправо от центра
     >
-      <sphereGeometry args={[2.5, 128, 128]} />
+      <sphereGeometry args={[2.2, 128, 128]} /> {/* Вернули нормальный размер */}
       <wireframeSphereMaterial 
         ref={materialRef} 
         transparent={true} 
@@ -155,7 +148,7 @@ export default function NetworkGraph3D({ status = 'normal', onClick }) {
   const color = status === 'critical' ? '#FF0032' : '#00D2FF';
 
   return (
-    <div className="w-full h-full absolute inset-0 bg-[#000000]">
+    <div className="w-full h-full absolute inset-0 bg-[#05080F]">
       <Canvas camera={{ position: [0, 0, 7], fov: 45 }}>
         <Sphere statusColor={color} onClick={onClick} />
         <OrbitControls enableZoom={false} enablePan={false} autoRotate={false} />
