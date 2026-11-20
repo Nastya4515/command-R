@@ -1,24 +1,23 @@
-import React, { useRef, useMemo } from 'react';
+import React, { useRef, useMemo, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, shaderMaterial } from '@react-three/drei';
 import { extend } from '@react-three/fiber';
 import * as THREE from 'three';
 import { EffectComposer, Bloom } from '@react-three/postprocessing';
 
-// 1. Добавили uDistortion (сила хаоса)
-const SmokeParticlesMaterial = shaderMaterial(
+const WireframeSphereMaterial = shaderMaterial(
   {
     uTime: 0,
     uColor: new THREE.Color('#00D2FF'),
-    uSize: 25.0,
-    uDistortion: 0.8, // Базовое значение (спокойный дым)
+    uDistortion: 0.5,
+    uHover: 0, // Новый параметр для анимации наведения
   },
-  // Вершинный шейдер
   `
   uniform float uTime;
-  uniform float uSize;
-  uniform float uDistortion; // Получаем силу хаоса
-  varying float vAlpha;
+  uniform float uDistortion;
+  uniform float uHover;
+  varying vec3 vPosition;
+  varying vec3 vNormal;
 
   vec3 mod289(vec3 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
   vec4 mod289(vec4 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
@@ -68,120 +67,100 @@ const SmokeParticlesMaterial = shaderMaterial(
   }
 
   void main() {
-    vec3 pos = position;
-    
-    // Умножаем шум на uDistortion (при инциденте частицы улетают дальше)
-    float noiseX = snoise(vec3(pos.x * 0.5 + uTime * 0.1, pos.y * 0.5, pos.z * 0.5));
-    float noiseY = snoise(vec3(pos.y * 0.5 + uTime * 0.1, pos.z * 0.5, pos.x * 0.5));
-    float noiseZ = snoise(vec3(pos.z * 0.5 + uTime * 0.1, pos.x * 0.5, pos.y * 0.5));
-    
-    pos.x += noiseX * uDistortion;
-    pos.y += noiseY * uDistortion;
-    pos.z += noiseZ * uDistortion;
-
-    float dist = length(pos);
-    vAlpha = smoothstep(3.5, 1.0, dist); 
-
-    vec4 mvPosition = modelViewMatrix * vec4(pos, 1.0);
-    
-    gl_PointSize = uSize * (1.0 / -mvPosition.z);
-    gl_Position = projectionMatrix * mvPosition;
+    vNormal = normal;
+    // При наведении (uHover = 1) шум (искажение) усиливается
+    float currentDistortion = uDistortion + (uHover * 0.8);
+    float noise = snoise(vec3(position * 2.0 + uTime * 0.2)) * currentDistortion;
+    vec3 newPosition = position + normal * noise;
+    vPosition = newPosition;
+    gl_Position = projectionMatrix * modelViewMatrix * vec4(newPosition, 1.0);
   }
   `,
-  // Фрагментный шейдер
   `
   uniform vec3 uColor;
-  varying float vAlpha;
+  uniform float uHover;
+  varying vec3 vPosition;
+  varying vec3 vNormal;
 
   void main() {
-    float dist = length(gl_PointCoord - vec2(0.5));
-    if (dist > 0.5) discard; 
-
-    float alpha = smoothstep(0.5, 0.1, dist) * vAlpha;
+    float linePattern = sin(vPosition.x * 20.0) * sin(vPosition.y * 20.0) * sin(vPosition.z * 20.0);
+    linePattern = smoothstep(0.85, 1.0, abs(linePattern));
     
-    gl_FragColor = vec4(uColor, alpha);
+    vec3 viewDir = normalize(vPosition);
+    float fresnel = pow(1.0 - abs(dot(vNormal, viewDir)), 3.0);
+
+    // При наведении линии становятся ярче
+    float alpha = (linePattern * (0.8 + uHover * 0.2)) + (fresnel * 0.5);
+    
+    // Если наведено, цвет сдвигается в сторону белого для яркости
+    vec3 finalColor = mix(uColor, vec3(1.0), uHover * 0.5);
+    
+    gl_FragColor = vec4(finalColor, alpha);
   }
   `
 );
 
-extend({ SmokeParticlesMaterial });
+extend({ WireframeSphereMaterial });
 
-function ParticleSmoke({ statusColor, isCritical }) {
+function Sphere({ statusColor, onClick }) {
   const materialRef = useRef();
-  const particleCount = 15000;
-  
+  const meshRef = useRef();
+  const [hovered, setHovered] = useState(false);
   const targetColor = useMemo(() => new THREE.Color(statusColor), [statusColor]);
-  // Целевое искажение: 2.5 при ошибке, 0.8 в норме
-  const targetDistortion = isCritical ? 2.5 : 0.8;
 
-  const particlesPosition = useMemo(() => {
-    const positions = new Float32Array(particleCount * 3);
-    for (let i = 0; i < particleCount; i++) {
-      const r = Math.cbrt(Math.random()) * 3.0;
-      const theta = Math.random() * Math.PI * 2;
-      const phi = Math.acos((Math.random() * 2) - 1);
+  // Меняем курсор мышки при наведении
+  React.useEffect(() => {
+    document.body.style.cursor = hovered ? 'pointer' : 'auto';
+    return () => { document.body.style.cursor = 'auto'; };
+  }, [hovered]);
 
-      positions[i * 3] = r * Math.sin(phi) * Math.cos(theta);
-      positions[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
-      positions[i * 3 + 2] = r * Math.cos(phi);
-    }
-    return positions;
-  }, []);
-
-  useFrame((state) => {
+  useFrame((state, delta) => {
     if (materialRef.current) {
-      // Ускоряем время при критическом статусе, чтобы дым "кипел" быстрее
-      materialRef.current.uTime += isCritical ? 0.05 : 0.02;
-      
-      // Плавно меняем цвет
+      materialRef.current.uTime = state.clock.getElapsedTime();
       materialRef.current.uColor.lerp(targetColor, 0.05);
       
-      // Плавно меняем степень хаоса (искажение)
-      materialRef.current.uDistortion += (targetDistortion - materialRef.current.uDistortion) * 0.05;
+      // Плавно включаем/выключаем эффект наведения
+      const targetHover = hovered ? 1.0 : 0.0;
+      materialRef.current.uHover += (targetHover - materialRef.current.uHover) * 0.1;
+    }
+    
+    if (meshRef.current) {
+      // При наведении шар немного увеличивается и вращается быстрее
+      const targetScale = hovered ? 1.1 : 1.0;
+      meshRef.current.scale.lerp(new THREE.Vector3(targetScale, targetScale, targetScale), 0.1);
+      meshRef.current.rotation.y += delta * (hovered ? 0.5 : 0.2);
     }
   });
 
   return (
-    <points>
-      <bufferGeometry>
-        <bufferAttribute
-          attach="attributes-position"
-          count={particleCount}
-          array={particlesPosition}
-          itemSize={3}
-        />
-      </bufferGeometry>
-      <smokeParticlesMaterial
-        ref={materialRef}
-        transparent={true}
-        depthWrite={false}
-        blending={THREE.AdditiveBlending}
+    <mesh 
+      ref={meshRef}
+      onClick={(e) => { e.stopPropagation(); if(onClick) onClick(); }}
+      onPointerOver={(e) => { e.stopPropagation(); setHovered(true); }}
+      onPointerOut={(e) => { e.stopPropagation(); setHovered(false); }}
+    >
+      <sphereGeometry args={[2.5, 128, 128]} />
+      <wireframeSphereMaterial 
+        ref={materialRef} 
+        transparent={true} 
+        depthWrite={false} 
+        blending={THREE.AdditiveBlending} 
+        side={THREE.DoubleSide}
       />
-    </points>
+    </mesh>
   );
 }
 
-export default function NetworkGraph3D({ status = 'normal' }) {
-  const isCritical = status === 'critical';
-  const color = isCritical ? '#E30611' : '#00D2FF';
+export default function NetworkGraph3D({ status = 'normal', onClick }) {
+  const color = status === 'critical' ? '#FF0032' : '#00D2FF';
 
   return (
-    <div className="w-full h-full absolute inset-0 cursor-grab active:cursor-grabbing bg-[#000000]">
-      <Canvas camera={{ position: [0, 0, 7], fov: 60 }}>
-        <ambientLight intensity={0.5} />
-        
-        {/* Передаем isCritical в компонент */}
-        <ParticleSmoke statusColor={color} isCritical={isCritical} />
-        
-        <OrbitControls enableZoom={true} enablePan={false} autoRotate autoRotateSpeed={isCritical ? 1.5 : 0.5} />
-
+    <div className="w-full h-full absolute inset-0 bg-[#000000]">
+      <Canvas camera={{ position: [0, 0, 7], fov: 45 }}>
+        <Sphere statusColor={color} onClick={onClick} />
+        <OrbitControls enableZoom={false} enablePan={false} autoRotate={false} />
         <EffectComposer>
-          <Bloom 
-            luminanceThreshold={0.2} 
-            mipmapBlur 
-            intensity={isCritical ? 3.0 : 1.5} 
-            radius={0.6}
-          />
+          <Bloom luminanceThreshold={0.1} mipmapBlur intensity={1.5} radius={0.8} />
         </EffectComposer>
       </Canvas>
     </div>
