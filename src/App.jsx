@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { 
   LayoutDashboard, Database, Settings, 
   Search, FileText, X, CheckCircle2, 
@@ -41,6 +41,9 @@ export default function RAGDashboard() {
 
   const [uploadStatus, setUploadStatus] = useState('idle'); 
   const [logs, setLogs] = useState([]);
+  const fileInputRef = useRef(null);
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [uploadProgress, setUploadProgress] = useState(0);
 
   // Сброс страницы при изменении фильтров
   useEffect(() => {
@@ -122,6 +125,51 @@ export default function RAGDashboard() {
     link.click();
   };
 
+  // Реальная загрузка PDF на бекенд (POST /api/upload)
+  const handleFileSelected = (file) => {
+    if (!file) return;
+    const isPdf = file.type === 'application/pdf' || file.name.toLowerCase().endsWith('.pdf');
+    setLogs([]);
+    setSelectedFile(null);
+    if (!isPdf) {
+      setUploadStatus('error');
+      setLogs([`[${new Date().toLocaleTimeString()}] Ошибка: можно загружать только PDF-файлы`]);
+      return;
+    }
+
+    setSelectedFile(file);
+    setUploadStatus('uploading');
+    setUploadProgress(0);
+
+    const formData = new FormData();
+    formData.append('file', file);
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', '/api/upload');
+    xhr.upload.onprogress = (e) => {
+      if (e.lengthComputable) setUploadProgress(Math.round((e.loaded / e.total) * 100));
+    };
+    xhr.onload = () => {
+      if (xhr.status >= 200 && xhr.status < 300) {
+        const resp = JSON.parse(xhr.responseText);
+        setLogs(prev => [...prev, `[${new Date().toLocaleTimeString()}] Файл загружен на сервер: ${resp.originalName} (${(resp.size / 1024).toFixed(1)} КБ)`]);
+        setUploadStatus('processing'); // дальше подхватывает эффект пайплайна
+      } else {
+        let msg = 'Ошибка сервера';
+        try { msg = JSON.parse(xhr.responseText).error || msg; } catch { /* не JSON */ }
+        setLogs(prev => [...prev, `[${new Date().toLocaleTimeString()}] Ошибка загрузки: ${msg}`]);
+        setUploadStatus('error');
+      }
+    };
+    xhr.onerror = () => {
+      setLogs(prev => [...prev, `[${new Date().toLocaleTimeString()}] Ошибка: сервер недоступен (запущен ли "npm run server"?)`]);
+      setUploadStatus('error');
+    };
+    xhr.send(formData);
+  };
+
+  const isUploadBusy = ['uploading', 'processing', 'extracting'].includes(uploadStatus);
+
   return (
     <div className="flex h-screen bg-[#0B0E14] text-[#E2E8F0] font-sans overflow-hidden selection:bg-[#00D2FF] selection:text-black">
       
@@ -172,17 +220,43 @@ export default function RAGDashboard() {
           {activeTab === 'upload' && (
             <div className="absolute inset-0 p-8 flex gap-8 bg-[#0B0E14]">
               <div className="w-1/3 flex flex-col gap-6">
-                <div className="bg-[#151A24] border border-white/10 rounded-2xl p-8 flex flex-col items-center justify-center text-center h-64 border-dashed hover:border-[#00D2FF]/50 transition-colors cursor-pointer" onClick={() => { setLogs([]); setUploadStatus('processing'); }}>
+                <input
+                  ref={fileInputRef}
+                  type="file"
+                  accept="application/pdf,.pdf"
+                  className="hidden"
+                  onChange={(e) => { handleFileSelected(e.target.files?.[0]); e.target.value = ''; }}
+                />
+                <div
+                  className={`bg-[#151A24] border border-white/10 rounded-2xl p-8 flex flex-col items-center justify-center text-center h-64 border-dashed transition-colors ${isUploadBusy ? 'opacity-60 cursor-wait' : 'hover:border-[#00D2FF]/50 cursor-pointer'}`}
+                  onClick={() => { if (!isUploadBusy) fileInputRef.current?.click(); }}
+                >
                   <UploadCloud className="w-8 h-8 text-[#00D2FF] mb-4" />
                   <h3 className="text-white font-medium mb-2">Загрузить PDF</h3>
-                  <p className="text-xs text-gray-500 mb-4">ИИ автоматически определит область</p>
+                  <p className="text-xs text-gray-500 mb-4">Файл отправится на сервер, затем ИИ определит область</p>
                   <button className="px-6 py-2 bg-[#00D2FF] text-black font-bold text-xs uppercase rounded-lg">Выбрать файл</button>
                 </div>
+
+                {selectedFile && (
+                  <div className="bg-[#151A24] border border-white/10 rounded-xl p-4">
+                    <div className="flex items-center gap-2 text-sm text-white mb-2">
+                      <FileText className="w-4 h-4 text-[#00D2FF] shrink-0" />
+                      <span className="truncate">{selectedFile.name}</span>
+                      <span className="text-xs text-gray-500 shrink-0 ml-auto">{(selectedFile.size / 1024).toFixed(1)} КБ</span>
+                    </div>
+                    {uploadStatus === 'uploading' && (
+                      <div className="h-1.5 bg-white/10 rounded overflow-hidden">
+                        <div className="h-full bg-[#00D2FF] transition-all" style={{ width: `${uploadProgress}%` }}></div>
+                      </div>
+                    )}
+                  </div>
+                )}
               </div>
               <div className="flex-1 bg-[#050505] border border-white/10 rounded-2xl flex flex-col overflow-hidden relative">
                 <div className="h-12 border-b border-white/10 flex items-center px-4 gap-2 bg-[#151A24]">
                   <Terminal className="w-4 h-4 text-gray-500" /><span className="text-xs font-mono text-gray-400">Multimodal AI Pipeline Log</span>
-                  {uploadStatus !== 'idle' && uploadStatus !== 'done' && <span className="ml-auto flex items-center gap-2 text-xs text-[#00D2FF]"><Loader2 className="w-3 h-3 animate-spin"/> Processing...</span>}
+                  {isUploadBusy && <span className="ml-auto flex items-center gap-2 text-xs text-[#00D2FF]"><Loader2 className="w-3 h-3 animate-spin"/> {uploadStatus === 'uploading' ? `Uploading... ${uploadProgress}%` : 'Processing...'}</span>}
+                  {uploadStatus === 'error' && <span className="ml-auto flex items-center gap-2 text-xs text-[#FF0032]"><AlertTriangle className="w-3 h-3"/> Error</span>}
                   {uploadStatus === 'done' && <span className="ml-auto flex items-center gap-2 text-xs text-green-500"><CheckCircle2 className="w-3 h-3"/> Completed</span>}
                 </div>
                 <div className="flex-1 p-6 font-mono text-sm overflow-y-auto space-y-2">
