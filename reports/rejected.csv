@@ -1,0 +1,8 @@
+publication_id,fragment_id,metric,value,reason
+P031,P031_x4_0,метрика,ρM,value_not_in_fragment
+P031,P031_t9_p0,F1,27,value_not_in_fragment
+P031,P031_t10_p1,F1,27,value_not_in_fragment
+P031,P031_t11_p2,F1,27,value_not_in_fragment
+P031,P031_t12_p3,F1,27,value_not_in_fragment
+P031,P031_t13_p4,precision,,value_not_in_fragment
+P031,P031_t14_p5,recall,,value_not_in_fragment

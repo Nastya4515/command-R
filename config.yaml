@@ -1,0 +1,52 @@
+# Конфигурация конвейера извлечения (кейс ВИНИТИ, область RAG)
+# Все пути — относительно корня проекта. Путей в коде нет, всё отсюда.
+
+data:
+  dev_dir: data/dev
+  test_dir: data/test
+  uploads_dir: uploads
+  dev_gold_dir: data/dev_gold
+  template_dir: data/submission_template
+  checklist: data/CHECKLIST.txt
+  checker: data/tools/check_submission.py
+
+work:
+  cache_dir: cache
+  out_dir: out
+  logs_dir: logs
+  reports_dir: reports
+
+model:
+  # mock — ответы из dev_gold (разработка без нейронки)
+  # file — обмен requests.jsonl / responses.jsonl с командой ИИ
+  # local — дообученная LoRA-модель (model.local_path)
+  # api — OpenRouter (ключ в .env: OPENROUTER_API_KEY)
+  client: api
+  local_path: models/extractor-v1
+  api:
+    base_url: https://api.openai.com/v1
+    model: gpt-4o-mini
+    max_parallel: 8
+    timeout: 90
+    max_retries: 5
+    max_tokens: 200
+
+pdf:
+  scan_char_threshold: 50   # меньше символов на странице => скан
+  ocr_enabled: true
+  ocr_backend: vision       # vision = OpenAI gpt-4o-mini (без установки); tesseract = системный
+  ocr_model: gpt-4o-mini
+  ocr_lang: eng
+
+lines:
+  y_tolerance: 3.0          # слова в одной строке, pt
+  two_column_gap: true      # резать строки по промежутку в центре страницы
+  stitch_tolerance: 3.5     # склейка половин строк таблиц, pt
+
+fragments:
+  max_table_rows: 12        # резка длинных таблиц
+  max_table_numbers: 60
+  text_window_words: 12     # окно вокруг числа в тексте
+
+scoring:
+  sample_errors: 20

@@ -1,0 +1,9 @@
+# Дообучение модели извлечения (QLoRA, RTX 2060 Super 8 ГБ)
+--extra-index-url https://download.pytorch.org/whl/cu121
+torch==2.5.1
+transformers==4.46.3
+peft==0.13.2
+trl==0.12.1
+accelerate==1.1.1
+datasets==3.1.0
+bitsandbytes==0.44.1
