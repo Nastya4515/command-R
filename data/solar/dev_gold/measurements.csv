@@ -1,0 +1,46 @@
+﻿publication_id,measurement_id,device_id,measurement_type,spectrum,light_intensity,intensity_unit,scan_direction,scan_rate,mask_used,certified,certification_lab,temperature,stability_protocol,stress_conditions,note
+D001,MS1,DV1;DV2;DV3;DV4;DV5;DV6,J-V,AM1.5G,100,mW/cm2,reverse,0.15 V/s,true,false,,,,,В статье обратный ход назван FB–SC (от прямого смещения к короткому замыканию)
+D001,MS2,DV4,J-V,AM1.5G,100,mW/cm2,forward,0.15 V/s,true,false,,,,,В статье назван SC–FB
+D001,MS3,DV1;DV4,MPP tracking,AM1.5G,100,mW/cm2,,,true,false,,,,,Прибор удерживался при фиксированном напряжении точки максимальной мощности; длительность не указана
+D001,MS4,DV1;DV4,EQE,,,,,,,false,,,,,Спектры EQE — в Supplementary Figure S3
+D002,MS1,DV1;DV2,J-V,halogen lamp (non-standard),1000,W/m2,,,,false,,,,,"Самодельный имитатор с галогенной лампой, мультиметр-логгер MS8250C; спектр AM1.5G не заявлен"
+D003,MS1,DV1;DV2,J-V,AM1.5G,100,mW/cm2,reverse,100 mV/s,true,false,,,,ambient,"Развёртка от 1.2 до −0.2 В (обратный ход), шаг 10 мВ; калибровка — Si-элемент Newport"
+D003,MS2,DV1;DV2,EQE,,,,,,,false,,,,,
+D003,MS3,DV2,MPP tracking,AM1.5G,100,mW/cm2,,,true,false,,,,,
+D003,MS4,DV1;DV2,stability,,,,,,,false,,,other,"dry air, RH = 10%, хранение",storage in dry air (протокол ISOS не назван)
+D004,MS1,DV1;DV2;DV3;DV4,J-V,,,,,,,false,,,,"open air, RH 70 ± 10%","Условия освещения, площадь и направление развёртки в статье не указаны"
+D005,MS1,DV1;DV2,J-V,AM1.5G,100,mW/cm2,reverse,,,false,,,,,"Keithley 2400, Amazing Light SS-F5-3A, калибровка Si-элементом; площадь не указана"
+D005,MS2,DV1;DV2,J-V,AM1.5G,100,mW/cm2,forward,,,false,,,,,"Keithley 2400, Amazing Light SS-F5-3A, калибровка Si-элементом; площадь не указана"
+D005,MS7,DV1;DV2,J-V,AM1.5G,100,mW/cm2,,,,false,,,,,"Keithley 2400, Amazing Light SS-F5-3A, калибровка Si-элементом; площадь не указана"
+D005,MS3,DV1;DV2,EQE,,,,,,,false,,,,,
+D005,MS4,DV1;DV2,MPP tracking,AM1.5G,100,mW/cm2,,,,false,,,,,200 s MPP tracking
+D005,MS5,DV1;DV2,stability,1 sun (100 mW/cm2),100,mW/cm2,,,,false,,,other,"непрерывное освещение 1 sun, MPP, без герметизации",continuous light soaking at MPP (протокол ISOS не назван)
+D005,MS6,DV1;DV2,stability,,,,,,,false,,85 °C,other,"85 °C, N2 (glovebox), без герметизации",thermal aging in N2 (протокол ISOS не назван)
+D007,MS1,DV1;DV2;DV3;DV4,J-V,,,,,,,false,,,,,Условия измерения — только в Supporting Information
+D007,MS2,DV1;DV2,stability,,,,,,,false,,RT,other,"15–20% RH, комнатная температура, измерение каждые 12 ч",не назван
+D008,MS1,DV1;DV2,J-V,1 sun (OAI TriSol Class AAA),100,mW/cm2,forward,step 20 mV,false,false,,,,,Спектр AM1.5G явно не назван; интенсивность «corrected by calculating the 1.2–1.28 sun shown on the run screen». Измерялись оба направления развёртки; значения в тексте названы «forward bias scan»
+D008,MS2,DV1;DV2;DV3,J-V,1 sun (OAI TriSol Class AAA),100,mW/cm2,,step 20 mV,false,false,,,,,Направление развёртки не указано
+D008,MS3,DV1;DV2,stability,,,,,,,false,,,other,хранение в перчаточном боксе N2 между измерениями,storage in N2 glovebox (протокол ISOS не назван)
+D009,MS1,DV1;DV2,J-V,AM1.5G,100,mW/cm2,,"step 0.01 V, delay 50 ms",true,false,,,,,"Снимались обе развёртки (1.0→−0.1 В и обратно); к какой относятся значения в тексте, не указано"
+D009,MS2,DV2,J-V,AM1.5G,100,mW/cm2,,"step 0.01 V, delay 50 ms",true,true,Shanghai Institute of Microsystem and Information Technology,,,,
+D009,MS3,DV1;DV2,MPP tracking,AM1.5G,100,mW/cm2,,,true,false,,,,,
+D009,MS4,DV2,EQE,,,,,,true,false,,,,,
+D009,MS5,DV1;DV2,stability,,,,,,,false,,35 ± 5 °C,other,"темнота, N2, 35 ± 5 °C","shelf storage, dark, N2 (протокол ISOS не назван)"
+D009,MS6,DV1;DV2,stability,white LED,100,mW/cm2,,,,false,,60 ± 5 °C,other,"непрерывное освещение LED 1 sun, разомкнутая цепь, N2, 60 ± 5 °C",continuous illumination at open circuit (протокол ISOS не назван)
+D010,MS1,DV1;DV2,J-V,AM1.5G,100,mW/cm2,,,,false,,,,,"94043A I-V Station, Newport 91160"
+D012,MS1,DV10;DV15;DV20;DV5,J-V,AM1.5G,100,mW/cm2,,,,false,,,,,Keithley 2400; площадь прибора не указана
+D013,MS1,DV0;DV100;DV40;DV60;DV80,J-V,1 sun,,,,,,false,,,,,Подробности измерений — в дополнительных материалах; спектр AM1.5G в основном тексте прямо не назван
+D013,MS2,DV40,J-V,,0,,,,,false,,,,,
+D014,MS1,DV1;DV2;DV3;DV4;DV5,J-V,AM1.5G (Xe lamp + filter),,,,,true,false,,,,после current/light soaking (2–3 V прямого смещения под освещением),Калибровка Si-фотодиодом с фильтром KG5; интенсивность явно не названа
+D015,MS1,DV-0;DV-10;DV-12;DV-6;DV-8;DV-bif;DV-ref,J-V,AM1.5G,100,mW/cm2,,,,false,,,,,
+D015,MS2,DV-bif,J-V,AM1.5G,100,mW/cm2,,,,false,,,,,
+D017,MS1,DV-G1;DV-G2;DV-I1;DV-I2;DV-I3;DV-I4;DV-O1;DV-O2;DV-O3;DV-R1;DV-R2,J-V,AM1.5G,1000,W/m2,,,,false,,25 °C,,,"Standard test conditions, ABA-class sun simulator, four-terminal Keithley 2400; 1000 W/m2 = 100 mW/cm2"
+D017,MS2,,EQE,,,,,,,false,,,,,"Chopped halogen light, bias light ~0.2 sun, calibrated Si cell"
+D018,MS1,DV1;DV2,J-V,AM1.5 (G не указано),,,,,false,false,,,,,Oriel Sol3A class AAA; интенсивность не названа
+D019,MS1,DV-R200;DV-R200-Mo;DV-T250;DV-T260;DV-T270;DV-T290;DV-T315-Mo,J-V,AM1.5 (в тексте «1.5AM»),,,,,,false,,,,,"Keithley 2400, Newport 94022A"
+D019,MS2,DV-T260,J-V,AM1.5 (в тексте «1.5AM»),,,,,,true,«external certified laboratory» (не названа),,,,
+D019,MS3,DV-T260,EQE,,,,,,,true,«external certified laboratory»,,,,
+D020,MS1,DV1;DV2;DV3;DV4,J-V,AM1.5G,100,mW/cm2,,,true,false,,,,ambient air,"Newport Oriel Sol 3A, калибровка Si-элементом"
+D021,MS1,DV-A1;DV-A2;DV-A3;DV-A4;DV-A5;DV-A6;DV-B1;DV-B2;DV-B3;DV-B4;DV-P0;DV-R0,J-V,AM1.5G,1000,W/m2,,,,false,,25 °C,,,"Standard test conditions; Keithley 2614B, ABET SUN 2000"
+D022,MS1,DV1;DV2;DV3;DV4;DV5,J-V,AM1.5G,,,,,true,false,,,,,"AAA simulator, калибровка NREL-сертифицированным Si-элементом; образец на тёмной матовой подложке"
+D022,MS2,DV1;DV2;DV5,,,,,,,,false,,,,,optical (UV–vis T/R)

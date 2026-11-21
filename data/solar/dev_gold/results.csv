@@ -1,0 +1,660 @@
+﻿publication_id,result_id,device_id,measurement_id,material_id,metric_name,metric_value,metric_unit,aggregation,spread_value,n_devices,time_point,time_unit,raw_value,raw_unit,normalized_value,normalized_unit,result_origin,cited_publication_id,source_page,source_section,source_table,source_figure,source_fragment,extraction_status,duplicate_of,note
+D001,R001,DV1,MS1,M1,Jsc,15.28,mA/cm2,,,,,,15.28,mA/cm2,15.28,mA/cm2,primary,,5,Results and Discussion,TABLE 1,FIGURE 5B,"Table 1, строка pristine",extracted,,"Тип агрегации в таблице не указан (вероятно, типичный прибор)"
+D001,R002,DV1,MS1,M1,Voc,1.197,V,,,,,,1197,mV,1.197,V,primary,,5,Results and Discussion,TABLE 1,FIGURE 5B,"Table 1, строка pristine",extracted,,"Тип агрегации в таблице не указан (вероятно, типичный прибор)"
+D001,R003,DV1,MS1,M1,FF,71.0,%,,,,,,0.71,fraction,71.0,%,primary,,5,Results and Discussion,TABLE 1,FIGURE 5B,"Table 1, строка pristine",extracted,,"Тип агрегации в таблице не указан (вероятно, типичный прибор)"
+D001,R004,DV1,MS1,M1,PCE,12.89,%,,,,,,12.89,%,12.89,%,primary,,5,Results and Discussion,TABLE 1,FIGURE 5B,"Table 1, строка pristine",extracted,,"Тип агрегации в таблице не указан (вероятно, типичный прибор)"
+D001,R005,DV2,MS1,M2,Jsc,15.37,mA/cm2,,,,,,15.37,mA/cm2,15.37,mA/cm2,primary,,5,Results and Discussion,TABLE 1,FIGURE 5B,"Table 1, строка 0.001 M SrCl2",extracted,,"Тип агрегации в таблице не указан (вероятно, типичный прибор)"
+D001,R006,DV2,MS1,M2,Voc,1.266,V,,,,,,1266,mV,1.266,V,primary,,5,Results and Discussion,TABLE 1,FIGURE 5B,"Table 1, строка 0.001 M SrCl2",extracted,,"Тип агрегации в таблице не указан (вероятно, типичный прибор)"
+D001,R007,DV2,MS1,M2,FF,70.0,%,,,,,,0.7,fraction,70.0,%,primary,,5,Results and Discussion,TABLE 1,FIGURE 5B,"Table 1, строка 0.001 M SrCl2",extracted,,"Тип агрегации в таблице не указан (вероятно, типичный прибор)"
+D001,R008,DV2,MS1,M2,PCE,13.55,%,,,,,,13.55,%,13.55,%,primary,,5,Results and Discussion,TABLE 1,FIGURE 5B,"Table 1, строка 0.001 M SrCl2",extracted,,"Тип агрегации в таблице не указан (вероятно, типичный прибор)"
+D001,R009,DV3,MS1,M3,Jsc,15.64,mA/cm2,,,,,,15.64,mA/cm2,15.64,mA/cm2,primary,,5,Results and Discussion,TABLE 1,FIGURE 5B,"Table 1, строка 0.005 M SrCl2",extracted,,"Тип агрегации в таблице не указан (вероятно, типичный прибор)"
+D001,R010,DV3,MS1,M3,Voc,1.278,V,,,,,,1278,mV,1.278,V,primary,,5,Results and Discussion,TABLE 1,FIGURE 5B,"Table 1, строка 0.005 M SrCl2",extracted,,"Тип агрегации в таблице не указан (вероятно, типичный прибор)"
+D001,R011,DV3,MS1,M3,FF,72.0,%,,,,,,0.72,fraction,72.0,%,primary,,5,Results and Discussion,TABLE 1,FIGURE 5B,"Table 1, строка 0.005 M SrCl2",extracted,,"Тип агрегации в таблице не указан (вероятно, типичный прибор)"
+D001,R012,DV3,MS1,M3,PCE,14.32,%,,,,,,14.32,%,14.32,%,primary,,5,Results and Discussion,TABLE 1,FIGURE 5B,"Table 1, строка 0.005 M SrCl2",extracted,,"Тип агрегации в таблице не указан (вероятно, типичный прибор)"
+D001,R013,DV4,MS1,M4,Jsc,15.67,mA/cm2,,,,,,15.67,mA/cm2,15.67,mA/cm2,primary,,5,Results and Discussion,TABLE 1,FIGURE 5B,"Table 1, строка 0.01 M SrCl2",extracted,,"Тип агрегации в таблице не указан (вероятно, типичный прибор)"
+D001,R014,DV4,MS1,M4,Voc,1.278,V,,,,,,1278,mV,1.278,V,primary,,5,Results and Discussion,TABLE 1,FIGURE 5B,"Table 1, строка 0.01 M SrCl2",extracted,,"Тип агрегации в таблице не указан (вероятно, типичный прибор)"
+D001,R015,DV4,MS1,M4,FF,73.0,%,,,,,,0.73,fraction,73.0,%,primary,,5,Results and Discussion,TABLE 1,FIGURE 5B,"Table 1, строка 0.01 M SrCl2",extracted,,"Тип агрегации в таблице не указан (вероятно, типичный прибор)"
+D001,R016,DV4,MS1,M4,PCE,14.61,%,,,,,,14.61,%,14.61,%,primary,,5,Results and Discussion,TABLE 1,FIGURE 5B,"Table 1, строка 0.01 M SrCl2",extracted,,"Тип агрегации в таблице не указан (вероятно, типичный прибор)"
+D001,R017,DV5,MS1,M5,Jsc,15.02,mA/cm2,,,,,,15.02,mA/cm2,15.02,mA/cm2,primary,,5,Results and Discussion,TABLE 1,FIGURE 5B,"Table 1, строка 0.05 M SrCl2",extracted,,"Тип агрегации в таблице не указан (вероятно, типичный прибор)"
+D001,R018,DV5,MS1,M5,Voc,1.163,V,,,,,,1163,mV,1.163,V,primary,,5,Results and Discussion,TABLE 1,FIGURE 5B,"Table 1, строка 0.05 M SrCl2",extracted,,"Тип агрегации в таблице не указан (вероятно, типичный прибор)"
+D001,R019,DV5,MS1,M5,FF,70.0,%,,,,,,0.7,fraction,70.0,%,primary,,5,Results and Discussion,TABLE 1,FIGURE 5B,"Table 1, строка 0.05 M SrCl2",extracted,,"Тип агрегации в таблице не указан (вероятно, типичный прибор)"
+D001,R020,DV5,MS1,M5,PCE,12.11,%,,,,,,12.11,%,12.11,%,primary,,5,Results and Discussion,TABLE 1,FIGURE 5B,"Table 1, строка 0.05 M SrCl2",extracted,,"Тип агрегации в таблице не указан (вероятно, типичный прибор)"
+D001,R021,DV4,MS1,M4,Jsc,15.75,mA/cm2,champion,,,,,15.75,mA/cm2,15.75,mA/cm2,primary,,5,Results and Discussion,TABLE 2,FIGURE 5C,"Table 2, строка FB–SC",extracted,,
+D001,R022,DV4,MS1,M4,Voc,1.322,V,champion,,,,,1322,mV,1.322,V,primary,,5,Results and Discussion,TABLE 2,FIGURE 5C,"Table 2, строка FB–SC",extracted,,
+D001,R023,DV4,MS1,M4,FF,77.0,%,champion,,,,,0.77,fraction,77.0,%,primary,,5,Results and Discussion,TABLE 2,FIGURE 5C,"Table 2, строка FB–SC",extracted,,
+D001,R024,DV4,MS1,M4,PCE,16.07,%,champion,,,,,16.07,%,16.07,%,primary,,5,Results and Discussion,TABLE 2,FIGURE 5C,"Table 2, строка FB–SC",extracted,,
+D001,R025,DV4,MS2,M4,Jsc,15.66,mA/cm2,champion,,,,,15.66,mA/cm2,15.66,mA/cm2,primary,,5,Results and Discussion,TABLE 2,FIGURE 5C,"Table 2, строка SC–FB",extracted,,
+D001,R026,DV4,MS2,M4,Voc,1.312,V,champion,,,,,1312,mV,1.312,V,primary,,5,Results and Discussion,TABLE 2,FIGURE 5C,"Table 2, строка SC–FB",extracted,,
+D001,R027,DV4,MS2,M4,FF,77.0,%,champion,,,,,0.77,fraction,77.0,%,primary,,5,Results and Discussion,TABLE 2,FIGURE 5C,"Table 2, строка SC–FB",extracted,,
+D001,R028,DV4,MS2,M4,PCE,15.73,%,champion,,,,,15.73,%,15.73,%,primary,,5,Results and Discussion,TABLE 2,FIGURE 5C,"Table 2, строка SC–FB",extracted,,
+D001,R029,DV1,MS1,M1,Jsc,15.69,mA/cm2,champion,,,,,15.69,mA/cm2,15.69,mA/cm2,primary,,5,Results and Discussion,,,"the best pristine sample exhibited a JSC of 15.69 mA cm−2, a VOC of 1,217 mV, a FF of 0.73, and a PCE of 13.66%",extracted,,Значения в тексте; таблица и кривая — в Supplementary Table S1 / Figure S1
+D001,R030,DV1,MS1,M1,Voc,1.217,V,champion,,,,,1217,mV,1.217,V,primary,,5,Results and Discussion,,,"the best pristine sample exhibited a JSC of 15.69 mA cm−2, a VOC of 1,217 mV, a FF of 0.73, and a PCE of 13.66%",extracted,,Значения в тексте; таблица и кривая — в Supplementary Table S1 / Figure S1
+D001,R031,DV1,MS1,M1,FF,73.0,%,champion,,,,,0.73,fraction,73.0,%,primary,,5,Results and Discussion,,,"the best pristine sample exhibited a JSC of 15.69 mA cm−2, a VOC of 1,217 mV, a FF of 0.73, and a PCE of 13.66%",extracted,,Значения в тексте; таблица и кривая — в Supplementary Table S1 / Figure S1
+D001,R032,DV1,MS1,M1,PCE,13.66,%,champion,,,,,13.66,%,13.66,%,primary,,5,Results and Discussion,,,"the best pristine sample exhibited a JSC of 15.69 mA cm−2, a VOC of 1,217 mV, a FF of 0.73, and a PCE of 13.66%",extracted,,Значения в тексте; таблица и кривая — в Supplementary Table S1 / Figure S1
+D001,R033,DV4,MS3,M4,Jmpp,14.39,mA/cm2,champion,,,,,14.39,mA/cm2,14.39,mA/cm2,primary,,5,Results and Discussion,,FIGURE 5D,"current density at the MPP was 14.39 mA cm−2 at a bias voltage of 1,100 mV, corresponding to an efficiency of 15.83%",extracted,,
+D001,R034,DV4,MS3,M4,Vmpp,1.1,V,champion,,,,,1100,mV,1.1,V,primary,,5,Results and Discussion,,FIGURE 5D,"current density at the MPP was 14.39 mA cm−2 at a bias voltage of 1,100 mV, corresponding to an efficiency of 15.83%",extracted,,
+D001,R035,DV4,MS3,M4,stabilized_PCE,15.83,%,champion,,,,,15.83,%,15.83,%,primary,,5,Results and Discussion,,FIGURE 5D,"current density at the MPP was 14.39 mA cm−2 at a bias voltage of 1,100 mV, corresponding to an efficiency of 15.83%",extracted,,
+D001,R036,DV1,MS3,M1,Jmpp,13.47,mA/cm2,champion,,,,,13.47,mA/cm2,13.47,mA/cm2,primary,,5,Results and Discussion,,Supplementary Figure S2,"The current density at the MPP was 13.47 mA cm−2 at a bias voltage of 960 mV, corresponding to an efficiency of 12.93%",extracted,,Прибор в тексте не назван; отнесён к контрольному по порядку изложения и ссылке на Fig. S2
+D001,R037,DV1,MS3,M1,Vmpp,0.96,V,champion,,,,,960,mV,0.96,V,primary,,5,Results and Discussion,,Supplementary Figure S2,"The current density at the MPP was 13.47 mA cm−2 at a bias voltage of 960 mV, corresponding to an efficiency of 12.93%",extracted,,Прибор в тексте не назван; отнесён к контрольному по порядку изложения и ссылке на Fig. S2
+D001,R038,DV1,MS3,M1,stabilized_PCE,12.93,%,champion,,,,,12.93,%,12.93,%,primary,,5,Results and Discussion,,Supplementary Figure S2,"The current density at the MPP was 13.47 mA cm−2 at a bias voltage of 960 mV, corresponding to an efficiency of 12.93%",extracted,,Прибор в тексте не назван; отнесён к контрольному по порядку изложения и ссылке на Fig. S2
+D001,R039,DV4,MS4,M4,Jsc_EQE,15.37,mA/cm2,champion,,,,,15.37,mA/cm2,15.37,mA/cm2,primary,,5,Results and Discussion,,Supplementary Figure S3,integration of the EQE spectrum yields the photocurrent of 15.37 mA cm−2 for the 0.01 M SrCl2–doped device and 15.24 mA cm−2 for the pristine device,extracted,,
+D001,R040,DV1,MS4,M1,Jsc_EQE,15.24,mA/cm2,champion,,,,,15.24,mA/cm2,15.24,mA/cm2,primary,,5,Results and Discussion,,Supplementary Figure S3,integration of the EQE spectrum yields the photocurrent of 15.37 mA cm−2 for the 0.01 M SrCl2–doped device and 15.24 mA cm−2 for the pristine device,extracted,,
+D001,R041,DV1,MS1,M1,PCE,14.66,%,mean,,20,,,14.66,%,14.66,%,primary,,5,Results and Discussion,,FIGURE 5E,"the mean PCEs of pristine and SrCl2-doped devices are 14.66 and 12.96%, respectively",extracted,,"«20 individual PSCs based on pristine and 0.01 M SrCl2–doped» — неясно, 20 на группу или всего"
+D001,R042,DV4,MS1,M4,PCE,12.96,%,mean,,20,,,12.96,%,12.96,%,primary,,5,Results and Discussion,,FIGURE 5E,"the mean PCEs of pristine and SrCl2-doped devices are 14.66 and 12.96%, respectively",extracted,,"«20 individual PSCs based on pristine and 0.01 M SrCl2–doped» — неясно, 20 на группу или всего"
+D001,R043,DV6,MS1,M6,Voc,1.245,V,,,,,,1245,mV,1.245,V,primary,,5,Results and Discussion,,FIGURE 5F,"The VOC of the NiCl2-doped device increased to 1,245 mV, yielding a PCE of 13.83%",extracted,,На рис. 5F — «typical devices»; полные параметры в Supplementary Table S2
+D001,R044,DV6,MS1,M6,PCE,13.83,%,,,,,,13.83,%,13.83,%,primary,,5,Results and Discussion,,FIGURE 5F,"The VOC of the NiCl2-doped device increased to 1,245 mV, yielding a PCE of 13.83%",extracted,,На рис. 5F — «typical devices»; полные параметры в Supplementary Table S2
+D001,R045,DV6,MS1,M6,Jsc,,,,,,,,,,,,primary,,5,Results and Discussion,,,Supplementary Table S2,present_not_extractable,,"Значение есть только в дополнительных материалах, которых нет в PDF"
+D001,R046,DV6,MS1,M6,FF,,,,,,,,,,,,primary,,5,Results and Discussion,,,Supplementary Table S2,present_not_extractable,,"Значение есть только в дополнительных материалах, которых нет в PDF"
+D001,R047,,,,PCE,19,%,,,,,,19,%,19,%,cited,"Bai et al., 2018; Wang et al., 2019a; Wang et al., 2019b; Straus et al., 2019; Tan et al., 2019",1,Introduction,,,whose PCEs have reached 19% with benign thermal endurance,extracted,,"Рекорд для класса CsPbX3 из литературы, не результат авторов"
+D002,R001,DV1,MS1,M1,Voc,0.855,V,,,,,,0.855,V,0.855,V,primary,,5,3.3 The Current and Voltage Testing,Table 1,Figure 7,"Table 1, строка NiO",extracted,,"«Note those equivalent PCE parameters and data statistics obtained from 100 different cells» — не ясно, одиночные ли это приборы или статистика по 100 ячейкам"
+D002,R002,DV1,MS1,M1,Jsc,14.8,mA/cm2,,,,,,14.8,mA/cm2,14.8,mA/cm2,primary,,5,3.3 The Current and Voltage Testing,Table 1,Figure 7,"Table 1, строка NiO",extracted,,"«Note those equivalent PCE parameters and data statistics obtained from 100 different cells» — не ясно, одиночные ли это приборы или статистика по 100 ячейкам"
+D002,R003,DV1,MS1,M1,FF,61.64,%,,,,,,61.64,%,61.64,%,primary,,5,3.3 The Current and Voltage Testing,Table 1,Figure 7,"Table 1, строка NiO",extracted,,"«Note those equivalent PCE parameters and data statistics obtained from 100 different cells» — не ясно, одиночные ли это приборы или статистика по 100 ячейкам"
+D002,R004,DV1,MS1,M1,PCE,7.8,%,,,,,,7.8,%,7.8,%,primary,,5,3.3 The Current and Voltage Testing,Table 1,Figure 7,"Table 1, строка NiO",extracted,,"«Note those equivalent PCE parameters and data statistics obtained from 100 different cells» — не ясно, одиночные ли это приборы или статистика по 100 ячейкам"
+D002,R005,DV2,MS1,M1,Voc,0.982,V,,,,,,0.982,V,0.982,V,primary,,5,3.3 The Current and Voltage Testing,Table 1,Figure 7,"Table 1, строка NiO/GO",extracted,,"«Note those equivalent PCE parameters and data statistics obtained from 100 different cells» — не ясно, одиночные ли это приборы или статистика по 100 ячейкам"
+D002,R006,DV2,MS1,M1,Jsc,17.9,mA/cm2,,,,,,17.9,mA/cm2,17.9,mA/cm2,primary,,5,3.3 The Current and Voltage Testing,Table 1,Figure 7,"Table 1, строка NiO/GO",extracted,,"«Note those equivalent PCE parameters and data statistics obtained from 100 different cells» — не ясно, одиночные ли это приборы или статистика по 100 ячейкам"
+D002,R007,DV2,MS1,M1,FF,87.04,%,,,,,,87.04,%,87.04,%,primary,,5,3.3 The Current and Voltage Testing,Table 1,Figure 7,"Table 1, строка NiO/GO",extracted,,"«Note those equivalent PCE parameters and data statistics obtained from 100 different cells» — не ясно, одиночные ли это приборы или статистика по 100 ячейкам"
+D002,R008,DV2,MS1,M1,PCE,15.3,%,,,,,,15.3,%,15.3,%,primary,,5,3.3 The Current and Voltage Testing,Table 1,Figure 7,"Table 1, строка NiO/GO",extracted,,"«Note those equivalent PCE parameters and data statistics obtained from 100 different cells» — не ясно, одиночные ли это приборы или статистика по 100 ячейкам"
+D002,R008-1,DV2,MS1,M1,PCE,15.3,%,,,,,,15.3,%,15.3,%,primary,,1,,,,better power conversion efficiency of 15.3%,extracted,R008,повторное упоминание
+D002,R008-2,DV2,MS1,M1,PCE,15.3,%,,,,,,15.3,%,15.3,%,primary,,5,,,,NiO/GO and NiO are 15.3% and 7.8%,extracted,R008,повторное упоминание
+D002,R009,,,,PCE,11.65,%,,,,,,11.65,%,11.65,%,cited,ref. [11],1,1 Introduction,,,"low power conversion efficiency (i.e., 11.65%)",extracted,,PCE прибора с PEDOT:PSS из литературы
+D002,R010,,,,PCE,13.5,%,,,,,,13.5,%,13.5,%,cited,ref. [12],1,1 Introduction,,,"higher PCE than PEDOT:PSS (i.e., 13.5%)",extracted,,PCE прибора со Spiro-OMeTAD из литературы
+D003,R001,DV2,MS1,M1,Voc,1.14,V,champion,,,,,1.14,V,1.14,V,primary,,6,2 Results and Discussion,,FIGURE 5C,Y-Sn3O4 ETL show a VOC of 1.14 V,extracted,,
+D003,R002,DV2,MS1,M1,Jsc,24.89,mA/cm2,champion,,,,,24.89,mA/cm2,24.89,mA/cm2,primary,,6,2 Results and Discussion,,FIGURE 5C,a JSC of 24.89 mA/cm2,extracted,,
+D003,R003,DV2,MS1,M1,FF,81.2,%,champion,,,,,0.812,fraction,81.2,%,primary,,6,2 Results and Discussion,,FIGURE 5C,an FF of 0.812,extracted,,
+D003,R004,DV2,MS1,M1,PCE,23.05,%,champion,,,,,23.05,%,23.05,%,primary,,6,2 Results and Discussion,,FIGURE 5C,corresponding to a PCE of 23.05%,extracted,,
+D003,R004-1,DV2,MS1,M1,PCE,23.05,%,champion,,,,,23.05,%,23.05,%,primary,,1,,,,boosted to 23.05%,extracted,R004,повторное упоминание
+D003,R005,DV1,MS1,M1,PCE,21.39,%,champion,,,,,21.39,%,21.39,%,primary,,6,2 Results and Discussion,,FIGURE 5C,undoped Sn3O4 ETL shows a PCE of 21.39%,extracted,,
+D003,R006,DV1,MS1,M1,Voc,1.11,V,champion,,,,,1.11,V,1.11,V,primary,,6,2 Results and Discussion,,FIGURE 5C,with a VOC of 1.11 V,extracted,,
+D003,R007,DV1,MS1,M1,Jsc,24.23,mA/cm2,champion,,,,,24.23,mA/cm2,24.23,mA/cm2,primary,,6,2 Results and Discussion,,FIGURE 5C,a JSC of 24.23 mA,extracted,,
+D003,R008,DV1,MS1,M1,FF,79.5,%,champion,,,,,0.795,fraction,79.5,%,primary,,6,2 Results and Discussion,,FIGURE 5C,and an FF of 0.795,extracted,,
+D003,R009,DV1,MS1,M1,Rs,3.15,Ohm*cm2,champion,,,,,3.15,Ohm*cm2,3.15,Ohm*cm2,primary,,6,2 Results and Discussion,,,the calculated Rs for Sn3O4,extracted,,Rs рассчитано авторами по ВАХ
+D003,R010,DV2,MS1,M1,Rs,2.66,Ohm*cm2,champion,,,,,2.66,Ohm*cm2,2.66,Ohm*cm2,primary,,6,2 Results and Discussion,,,Y-Sn3O4 are 3.15 and 2.66,extracted,,Rs рассчитано авторами по ВАХ
+D003,R011,DV1,MS1,M1,HI,8.9,%,,,,,,0.089,fraction,8.9,%,primary,,6,2 Results and Discussion,,Figure S14,hysteresis index (HI) from 0.089 to 0.034,extracted,,
+D003,R012,DV2,MS1,M1,HI,3.4,%,,,,,,0.034,fraction,3.4,%,primary,,6,2 Results and Discussion,,Figure S14,hysteresis index (HI) from 0.089 to 0.034,extracted,,
+D003,R013,DV1,MS2,M1,Jsc_EQE,24.0,mA/cm2,champion,,,,,24.0,mA/cm2,24.0,mA/cm2,primary,,6,2 Results and Discussion,,FIGURE 5D,are 24.0 and 23.5,extracted,,"«The integrated current densities are 24.0 and 23.5 mA cm−2, respectively» для Sn3O4 и Y-Sn3O4"
+D003,R014,DV2,MS2,M1,Jsc_EQE,23.5,mA/cm2,champion,,,,,23.5,mA/cm2,23.5,mA/cm2,primary,,6,2 Results and Discussion,,FIGURE 5D,are 24.0 and 23.5,extracted,,"«The integrated current densities are 24.0 and 23.5 mA cm−2, respectively» для Sn3O4 и Y-Sn3O4"
+D003,R015,DV2,MS3,M1,stabilized_PCE,23.0,%,champion,,,,,23.0,%,23.0,%,primary,,6,2 Results and Discussion,,FIGURE 5E,average steady-state output efficiency at the maximum power point is 23.0%,extracted,,Среднее по времени выхода на MPP для лучшего прибора
+D003,R016,DV1,MS4,M1,retained_PCE,93,%,,,,1000,h,93,%,93,%,primary,,7,2 Results and Discussion,,FIGURE 5F,remained 93% of the initial efficiency for 1000 h,extracted,,
+D003,R017,DV2,MS4,M1,retained_PCE,93,%,,,,1000,h,93,%,93,%,primary,,7,2 Results and Discussion,,FIGURE 5F,remained 93% of the initial efficiency for 1000 h,extracted,,
+D003,R018,,,,PCE,20.12,%,,,,,,20.12,%,20.12,%,cited,ref. 13,1,1 Introduction,,,obtaining a PCE of 20.12%,extracted,,Результат другой работы с иным ETL
+D003,R019,,,,PCE,21.7,%,,,,,,21.7,%,21.7,%,cited,ref. 14,2,1 Introduction,,,and an improved PCE of 21.7%,extracted,,Результат другой работы с иным ETL
+D003,R020,,,,PCE,20.14,%,,,,,,20.14,%,20.14,%,cited,ref. 15,2,1 Introduction,,,finally achieve a PCE of 20.14%,extracted,,Результат другой работы с иным ETL
+D004,R001,DV1,MS1,M1,Voc,0.818,V,,,,,,0.818,V,0.818,V,primary,,11,3.3 Photoconversion Efficiency,Table 1,Figure 8,"Table 1, строка ED",extracted,,"Для Voc, Jsc, FF не указано, относятся ли они к лучшему прибору или к среднему"
+D004,R002,DV1,MS1,M1,Jsc,9.344,mA/cm2,,,,,,9.344,mA/cm2,9.344,mA/cm2,primary,,11,3.3 Photoconversion Efficiency,Table 1,Figure 8,"Table 1, строка ED",extracted,,"Для Voc, Jsc, FF не указано, относятся ли они к лучшему прибору или к среднему"
+D004,R003,DV1,MS1,M1,FF,57.49,%,,,,,,57.49,%,57.49,%,primary,,11,3.3 Photoconversion Efficiency,Table 1,Figure 8,"Table 1, строка ED",extracted,,"Для Voc, Jsc, FF не указано, относятся ли они к лучшему прибору или к среднему"
+D004,R004,DV1,MS1,M1,PCE,4.39,%,mean,0.81,,,,4.39,%,4.39,%,primary,,11,3.3 Photoconversion Efficiency,Table 1,Figure 8,"Table 1, строка ED",extracted,,Запись «среднее ± разброс (максимум)»; число приборов не указано
+D004,R005,DV1,MS1,M1,PCE,5.23,%,champion,,,,,5.23,%,5.23,%,primary,,11,3.3 Photoconversion Efficiency,Table 1,Figure 8,"Table 1, строка ED",extracted,,Значение в скобках интерпретировано как максимальное
+D004,R006,DV2,MS1,M1,Voc,1.009,V,,,,,,1.009,V,1.009,V,primary,,11,3.3 Photoconversion Efficiency,Table 1,Figure 8,"Table 1, строка BCC-ED",extracted,,"Для Voc, Jsc, FF не указано, относятся ли они к лучшему прибору или к среднему"
+D004,R007,DV2,MS1,M1,Jsc,19.61,mA/cm2,,,,,,19.61,mA/cm2,19.61,mA/cm2,primary,,11,3.3 Photoconversion Efficiency,Table 1,Figure 8,"Table 1, строка BCC-ED",extracted,,"Для Voc, Jsc, FF не указано, относятся ли они к лучшему прибору или к среднему"
+D004,R008,DV2,MS1,M1,FF,47.79,%,,,,,,47.79,%,47.79,%,primary,,11,3.3 Photoconversion Efficiency,Table 1,Figure 8,"Table 1, строка BCC-ED",extracted,,"Для Voc, Jsc, FF не указано, относятся ли они к лучшему прибору или к среднему"
+D004,R009,DV2,MS1,M1,PCE,9.46,%,mean,0.58,,,,9.46,%,9.46,%,primary,,11,3.3 Photoconversion Efficiency,Table 1,Figure 8,"Table 1, строка BCC-ED",extracted,,Запись «среднее ± разброс (максимум)»; число приборов не указано
+D004,R010,DV2,MS1,M1,PCE,10.21,%,champion,,,,,10.21,%,10.21,%,primary,,11,3.3 Photoconversion Efficiency,Table 1,Figure 8,"Table 1, строка BCC-ED",extracted,,Значение в скобках интерпретировано как максимальное
+D004,R011,DV3,MS1,M1,Voc,0.943,V,,,,,,0.943,V,0.943,V,primary,,11,3.3 Photoconversion Efficiency,Table 1,Figure 8,"Table 1, строка C-ED-1",extracted,,"Для Voc, Jsc, FF не указано, относятся ли они к лучшему прибору или к среднему"
+D004,R012,DV3,MS1,M1,Jsc,19.664,mA/cm2,,,,,,19.664,mA/cm2,19.664,mA/cm2,primary,,11,3.3 Photoconversion Efficiency,Table 1,Figure 8,"Table 1, строка C-ED-1",extracted,,"Для Voc, Jsc, FF не указано, относятся ли они к лучшему прибору или к среднему"
+D004,R013,DV3,MS1,M1,FF,56.07,%,,,,,,56.07,%,56.07,%,primary,,11,3.3 Photoconversion Efficiency,Table 1,Figure 8,"Table 1, строка C-ED-1",extracted,,"Для Voc, Jsc, FF не указано, относятся ли они к лучшему прибору или к среднему"
+D004,R014,DV3,MS1,M1,PCE,9.9,%,mean,1.03,,,,9.9,%,9.9,%,primary,,11,3.3 Photoconversion Efficiency,Table 1,Figure 8,"Table 1, строка C-ED-1",extracted,,Запись «среднее ± разброс (максимум)»; число приборов не указано
+D004,R015,DV3,MS1,M1,PCE,10.32,%,champion,,,,,10.32,%,10.32,%,primary,,11,3.3 Photoconversion Efficiency,Table 1,Figure 8,"Table 1, строка C-ED-1",extracted,,Значение в скобках интерпретировано как максимальное
+D004,R016,DV4,MS1,M1,Voc,1.05,V,,,,,,1.05,V,1.05,V,primary,,11,3.3 Photoconversion Efficiency,Table 1,Figure 8,"Table 1, строка C-ED-2",extracted,,"Для Voc, Jsc, FF не указано, относятся ли они к лучшему прибору или к среднему"
+D004,R017,DV4,MS1,M1,Jsc,18.65,mA/cm2,,,,,,18.65,mA/cm2,18.65,mA/cm2,primary,,11,3.3 Photoconversion Efficiency,Table 1,Figure 8,"Table 1, строка C-ED-2",extracted,,"Для Voc, Jsc, FF не указано, относятся ли они к лучшему прибору или к среднему"
+D004,R017-1,DV4,MS1,M1,Jsc,18.65,mA/cm2,,,,,,18.65,mA/cm2,18.65,mA/cm2,primary,,1,,,,density of 18.65 mA/cm2,extracted,R017,повторное упоминание
+D004,R018,DV4,MS1,M1,FF,58.66,%,,,,,,58.66,%,58.66,%,primary,,11,3.3 Photoconversion Efficiency,Table 1,Figure 8,"Table 1, строка C-ED-2",extracted,,"Для Voc, Jsc, FF не указано, относятся ли они к лучшему прибору или к среднему"
+D004,R018-1,DV4,MS1,M1,FF,58.66,%,,,,,,58.66,%,58.66,%,primary,,1,,,,fill factor of 58.66%,extracted,R018,повторное упоминание
+D004,R019,DV4,MS1,M1,PCE,11.46,%,mean,0.66,,,,11.46,%,11.46,%,primary,,11,3.3 Photoconversion Efficiency,Table 1,Figure 8,"Table 1, строка C-ED-2",extracted,,Запись «среднее ± разброс (максимум)»; число приборов не указано
+D004,R019-1,DV4,MS1,M1,PCE,11.46,%,mean,0.66,,,,11.46,%,11.46,%,primary,,1,,,,efficiency (PEC) of 11.46%,extracted,R019,повторное упоминание
+D004,R019-2,DV4,MS1,M1,PCE,11.46,%,mean,0.66,,,,11.46,%,11.46,%,primary,,11,,,,C-ED-assisted synthesis at low temperature,extracted,R019,повторное упоминание
+D004,R020,DV4,MS1,M1,PCE,12.13,%,champion,,,,,12.13,%,12.13,%,primary,,11,3.3 Photoconversion Efficiency,Table 1,Figure 8,"Table 1, строка C-ED-2",extracted,,Значение в скобках интерпретировано как максимальное
+D004,R021,,,,PCE,13.1,%,,,,,,13.1,%,13.1,%,cited,[24],11,3.3 Photoconversion Efficiency,Table 2,,"Table 2, строка [24]",extracted,,"FTO/MoS2/perovskite/po-spiro-OMeTAD/Au, MoS2 by microwave irradiation"
+D004,R022,,,,PCE,12.12,%,,,,,,12.12,%,12.12,%,cited,[38],11,3.3 Photoconversion Efficiency,Table 2,,"Table 2, строка [38]",extracted,,FTO/BL-(MoS2/TETA-GR)/MAPbI3/PTAA/Au
+D004,R023,,,,PCE,16.17,%,,,,,,16.17,%,16.17,%,cited,[39],11,3.3 Photoconversion Efficiency,Table 2,,"Table 2, строка [39]",extracted,,"FTO/MoS2 nanosheets/perovskite/po-spiro-OMeTAD/Au, electrospray"
+D004,R024,,,,PCE,14.42,%,,,,,,14.42,%,14.42,%,cited,[40],11,3.3 Photoconversion Efficiency,Table 2,,"Table 2, строка [40]",extracted,,"Graphene/MoS2/MAPbI3/PTAA/Au, CVD MoS2"
+D004,R025,,,,PCE,3.36,%,,,,,,3.36,%,3.36,%,cited,[25],11,3.3 Photoconversion Efficiency,Table 2,,"Table 2, строка [25]",extracted,,"FTO/MoS2/perovskite/po-spiro-OMeTAD/Au, ultrasonic spray pyrolysis"
+D004,R026,,,,PCE,4.3,%,,,,,,4.3,%,4.3,%,cited,[36],11,3.3 Photoconversion Efficiency,Table 2,,"Table 2, строка [36]",extracted,,ITO/NC(TiO2/MoS2)/MAPbI3/spiro-OMeTAD/Au
+D004,R027,,,,PCE,10.1,%,,,,,,10.1,%,10.1,%,cited,[35],11,3.3 Photoconversion Efficiency,Table 2,,"Table 2, строка [35]",extracted,,ITO/ZnO:MoS2/PTB7-TH:PC71BM/MoO3/Ag — органический элемент
+D005,R001,DV1,MS2,M1,Jsc,25.5,mA/cm2,champion,,,,,25.5,mA/cm2,25.5,mA/cm2,primary,,6,Results,Table 2,Fig. 3B,"Table 2, строка Spiro-OMeTAD Forward",extracted,,
+D005,R002,DV1,MS2,M1,Voc,1.13,V,champion,,,,,1.13,V,1.13,V,primary,,6,Results,Table 2,Fig. 3B,"Table 2, строка Spiro-OMeTAD Forward",extracted,,
+D005,R003,DV1,MS2,M1,FF,77.96,%,champion,,,,,77.96,%,77.96,%,primary,,6,Results,Table 2,Fig. 3B,"Table 2, строка Spiro-OMeTAD Forward",extracted,,
+D005,R004,DV1,MS2,M1,PCE,22.47,%,champion,,,,,22.47,%,22.47,%,primary,,6,Results,Table 2,Fig. 3B,"Table 2, строка Spiro-OMeTAD Forward",extracted,,
+D005,R005,DV1,MS1,M1,Jsc,25.51,mA/cm2,champion,,,,,25.51,mA/cm2,25.51,mA/cm2,primary,,6,Results,Table 2,Fig. 3B,"Table 2, строка Spiro-OMeTAD Reverse",extracted,,
+D005,R006,DV1,MS1,M1,Voc,1.15,V,champion,,,,,1.15,V,1.15,V,primary,,6,Results,Table 2,Fig. 3B,"Table 2, строка Spiro-OMeTAD Reverse",extracted,,
+D005,R007,DV1,MS1,M1,FF,78.2,%,champion,,,,,78.2,%,78.2,%,primary,,6,Results,Table 2,Fig. 3B,"Table 2, строка Spiro-OMeTAD Reverse",extracted,,
+D005,R008,DV1,MS1,M1,PCE,22.95,%,champion,,,,,22.95,%,22.95,%,primary,,6,Results,Table 2,Fig. 3B,"Table 2, строка Spiro-OMeTAD Reverse",extracted,,
+D005,R009,DV2,MS2,M1,Jsc,26.24,mA/cm2,champion,,,,,26.24,mA/cm2,26.24,mA/cm2,primary,,6,Results,Table 2,Fig. 3B,"Table 2, строка SF-MPA-MCz Forward",extracted,,
+D005,R010,DV2,MS2,M1,Voc,1.17,V,champion,,,,,1.17,V,1.17,V,primary,,6,Results,Table 2,Fig. 3B,"Table 2, строка SF-MPA-MCz Forward",extracted,,
+D005,R011,DV2,MS2,M1,FF,79.1,%,champion,,,,,79.1,%,79.1,%,primary,,6,Results,Table 2,Fig. 3B,"Table 2, строка SF-MPA-MCz Forward",extracted,,
+D005,R012,DV2,MS2,M1,PCE,24.28,%,champion,,,,,24.28,%,24.28,%,primary,,6,Results,Table 2,Fig. 3B,"Table 2, строка SF-MPA-MCz Forward",extracted,,
+D005,R013,DV2,MS1,M1,Jsc,26.24,mA/cm2,champion,,,,,26.24,mA/cm2,26.24,mA/cm2,primary,,6,Results,Table 2,Fig. 3B,"Table 2, строка SF-MPA-MCz Reverse",extracted,,
+D005,R014,DV2,MS1,M1,Voc,1.18,V,champion,,,,,1.18,V,1.18,V,primary,,6,Results,Table 2,Fig. 3B,"Table 2, строка SF-MPA-MCz Reverse",extracted,,
+D005,R015,DV2,MS1,M1,FF,79.22,%,champion,,,,,79.22,%,79.22,%,primary,,6,Results,Table 2,Fig. 3B,"Table 2, строка SF-MPA-MCz Reverse",extracted,,
+D005,R016,DV2,MS1,M1,PCE,24.53,%,champion,,,,,24.53,%,24.53,%,primary,,6,Results,Table 2,Fig. 3B,"Table 2, строка SF-MPA-MCz Reverse",extracted,,
+D005,R016-1,DV2,MS1,M1,PCE,24.53,%,champion,,,,,24.53,%,24.53,%,primary,,1,,,,remarkable power conversion efficiency (PCE) of 24.53%,extracted,R016,повторное упоминание
+D005,R016-2,DV2,MS1,M1,PCE,24.53,%,champion,,,,,24.53,%,24.53,%,primary,,5,,,,PCE of 24.53% with JSC of 26.24,extracted,R016,повторное упоминание
+D005,R017,DV1,MS7,M1,PCE,22.262,%,mean,0.381,20,,,22.262,%,22.262,%,primary,,6,Results,Table 2,Fig. 3D,"Table 2, столбец PCE(AVG), Spiro-OMeTAD",extracted,,Направление развёртки для среднего не указано
+D005,R018,DV2,MS7,M1,PCE,24.409,%,mean,0.07,20,,,24.409,%,24.409,%,primary,,6,Results,Table 2,Fig. 3D,"Table 2, столбец PCE(AVG), SF-MPA-MCz",extracted,,Направление развёртки для среднего не указано
+D005,R019,DV1,MS3,M1,Jsc_EQE,25.41,mA/cm2,champion,,,,,25.41,mA/cm2,25.41,mA/cm2,primary,,5,Results,,Fig. 3C,25.41 and 25.73 mA,extracted,,
+D005,R020,DV2,MS3,M1,Jsc_EQE,25.73,mA/cm2,champion,,,,,25.73,mA/cm2,25.73,mA/cm2,primary,,5,Results,,Fig. 3C,25.41 and 25.73 mA,extracted,,
+D005,R021,DV2,MS4,M1,stabilized_PCE,24.37,%,champion,,,,,24.37,%,24.37,%,primary,,6,Results,,Fig. 3E,"efficiency of 24.37%, higher than that of Spiro-OMeTAD",extracted,,
+D005,R022,DV1,MS4,M1,stabilized_PCE,22.36,%,champion,,,,,22.36,%,22.36,%,primary,,6,Results,,Fig. 3E,(22.36%),extracted,,
+D005,R023,DV2,MS5,M1,retained_PCE,90,%,,,,500,h,90,%,90,%,primary,,8,Stability assessment,,Fig. 5A,maintain more than 90% PCE after 500 h,extracted,,
+D005,R024,DV1,MS5,M1,retained_PCE,50,%,,,,500,h,50,%,50,%,primary,,8,Stability assessment,,Fig. 5A,drops to about ~50% under the same conditions,extracted,,
+D005,R025,DV2,MS6,M1,retained_PCE,85,%,,,,1000,h,85,%,85,%,primary,,8,Stability assessment,,Fig. 5B,"than 85% PCE can be maintained after 1,000 h",extracted,,
+D005,R026,DV1,MS6,M1,retained_PCE,0,%,,,,300,h,0,%,0,%,primary,,8,Stability assessment,,Fig. 5B,cannot work after heating for 300 h,extracted,,«cannot work» — прибор перестал работать; записано как 0 % с пометкой ~
+D005,R027,,,,PCE,26,%,,,,,,26,%,26,%,cited,"refs. [1,2]",1,Introduction,,,from 3.8% to over 26%,extracted,,Рост рекордного КПД перовскитов по литературе
+D005,R028,,,,PCE,3.8,%,,,,,,3.8,%,3.8,%,cited,"refs. [1,2]",1,Introduction,,,from 3.8% to over 26%,extracted,,Первый перовскитный элемент по литературе
+D007,R001,DV2,MS1,M1,PCE,22.97,%,,,,,,22.97,%,22.97,%,primary,,6,2 Results and Discussion,,FIGURE 8a,achieved a PCE of,extracted,,Кривые названы «typical»
+D007,R002,DV2,MS1,M1,Jsc,24.29,mA/cm2,,,,,,24.29,mA/cm2,24.29,mA/cm2,primary,,6,2 Results and Discussion,,FIGURE 8a,"24.29 mA cm−2, an open-circuit voltage",extracted,,Кривые названы «typical»
+D007,R003,DV2,MS1,M1,Voc,1.179,V,,,,,,1.179,V,1.179,V,primary,,6,2 Results and Discussion,,FIGURE 8a,(VOC) of 1.179 V,extracted,,Кривые названы «typical»
+D007,R004,DV2,MS1,M1,FF,80.2,%,,,,,,80.2,%,80.2,%,primary,,6,2 Results and Discussion,,FIGURE 8a,fill factor (FF) of 80.2%,extracted,,Кривые названы «typical»
+D007,R005,DV1,MS1,M1,PCE,22.8,%,,,,,,22.8,%,22.8,%,primary,,6,2 Results and Discussion,,FIGURE 8a,"22.8%, with a JSC of 24.69",extracted,,Кривые названы «typical»
+D007,R006,DV1,MS1,M1,Jsc,24.69,mA/cm2,,,,,,24.69,mA/cm2,24.69,mA/cm2,primary,,6,2 Results and Discussion,,FIGURE 8a,"22.8%, with a JSC of 24.69",extracted,,Кривые названы «typical»
+D007,R007,DV1,MS1,M1,Voc,1.14,V,,,,,,1.14,V,1.14,V,primary,,6,2 Results and Discussion,,FIGURE 8a,a VOC of 1.14 V,extracted,,Кривые названы «typical»
+D007,R008,DV1,MS1,M1,FF,81,%,,,,,,81,%,81,%,primary,,6,2 Results and Discussion,,FIGURE 8a,FF of 81%,extracted,,Кривые названы «typical»
+D007,R009,DV3,MS1,M1,PCE,19.99,%,,,,,,19.99,%,19.99,%,primary,,6,2 Results and Discussion,,FIGURE 8b,an impressive PCE of 19.99%,extracted,,
+D007,R010,DV3,MS1,M1,Jsc,2.59,mA/cm2,,,,,,2.59,mA/cm2,2.59,mA/cm2,primary,,6,2 Results and Discussion,,FIGURE 8b,with a JSC of 2.59 mA cm−2,extracted,,
+D007,R011,DV3,MS1,M1,Voc,9.399,V,,,,,,9.399,V,9.399,V,primary,,6,2 Results and Discussion,,FIGURE 8b,of 9.399 V,extracted,,
+D007,R012,DV3,MS1,M1,FF,82.1,%,,,,,,82.1,%,82.1,%,primary,,6,2 Results and Discussion,,FIGURE 8b,an FF of 82.1%,extracted,,
+D007,R013,DV4,MS1,M1,PCE,19.1,%,,,,,,19.1,%,19.1,%,primary,,6,2 Results and Discussion,,FIGURE 8b,PCEs of 19.1% achieved by module,extracted,,
+D007,R014,DV2,MS2,M1,retained_PCE,90,%,,,,1000,h,90,%,90,%,primary,,6,2 Results and Discussion,,FIGURE 8d,retained more than 90% of its initial PCE,extracted,,
+D007,R015,DV1,MS2,M1,retained_PCE,80,%,,,,1000,h,80,%,80,%,primary,,6,2 Results and Discussion,,FIGURE 8d,decline of over 20%,extracted,,«PCE decline of over 20%» записано как сохранение менее 80 %
+D008,R001,DV2,MS1,M2,PCE,18.5,%,champion,,,,,18.5,%,18.5,%,primary,,5,3 Results and discussion,,Fig. 3a,PCE of 18.5% in the forward bias,extracted,,
+D008,R001-1,DV2,MS1,M2,PCE,18.5,%,champion,,,,,18.5,%,18.5,%,primary,,1,,,,yields a PCE of 18.5% with a cell area of 0.09,extracted,R001,повторное упоминание
+D008,R002,DV2,MS1,M2,Voc,1.001,V,champion,,,,,1.001,V,1.001,V,primary,,5,3 Results and discussion,,Fig. 3a,PCE of 18.5% in the forward bias,extracted,,
+D008,R003,DV2,MS1,M2,Jsc,23.75,mA/cm2,champion,,,,,23.75,mA/cm2,23.75,mA/cm2,primary,,5,3 Results and discussion,,Fig. 3a,PCE of 18.5% in the forward bias,extracted,,
+D008,R004,DV2,MS1,M2,FF,78.5,%,champion,,,,,78.5,%,78.5,%,primary,,5,3 Results and discussion,,Fig. 3a,PCE of 18.5% in the forward bias,extracted,,
+D008,R005,DV1,MS1,M1,PCE,15.8,%,champion,,,,,15.8,%,15.8,%,primary,,5,3 Results and discussion,,Fig. 3a,to 15.8% for the sample w/o PbCl2,extracted,,
+D008,R006,DV1,MS1,M1,Voc,0.85,V,champion,,,,,0.85,V,0.85,V,primary,,5,3 Results and discussion,,Fig. 3a,to 15.8% for the sample w/o PbCl2,extracted,,"Единица в тексте не указана («Voc = 0.85»), принята В"
+D008,R007,DV1,MS1,M1,Jsc,23.88,mA/cm2,champion,,,,,23.88,mA/cm2,23.88,mA/cm2,primary,,5,3 Results and discussion,,Fig. 3a,to 15.8% for the sample w/o PbCl2,extracted,,
+D008,R008,DV1,MS1,M1,FF,76.3,%,champion,,,,,76.3,%,76.3,%,primary,,5,3 Results and discussion,,Fig. 3a,to 15.8% for the sample w/o PbCl2,extracted,,
+D008,R009,DV3,MS2,M2,PCE,17.06,%,champion,,,,,17.06,%,17.06,%,primary,,1,Abstract,,,achieving champion PCEs of 17.06%,extracted,,Направление развёртки не указано; параметры ВАХ — в Table S5
+D008,R009-1,DV3,MS2,M2,PCE,17.06,%,champion,,,,,17.06,%,17.06,%,primary,,2,,,,highest PCE of,extracted,R009,повторное упоминание
+D008,R010,DV3,MS2,M2,Voc,,,champion,,,,,,,,,primary,,7,3 Results and discussion,,,reported in Table S5,present_not_extractable,,Значения только в дополнительных материалах (Table S5)
+D008,R011,DV3,MS2,M2,Jsc,,,champion,,,,,,,,,primary,,7,3 Results and discussion,,,reported in Table S5,present_not_extractable,,Значения только в дополнительных материалах (Table S5)
+D008,R012,DV3,MS2,M2,FF,,,champion,,,,,,,,,primary,,7,3 Results and discussion,,,reported in Table S5,present_not_extractable,,Значения только в дополнительных материалах (Table S5)
+D008,R013,DV1,MS2,M1,PCE,15.0,%,mean,,20,,,15.0,%,15.0,%,primary,,6,3 Results and discussion,,Fig. 3b,approximately 15.0% and 17.6%,extracted,,
+D008,R014,DV2,MS2,M2,PCE,17.6,%,mean,,20,,,17.6,%,17.6,%,primary,,6,3 Results and discussion,,Fig. 3b,approximately 15.0% and 17.6%,extracted,,
+D008,R015,DV1,MS3,M1,retained_PCE,77,%,,,,30,day,77,%,77,%,primary,,7,3 Results and discussion,,Fig. 3d,retained 77% and 88% of their initial,extracted,,
+D008,R016,DV2,MS3,M2,retained_PCE,88,%,,,,30,day,88,%,88,%,primary,,7,3 Results and discussion,,Fig. 3d,retained 77% and 88% of their initial,extracted,,
+D008,R017,,,,PCE,26.4,%,,,,,,26.4,%,26.4,%,cited,ref. 5,1,1 Introduction,,,PCE) of 26.4%,extracted,,Рекорд PSC с напылённым поглотителем
+D008,R018,,,,PCE,20,%,,,,,,20,%,20,%,cited,ref. 6,1,1 Introduction,,,have demonstrated a PCE above 20%,extracted,,Полностью напылённые PSC
+D008,R019,,,,PCE,21.3,%,,,,,,21.3,%,21.3,%,cited,ref. 29 (Feng et al.),2,1 Introduction,,,a champion eﬃciency of 21.3%,extracted,,"Последовательное напыление, n-i-p"
+D008,R020,,,,PCE,24,%,,,,,,24,%,24,%,cited,ref. 17 (Li et al.),2,1 Introduction,,,eﬃciency exceeding 24%,extracted,,"Соиспарение + напыление FAI, n-i-p"
+D009,R001,DV2,MS1,M2,PCE,17.13,%,champion,,,,,17.13,%,17.13,%,primary,,4,Photovoltaic performance and device stability,,Fig. 3b,device delivered a high PCE of,extracted,,
+D009,R001-1,DV2,MS1,M2,PCE,17.13,%,champion,,,,,17.13,%,17.13,%,primary,,1,,,,excellent power conversion efficiency of 17.13%,extracted,R001,повторное упоминание
+D009,R001-2,DV2,MS1,M2,PCE,17.13,%,champion,,,,,17.13,%,17.13,%,primary,,5,,,,PCE achieved in the laboratory (17.13%),extracted,R001,повторное упоминание
+D009,R002,DV2,MS1,M2,Voc,0.99,V,champion,,,,,0.99,V,0.99,V,primary,,4,Photovoltaic performance and device stability,,Fig. 3b,device delivered a high PCE of,extracted,,
+D009,R003,DV2,MS1,M2,Jsc,23.07,mA/cm2,champion,,,,,23.07,mA/cm2,23.07,mA/cm2,primary,,4,Photovoltaic performance and device stability,,Fig. 3b,device delivered a high PCE of,extracted,,
+D009,R004,DV2,MS1,M2,FF,74.83,%,champion,,,,,74.83,%,74.83,%,primary,,4,Photovoltaic performance and device stability,,Fig. 3b,device delivered a high PCE of,extracted,,
+D009,R005,DV1,MS1,M1,PCE,13.49,%,champion,,,,,13.49,%,13.49,%,primary,,4,Photovoltaic performance and device stability,,Fig. 3b,whereas the best Cs0 device achieved only a modest PCE of 13.49%,extracted,,
+D009,R006,DV2,MS3,M2,stabilized_PCE,17.04,%,champion,,,,,17.04,%,17.04,%,primary,,4,Photovoltaic performance and device stability,,Fig. 3b (inset),stabilized PCE of 17.04%,extracted,,
+D009,R007,DV1,MS3,M1,stabilized_PCE,13.31,%,champion,,,,,13.31,%,13.31,%,primary,,4,Photovoltaic performance and device stability,,Fig. 3b (inset),higher than that (13.31%) of the Cs0 device,extracted,,
+D009,R008,DV2,MS3,M2,Vmpp,0.85,V,champion,,,,,0.85,V,0.85,V,primary,,5,,,Fig. 3b,tracked at 0.73,extracted,,"Напряжение, при котором отслеживалась мощность"
+D009,R009,DV1,MS3,M1,Vmpp,0.73,V,champion,,,,,0.73,V,0.73,V,primary,,5,,,Fig. 3b,tracked at 0.73,extracted,,
+D009,R010,DV2,MS4,M2,Jsc_EQE,22.34,mA/cm2,champion,,,,,22.34,mA/cm2,22.34,mA/cm2,primary,,4,,,Fig. 3c,integrated Jsc of 22.34 mA cm−2,extracted,,
+D009,R011,DV2,MS1,M2,PCE,16.57,%,mean,0.34,20,,,16.57,%,16.57,%,primary,,4,,,Fig. 3d,highest average PCE of 16.57 ± 0.34%,extracted,,20 приборов на условие из разных партий
+D009,R012,DV2,MS2,M2,PCE,16.65,%,champion,,,,,16.65,%,16.65,%,primary,,4,,,"Fig. 3e; Supplementary Figs. 14, 15",certified PCE of 16.65%,extracted,,
+D009,R012-1,DV2,MS2,M2,PCE,16.65,%,champion,,,,,16.65,%,16.65,%,primary,,1,,,,(certified 16.65%),extracted,R012,повторное упоминание
+D009,R013,DV2,MS1,M2,HI,2.95,%,mean,,,,,2.95,%,2.95,%,primary,,5,,,,hysteresis index of 2.95%,extracted,,Среднее по целевым приборам (Supplementary Fig. 16)
+D009,R014,DV2,MS5,M2,retained_PCE,93.3,%,,,,6000,h,93.3,%,93.3,%,primary,,5,Photovoltaic performance and device stability,,Fig. 3f,retaining 93.3% of the initial PCE,extracted,,
+D009,R014-1,DV2,MS5,M2,retained_PCE,93.3,%,,,,6000,h,93.3,%,93.3,%,primary,,2,,,,retaining 93.3% and 92.0% of their initial peak PCEs,extracted,R014,повторное упоминание
+D009,R015,DV2,MS5,M2,PCE,16.39,%,,,,0,h,16.39,%,16.39,%,primary,,5,,,Fig. 3f,12.73% for Cs0 and 16.39% for Cs5,extracted,,"Начальный КПД прибора, поставленного на хранение"
+D009,R016,DV1,MS5,M1,PCE,12.73,%,,,,0,h,12.73,%,12.73,%,primary,,5,,,Fig. 3f,12.73% for Cs0 and 16.39% for Cs5,extracted,,"Начальный КПД прибора, поставленного на хранение"
+D009,R017,DV2,MS6,M2,retained_PCE,92.0,%,,,,1500,h,92.0,%,92.0,%,primary,,5,Photovoltaic performance and device stability,,Fig. 3g,"maintained 92.0% of the original PCE after 1,500 h",extracted,,
+D009,R017-1,DV2,MS6,M2,retained_PCE,92.0,%,,,,1500,h,92.0,%,92.0,%,primary,,2,,,,retaining 93.3% and 92.0% of their initial peak PCEs,extracted,R017,повторное упоминание
+D009,R018,DV2,MS6,M2,PCE,17.09,%,,,,0,h,17.09,%,17.09,%,primary,,5,,,Fig. 3g,12.55% for Cs0 and 17.09% for Cs5,extracted,,Начальный КПД прибора для испытания под освещением
+D009,R019,DV1,MS6,M1,PCE,12.55,%,,,,0,h,12.55,%,12.55,%,primary,,5,,,Fig. 3g,12.55% for Cs0 and 17.09% for Cs5,extracted,,Начальный КПД прибора для испытания под освещением
+D010,R001,DV1,MS1,M1,Voc,0.296,V,,,,,,296,mV,0.296,V,primary,,9,3. Results and Discussion,Table 3,Figure 7a,"Table 3, строка CZTSSe",extracted,,
+D010,R002,DV1,MS1,M1,Jsc,26.42,mA/cm2,,,,,,26.42,mA/cm2,26.42,mA/cm2,primary,,9,3. Results and Discussion,Table 3,Figure 7a,"Table 3, строка CZTSSe",extracted,,
+D010,R003,DV1,MS1,M1,Rs,30.37,Ohm*cm2,,,,,,30.37,Ohm*cm2,30.37,Ohm*cm2,primary,,9,3. Results and Discussion,Table 3,Figure 7a,"Table 3, строка CZTSSe",extracted,,
+D010,R004,DV1,MS1,M1,Rsh,130.8,Ohm*cm2,,,,,,130.8,Ohm*cm2,130.8,Ohm*cm2,primary,,9,3. Results and Discussion,Table 3,Figure 7a,"Table 3, строка CZTSSe",extracted,,
+D010,R005,DV1,MS1,M1,FF,35.16,%,,,,,,35.16,%,35.16,%,primary,,9,3. Results and Discussion,Table 3,Figure 7a,"Table 3, строка CZTSSe",extracted,,
+D010,R006,DV1,MS1,M1,PCE,2.75,%,,,,,,2.75,%,2.75,%,primary,,9,3. Results and Discussion,Table 3,Figure 7a,"Table 3, строка CZTSSe",extracted,,
+D010,R007,DV2,MS1,M3,Voc,0.338,V,champion,,,,,338,mV,0.338,V,primary,,9,3. Results and Discussion,Table 3,Figure 7a,"Table 3, строка (Na0.1Cu0.9)2ZnSn(S,Se)4",extracted,,
+D010,R008,DV2,MS1,M3,Jsc,27.16,mA/cm2,champion,,,,,27.16,mA/cm2,27.16,mA/cm2,primary,,9,3. Results and Discussion,Table 3,Figure 7a,"Table 3, строка (Na0.1Cu0.9)2ZnSn(S,Se)4",extracted,,
+D010,R009,DV2,MS1,M3,Rs,17.58,Ohm*cm2,champion,,,,,17.58,Ohm*cm2,17.58,Ohm*cm2,primary,,9,3. Results and Discussion,Table 3,Figure 7a,"Table 3, строка (Na0.1Cu0.9)2ZnSn(S,Se)4",extracted,,
+D010,R010,DV2,MS1,M3,Rsh,279.05,Ohm*cm2,champion,,,,,279.05,Ohm*cm2,279.05,Ohm*cm2,primary,,9,3. Results and Discussion,Table 3,Figure 7a,"Table 3, строка (Na0.1Cu0.9)2ZnSn(S,Se)4",extracted,,
+D010,R011,DV2,MS1,M3,FF,52.59,%,champion,,,,,52.59,%,52.59,%,primary,,9,3. Results and Discussion,Table 3,Figure 7a,"Table 3, строка (Na0.1Cu0.9)2ZnSn(S,Se)4",extracted,,
+D010,R012,DV2,MS1,M3,PCE,4.82,%,champion,,,,,4.82,%,4.82,%,primary,,9,3. Results and Discussion,Table 3,Figure 7a,"Table 3, строка (Na0.1Cu0.9)2ZnSn(S,Se)4",extracted,,В аннотации — «the best power conversion efficiency»
+D010,R012-1,DV2,MS1,M3,PCE,4.82,%,champion,,,,,4.82,%,4.82,%,primary,,1,,,,the best power conversion efficiency (PCE) of 4.82%,extracted,R012,повторное упоминание
+D010,R012-2,DV2,MS1,M3,PCE,4.82,%,champion,,,,,4.82,%,4.82,%,primary,,10,,,,achieving a PCE of 4.82%,extracted,R012,повторное упоминание
+D010,R013,,,,PCE,12.62,%,,,,,,12.62,%,12.62,%,cited,[7],1,1. Introduction,,,highest reported PCE of 12.62%,extracted,,Рекорд CZTS-based по литературе
+D010,R014,,,,PCE,32.2,%,,,,,,32.2,%,32.2,%,cited,[8],1,1. Introduction,,,theoretical PCE of 32.2%,extracted,,"Теоретический предел, а не измерение"
+D010,R015,,,,PCE,22.9,%,,,,,,22.9,%,22.9,%,cited,[9],1,1. Introduction,,,the PCE (22.9%) of CuInGaSe2,extracted,,КПД CIGSe по литературе
+D012,R001,DV5,MS1,M5,Voc,0.432,V,,,,,,432,mV,0.432,V,primary,,12,3. Results and Discussion,Table 2,Figure 10,"Table 2, строка DIO-5 mg/mL",extracted,,
+D012,R002,DV5,MS1,M5,Jsc,11.74,mA/cm2,,,,,,11.74,mA/cm2,11.74,mA/cm2,primary,,12,3. Results and Discussion,Table 2,Figure 10,"Table 2, строка DIO-5 mg/mL",extracted,,
+D012,R003,DV5,MS1,M5,FF,61.3,%,,,,,,61.3,%,61.3,%,primary,,12,3. Results and Discussion,Table 2,Figure 10,"Table 2, строка DIO-5 mg/mL",extracted,,
+D012,R004,DV5,MS1,M5,PCE,2.36,%,,,,,,2.36,%,2.36,%,primary,,12,3. Results and Discussion,Table 2,Figure 10,"Table 2, строка DIO-5 mg/mL",extracted,,
+D012,R005,DV5,MS1,M5,Rs,23.37,Ohm*cm2,,,,,,23.37,Ohm*cm2,23.37,Ohm*cm2,primary,,12,3. Results and Discussion,Table 2,Figure 10,"Table 2, строка DIO-5 mg/mL",extracted,,
+D012,R006,DV5,MS1,M5,Rsh,443.2,Ohm*cm2,,,,,,443.2,Ohm*cm2,443.2,Ohm*cm2,primary,,12,3. Results and Discussion,Table 2,Figure 10,"Table 2, строка DIO-5 mg/mL",extracted,,
+D012,R007,DV10,MS1,M10,Voc,0.433,V,,,,,,433,mV,0.433,V,primary,,12,3. Results and Discussion,Table 2,Figure 10,"Table 2, строка DIO-10 mg/mL",extracted,,
+D012,R008,DV10,MS1,M10,Jsc,14.35,mA/cm2,,,,,,14.35,mA/cm2,14.35,mA/cm2,primary,,12,3. Results and Discussion,Table 2,Figure 10,"Table 2, строка DIO-10 mg/mL",extracted,,
+D012,R009,DV10,MS1,M10,FF,63.3,%,,,,,,63.3,%,63.3,%,primary,,12,3. Results and Discussion,Table 2,Figure 10,"Table 2, строка DIO-10 mg/mL",extracted,,
+D012,R010,DV10,MS1,M10,PCE,3.84,%,,,,,,3.84,%,3.84,%,primary,,12,3. Results and Discussion,Table 2,Figure 10,"Table 2, строка DIO-10 mg/mL",extracted,,
+D012,R011,DV10,MS1,M10,Rs,21.44,Ohm*cm2,,,,,,21.44,Ohm*cm2,21.44,Ohm*cm2,primary,,12,3. Results and Discussion,Table 2,Figure 10,"Table 2, строка DIO-10 mg/mL",extracted,,
+D012,R012,DV10,MS1,M10,Rsh,635.6,Ohm*cm2,,,,,,635.6,Ohm*cm2,635.6,Ohm*cm2,primary,,12,3. Results and Discussion,Table 2,Figure 10,"Table 2, строка DIO-10 mg/mL",extracted,,
+D012,R013,DV15,MS1,M15,Voc,0.445,V,,,,,,445,mV,0.445,V,primary,,12,3. Results and Discussion,Table 2,Figure 10,"Table 2, строка DIO-15 mg/mL",extracted,,
+D012,R014,DV15,MS1,M15,Jsc,15.88,mA/cm2,,,,,,15.88,mA/cm2,15.88,mA/cm2,primary,,12,3. Results and Discussion,Table 2,Figure 10,"Table 2, строка DIO-15 mg/mL",extracted,,
+D012,R015,DV15,MS1,M15,FF,64.1,%,,,,,,64.1,%,64.1,%,primary,,12,3. Results and Discussion,Table 2,Figure 10,"Table 2, строка DIO-15 mg/mL",extracted,,
+D012,R016,DV15,MS1,M15,PCE,4.52,%,,,,,,4.52,%,4.52,%,primary,,12,3. Results and Discussion,Table 2,Figure 10,"Table 2, строка DIO-15 mg/mL",extracted,,
+D012,R017,DV15,MS1,M15,Rs,16.25,Ohm*cm2,,,,,,16.25,Ohm*cm2,16.25,Ohm*cm2,primary,,12,3. Results and Discussion,Table 2,Figure 10,"Table 2, строка DIO-15 mg/mL",extracted,,
+D012,R018,DV15,MS1,M15,Rsh,774.4,Ohm*cm2,,,,,,774.4,Ohm*cm2,774.4,Ohm*cm2,primary,,12,3. Results and Discussion,Table 2,Figure 10,"Table 2, строка DIO-15 mg/mL",extracted,,
+D012,R019,DV20,MS1,M20,Voc,0.456,V,champion,,,,,456,mV,0.456,V,primary,,12,3. Results and Discussion,Table 2,Figure 10,"Table 2, строка DIO-20 mg/mL",extracted,,
+D012,R020,DV20,MS1,M20,Jsc,16.44,mA/cm2,champion,,,,,16.44,mA/cm2,16.44,mA/cm2,primary,,12,3. Results and Discussion,Table 2,Figure 10,"Table 2, строка DIO-20 mg/mL",extracted,,
+D012,R021,DV20,MS1,M20,FF,64.3,%,champion,,,,,64.3,%,64.3,%,primary,,12,3. Results and Discussion,Table 2,Figure 10,"Table 2, строка DIO-20 mg/mL",extracted,,
+D012,R022,DV20,MS1,M20,PCE,4.82,%,champion,,,,,4.82,%,4.82,%,primary,,12,3. Results and Discussion,Table 2,Figure 10,"Table 2, строка DIO-20 mg/mL",extracted,,
+D012,R022-1,DV20,MS1,M20,PCE,4.82,%,champion,,,,,4.82,%,4.82,%,primary,,1,,,,providing a conversion efficiency of 4.82%,extracted,R022,повторное упоминание
+D012,R022-2,DV20,MS1,M20,PCE,4.82,%,champion,,,,,4.82,%,4.82,%,primary,,11,,,,exhibited a Jsc of 16.44,extracted,R022,повторное упоминание
+D012,R023,DV20,MS1,M20,Rs,14.27,Ohm*cm2,champion,,,,,14.27,Ohm*cm2,14.27,Ohm*cm2,primary,,12,3. Results and Discussion,Table 2,Figure 10,"Table 2, строка DIO-20 mg/mL",extracted,,
+D012,R024,DV20,MS1,M20,Rsh,958.6,Ohm*cm2,champion,,,,,958.6,Ohm*cm2,958.6,Ohm*cm2,primary,,12,3. Results and Discussion,Table 2,Figure 10,"Table 2, строка DIO-20 mg/mL",extracted,,
+D012,R025,,,,PCE,7.99,%,,,,,,7.99,%,7.99,%,cited,[15],2,1. Introduction,,,An efficiency of 7.99% has been recorded,extracted,,Электроосаждённый CZTS по литературе
+D013,R001,DV0,MS1,M0,Jsc,32.89,mA/cm2,champion,,,,,32.89,mA/cm2,32.89,mA/cm2,primary,,6,3. Results and discussion,Table 3,Fig. 6a,"Table 3, столбец 0Ge",extracted,,
+D013,R002,DV0,MS1,M0,Voc,0.527,V,champion,,,,,527,mV,0.527,V,primary,,6,3. Results and discussion,Table 3,Fig. 6a,"Table 3, столбец 0Ge",extracted,,
+D013,R003,DV0,MS1,M0,FF,65.93,%,champion,,,,,65.93,%,65.93,%,primary,,6,3. Results and discussion,Table 3,Fig. 6a,"Table 3, столбец 0Ge",extracted,,
+D013,R004,DV0,MS1,M0,PCE,11.42,%,champion,,,,,11.42,%,11.42,%,primary,,6,3. Results and discussion,Table 3,Fig. 6a,"Table 3, столбец 0Ge",extracted,,
+D013,R005,DV40,MS1,M40,Jsc,31.59,mA/cm2,champion,,,,,31.59,mA/cm2,31.59,mA/cm2,primary,,6,3. Results and discussion,Table 3,Fig. 6a,"Table 3, столбец 40Ge",extracted,,
+D013,R006,DV40,MS1,M40,Voc,0.592,V,champion,,,,,592,mV,0.592,V,primary,,6,3. Results and discussion,Table 3,Fig. 6a,"Table 3, столбец 40Ge",extracted,,
+D013,R007,DV40,MS1,M40,FF,64.89,%,champion,,,,,64.89,%,64.89,%,primary,,6,3. Results and discussion,Table 3,Fig. 6a,"Table 3, столбец 40Ge",extracted,,
+D013,R008,DV40,MS1,M40,PCE,12.13,%,champion,,,,,12.13,%,12.13,%,primary,,6,3. Results and discussion,Table 3,Fig. 6a,"Table 3, столбец 40Ge",extracted,,
+D013,R008-1,DV40,MS1,M40,PCE,12.13,%,champion,,,,,12.13,%,12.13,%,primary,,1,,,,champion efficiency of 12.1 % obtained,extracted,R008,повторное упоминание
+D013,R008-2,DV40,MS1,M40,PCE,12.13,%,champion,,,,,12.13,%,12.13,%,primary,,6,,,,The optimal composition appears to be 40Ge,extracted,R008,повторное упоминание
+D013,R009,DV60,MS1,M60,Jsc,27.48,mA/cm2,champion,,,,,27.48,mA/cm2,27.48,mA/cm2,primary,,6,3. Results and discussion,Table 3,Fig. 6a,"Table 3, столбец 60Ge",extracted,,
+D013,R010,DV60,MS1,M60,Voc,0.618,V,champion,,,,,618,mV,0.618,V,primary,,6,3. Results and discussion,Table 3,Fig. 6a,"Table 3, столбец 60Ge",extracted,,
+D013,R011,DV60,MS1,M60,FF,55.78,%,champion,,,,,55.78,%,55.78,%,primary,,6,3. Results and discussion,Table 3,Fig. 6a,"Table 3, столбец 60Ge",extracted,,
+D013,R012,DV60,MS1,M60,PCE,9.47,%,champion,,,,,9.47,%,9.47,%,primary,,6,3. Results and discussion,Table 3,Fig. 6a,"Table 3, столбец 60Ge",extracted,,
+D013,R013,DV80,MS1,M80,Jsc,22.12,mA/cm2,champion,,,,,22.12,mA/cm2,22.12,mA/cm2,primary,,6,3. Results and discussion,Table 3,Fig. 6a,"Table 3, столбец 80Ge",extracted,,
+D013,R014,DV80,MS1,M80,Voc,0.65,V,champion,,,,,650,mV,0.65,V,primary,,6,3. Results and discussion,Table 3,Fig. 6a,"Table 3, столбец 80Ge",extracted,,
+D013,R015,DV80,MS1,M80,FF,45.06,%,champion,,,,,45.06,%,45.06,%,primary,,6,3. Results and discussion,Table 3,Fig. 6a,"Table 3, столбец 80Ge",extracted,,
+D013,R016,DV80,MS1,M80,PCE,6.48,%,champion,,,,,6.48,%,6.48,%,primary,,6,3. Results and discussion,Table 3,Fig. 6a,"Table 3, столбец 80Ge",extracted,,
+D013,R017,DV100,MS1,M100,Jsc,20.35,mA/cm2,champion,,,,,20.35,mA/cm2,20.35,mA/cm2,primary,,6,3. Results and discussion,Table 3,Fig. 6a,"Table 3, столбец 100Ge",extracted,,
+D013,R018,DV100,MS1,M100,Voc,0.647,V,champion,,,,,647,mV,0.647,V,primary,,6,3. Results and discussion,Table 3,Fig. 6a,"Table 3, столбец 100Ge",extracted,,
+D013,R019,DV100,MS1,M100,FF,41.21,%,champion,,,,,41.21,%,41.21,%,primary,,6,3. Results and discussion,Table 3,Fig. 6a,"Table 3, столбец 100Ge",extracted,,
+D013,R020,DV100,MS1,M100,PCE,5.43,%,champion,,,,,5.43,%,5.43,%,primary,,6,3. Results and discussion,Table 3,Fig. 6a,"Table 3, столбец 100Ge",extracted,,
+D013,R021,DV40,MS2,M40,Rsh,47600.0,Ohm*cm2,champion,,,,,47600.0,Ohm*cm2,47600.0,Ohm*cm2,primary,,6,,,Fig. 7b,Rsh = 4.76*10,extracted,,Из темновой ВАХ лучшего прибора 40Ge
+D013,R022,,,,PCE,14,%,,,,,,14,%,14,%,cited,[16–19],2,1. Introduction,,,reach beyond 14 %,extracted,,КПД кестеритов по литературе
+D014,R001,DV1,MS1,M1,Voc,0.676,V,champion,,,,,0.676,V,0.676,V,primary,,4,3. Results and discussion,Table 1,Figure 1e,"Table 1, строка spin-coating",extracted,,
+D014,R002,DV1,MS1,M1,Jsc,23.4,mA/cm2,champion,,,,,23.4,mA/cm2,23.4,mA/cm2,primary,,4,3. Results and discussion,Table 1,Figure 1e,"Table 1, строка spin-coating",extracted,,
+D014,R003,DV1,MS1,M1,PCE,11.6,%,champion,,,,,11.6,%,11.6,%,primary,,4,3. Results and discussion,Table 1,Figure 1e,"Table 1, строка spin-coating",extracted,,
+D014,R004,DV1,MS1,M1,FF,73.2,%,champion,,,,,73.2,%,73.2,%,primary,,4,3. Results and discussion,Table 1,Figure 1e,"Table 1, строка spin-coating",extracted,,
+D014,R005,DV1,MS1,M1,Rs,2.4,Ohm*cm2,champion,,,,,2.4,Ohm*cm2,2.4,Ohm*cm2,primary,,4,3. Results and discussion,Table 1,Figure 1e,"Table 1, строка spin-coating",extracted,,
+D014,R006,DV1,MS1,M1,Rsh,1440.0,Ohm*cm2,champion,,,,,1440.0,Ohm*cm2,1440.0,Ohm*cm2,primary,,4,3. Results and discussion,Table 1,Figure 1e,"Table 1, строка spin-coating",extracted,,
+D014,R007,DV2,MS1,M1,Voc,0.697,V,champion,,,,,0.697,V,0.697,V,primary,,4,3. Results and discussion,Table 1,Figure 1e,"Table 1, строка doctor-blading",extracted,,
+D014,R008,DV2,MS1,M1,Jsc,23.4,mA/cm2,champion,,,,,23.4,mA/cm2,23.4,mA/cm2,primary,,4,3. Results and discussion,Table 1,Figure 1e,"Table 1, строка doctor-blading",extracted,,
+D014,R009,DV2,MS1,M1,PCE,10.9,%,champion,,,,,10.9,%,10.9,%,primary,,4,3. Results and discussion,Table 1,Figure 1e,"Table 1, строка doctor-blading",extracted,,
+D014,R010,DV2,MS1,M1,FF,66.8,%,champion,,,,,66.8,%,66.8,%,primary,,4,3. Results and discussion,Table 1,Figure 1e,"Table 1, строка doctor-blading",extracted,,
+D014,R011,DV2,MS1,M1,Rs,3.5,Ohm*cm2,champion,,,,,3.5,Ohm*cm2,3.5,Ohm*cm2,primary,,4,3. Results and discussion,Table 1,Figure 1e,"Table 1, строка doctor-blading",extracted,,
+D014,R012,DV2,MS1,M1,Rsh,380.0,Ohm*cm2,champion,,,,,380.0,Ohm*cm2,380.0,Ohm*cm2,primary,,4,3. Results and discussion,Table 1,Figure 1e,"Table 1, строка doctor-blading",extracted,,
+D014,R013,DV3,MS1,M1,Voc,0.686,V,champion,,,,,0.686,V,0.686,V,primary,,4,3. Results and discussion,Table 1,Figure 1e,"Table 1, строка spray-coating",extracted,,
+D014,R014,DV3,MS1,M1,Jsc,23.0,mA/cm2,champion,,,,,23.0,mA/cm2,23.0,mA/cm2,primary,,4,3. Results and discussion,Table 1,Figure 1e,"Table 1, строка spray-coating",extracted,,
+D014,R015,DV3,MS1,M1,PCE,10.4,%,champion,,,,,10.4,%,10.4,%,primary,,4,3. Results and discussion,Table 1,Figure 1e,"Table 1, строка spray-coating",extracted,,
+D014,R016,DV3,MS1,M1,FF,65.9,%,champion,,,,,65.9,%,65.9,%,primary,,4,3. Results and discussion,Table 1,Figure 1e,"Table 1, строка spray-coating",extracted,,
+D014,R017,DV3,MS1,M1,Rs,3.6,Ohm*cm2,champion,,,,,3.6,Ohm*cm2,3.6,Ohm*cm2,primary,,4,3. Results and discussion,Table 1,Figure 1e,"Table 1, строка spray-coating",extracted,,
+D014,R018,DV3,MS1,M1,Rsh,630.0,Ohm*cm2,champion,,,,,630.0,Ohm*cm2,630.0,Ohm*cm2,primary,,4,3. Results and discussion,Table 1,Figure 1e,"Table 1, строка spray-coating",extracted,,
+D014,R019,DV4,MS1,M1,PCE,11.4,%,champion,,,,,11.4,%,11.4,%,primary,,6,3. Results and discussion,,Figure 4e,maximum PCE of 11.4% upon,extracted,,
+D014,R020,DV4,MS1,M1,Voc,0.701,V,champion,,,,,701,mV,0.701,V,primary,,6,3. Results and discussion,,Figure 4e,maximum PCE of 11.4% upon,extracted,,
+D014,R021,DV4,MS1,M1,Jsc,22.9,mA/cm2,champion,,,,,22.9,mA/cm2,22.9,mA/cm2,primary,,6,3. Results and discussion,,Figure 4e,maximum PCE of 11.4% upon,extracted,,
+D014,R022,DV4,MS1,M1,FF,71,%,champion,,,,,71,%,71,%,primary,,6,3. Results and discussion,,Figure 4e,maximum PCE of 11.4% upon,extracted,,
+D014,R023,DV5,MS1,M1,PCE,10.4,%,champion,,,,,10.4,%,10.4,%,primary,,7,3. Results and discussion,,Figure 5c,The best PCE achieved,extracted,,
+D014,R023-1,DV5,MS1,M1,PCE,10.4,%,champion,,,,,10.4,%,10.4,%,primary,,1,,,,yielding devices that reach 10.4% power conversion,extracted,R023,повторное упоминание
+D014,R024,DV5,MS1,M1,Voc,0.697,V,champion,,,,,697,mV,0.697,V,primary,,7,3. Results and discussion,,Figure 5c,The best PCE achieved,extracted,,
+D014,R025,DV5,MS1,M1,Jsc,22.2,mA/cm2,champion,,,,,22.2,mA/cm2,22.2,mA/cm2,primary,,7,3. Results and discussion,,Figure 5c,The best PCE achieved,extracted,,
+D014,R026,DV5,MS1,M1,FF,67,%,champion,,,,,67,%,67,%,primary,,7,3. Results and discussion,,Figure 5c,The best PCE achieved,extracted,,
+D014,R027,,,,PCE,2.3,%,,,,,,2.3,%,2.3,%,cited,ref. 25 (Foos et al.),1,1. Introduction,,,resulting in a PCE of,extracted,,"Распылённые CdTe НК, диод Шоттки"
+D014,R028,,,,PCE,3.0,%,,,,,,3.0,%,3.0,%,cited,ref. 26 (Townsend et al.),1,1. Introduction,,,further improved the device PCE to,extracted,,Гетеропереход с ZnO
+D015,R001,DV-ref,MS1,M1,Voc,0.835,V,,,,,,835,mV,0.835,V,primary,,3,2. Results and Discussion,Table 1,Figure 1a,"Table 1, строка Reference device",extracted,,"Средние со стандартным отклонением — в Figure S7; что именно в таблице, не указано"
+D015,R002,DV-ref,MS1,M1,Jsc,22.2,mA/cm2,,,,,,22.2,mA/cm2,22.2,mA/cm2,primary,,3,2. Results and Discussion,Table 1,Figure 1a,"Table 1, строка Reference device",extracted,,"Средние со стандартным отклонением — в Figure S7; что именно в таблице, не указано"
+D015,R003,DV-ref,MS1,M1,FF,75.0,%,,,,,,75.0,%,75.0,%,primary,,3,2. Results and Discussion,Table 1,Figure 1a,"Table 1, строка Reference device",extracted,,"Средние со стандартным отклонением — в Figure S7; что именно в таблице, не указано"
+D015,R004,DV-ref,MS1,M1,PCE,13.9,%,,,,,,13.9,%,13.9,%,primary,,3,2. Results and Discussion,Table 1,Figure 1a,"Table 1, строка Reference device",extracted,,"Средние со стандартным отклонением — в Figure S7; что именно в таблице, не указано"
+D015,R005,DV-0,MS1,M1,Voc,0.833,V,,,,,,833,mV,0.833,V,primary,,3,2. Results and Discussion,Table 1,Figure 1a,"Table 1, строка CuxCryOz/Au 0 min",extracted,,"Средние со стандартным отклонением — в Figure S7; что именно в таблице, не указано"
+D015,R006,DV-0,MS1,M1,Jsc,20.5,mA/cm2,,,,,,20.5,mA/cm2,20.5,mA/cm2,primary,,3,2. Results and Discussion,Table 1,Figure 1a,"Table 1, строка CuxCryOz/Au 0 min",extracted,,"Средние со стандартным отклонением — в Figure S7; что именно в таблице, не указано"
+D015,R007,DV-0,MS1,M1,FF,66.2,%,,,,,,66.2,%,66.2,%,primary,,3,2. Results and Discussion,Table 1,Figure 1a,"Table 1, строка CuxCryOz/Au 0 min",extracted,,"Средние со стандартным отклонением — в Figure S7; что именно в таблице, не указано"
+D015,R008,DV-0,MS1,M1,PCE,11.3,%,,,,,,11.3,%,11.3,%,primary,,3,2. Results and Discussion,Table 1,Figure 1a,"Table 1, строка CuxCryOz/Au 0 min",extracted,,"Средние со стандартным отклонением — в Figure S7; что именно в таблице, не указано"
+D015,R009,DV-6,MS1,M1,Voc,0.837,V,,,,,,837,mV,0.837,V,primary,,3,2. Results and Discussion,Table 1,Figure 1a,"Table 1, строка 6 min",extracted,,"Средние со стандартным отклонением — в Figure S7; что именно в таблице, не указано"
+D015,R010,DV-6,MS1,M1,Jsc,21.8,mA/cm2,,,,,,21.8,mA/cm2,21.8,mA/cm2,primary,,3,2. Results and Discussion,Table 1,Figure 1a,"Table 1, строка 6 min",extracted,,"Средние со стандартным отклонением — в Figure S7; что именно в таблице, не указано"
+D015,R011,DV-6,MS1,M1,FF,76.8,%,,,,,,76.8,%,76.8,%,primary,,3,2. Results and Discussion,Table 1,Figure 1a,"Table 1, строка 6 min",extracted,,"Средние со стандартным отклонением — в Figure S7; что именно в таблице, не указано"
+D015,R012,DV-6,MS1,M1,PCE,14.0,%,,,,,,14.0,%,14.0,%,primary,,3,2. Results and Discussion,Table 1,Figure 1a,"Table 1, строка 6 min",extracted,,"Средние со стандартным отклонением — в Figure S7; что именно в таблице, не указано"
+D015,R013,DV-8,MS1,M1,Voc,0.841,V,,,,,,841,mV,0.841,V,primary,,3,2. Results and Discussion,Table 1,Figure 1a,"Table 1, строка 8 min",extracted,,"Средние со стандартным отклонением — в Figure S7; что именно в таблице, не указано"
+D015,R014,DV-8,MS1,M1,Jsc,22.1,mA/cm2,,,,,,22.1,mA/cm2,22.1,mA/cm2,primary,,3,2. Results and Discussion,Table 1,Figure 1a,"Table 1, строка 8 min",extracted,,"Средние со стандартным отклонением — в Figure S7; что именно в таблице, не указано"
+D015,R015,DV-8,MS1,M1,FF,78.0,%,,,,,,78.0,%,78.0,%,primary,,3,2. Results and Discussion,Table 1,Figure 1a,"Table 1, строка 8 min",extracted,,"Средние со стандартным отклонением — в Figure S7; что именно в таблице, не указано"
+D015,R016,DV-8,MS1,M1,PCE,14.4,%,,,,,,14.4,%,14.4,%,primary,,3,2. Results and Discussion,Table 1,Figure 1a,"Table 1, строка 8 min",extracted,,"Средние со стандартным отклонением — в Figure S7; что именно в таблице, не указано"
+D015,R016-1,DV-8,MS1,M1,PCE,14.4,%,,,,,,14.4,%,14.4,%,primary,,2,,,,resulted in better devices with an efﬁciency of 14.4%,extracted,R016,повторное упоминание
+D015,R017,DV-10,MS1,M1,Voc,0.845,V,,,,,,845,mV,0.845,V,primary,,3,2. Results and Discussion,Table 1,Figure 1a,"Table 1, строка 10 min",extracted,,"Средние со стандартным отклонением — в Figure S7; что именно в таблице, не указано"
+D015,R018,DV-10,MS1,M1,Jsc,22.0,mA/cm2,,,,,,22.0,mA/cm2,22.0,mA/cm2,primary,,3,2. Results and Discussion,Table 1,Figure 1a,"Table 1, строка 10 min",extracted,,"Средние со стандартным отклонением — в Figure S7; что именно в таблице, не указано"
+D015,R019,DV-10,MS1,M1,FF,75.5,%,,,,,,75.5,%,75.5,%,primary,,3,2. Results and Discussion,Table 1,Figure 1a,"Table 1, строка 10 min",extracted,,"Средние со стандартным отклонением — в Figure S7; что именно в таблице, не указано"
+D015,R020,DV-10,MS1,M1,PCE,14.0,%,,,,,,14.0,%,14.0,%,primary,,3,2. Results and Discussion,Table 1,Figure 1a,"Table 1, строка 10 min",extracted,,"Средние со стандартным отклонением — в Figure S7; что именно в таблице, не указано"
+D015,R021,DV-12,MS1,M1,Voc,0.844,V,,,,,,844,mV,0.844,V,primary,,3,2. Results and Discussion,Table 1,Figure 1a,"Table 1, строка 12 min",extracted,,"Средние со стандартным отклонением — в Figure S7; что именно в таблице, не указано"
+D015,R022,DV-12,MS1,M1,Jsc,21.8,mA/cm2,,,,,,21.8,mA/cm2,21.8,mA/cm2,primary,,3,2. Results and Discussion,Table 1,Figure 1a,"Table 1, строка 12 min",extracted,,"Средние со стандартным отклонением — в Figure S7; что именно в таблице, не указано"
+D015,R023,DV-12,MS1,M1,FF,74.6,%,,,,,,74.6,%,74.6,%,primary,,3,2. Results and Discussion,Table 1,Figure 1a,"Table 1, строка 12 min",extracted,,"Средние со стандартным отклонением — в Figure S7; что именно в таблице, не указано"
+D015,R024,DV-12,MS1,M1,PCE,13.7,%,,,,,,13.7,%,13.7,%,primary,,3,2. Results and Discussion,Table 1,Figure 1a,"Table 1, строка 12 min",extracted,,"Средние со стандартным отклонением — в Figure S7; что именно в таблице, не указано"
+D015,R025,DV-bif,MS1,M1,Voc,0.796,V,champion,,,,,796,mV,0.796,V,primary,,4,2. Results and Discussion,Table 2,Figure 2a,"Table 2, строка CuxCryOz/ITO Front",extracted,,
+D015,R026,DV-bif,MS1,M1,Jsc,22.2,mA/cm2,champion,,,,,22.2,mA/cm2,22.2,mA/cm2,primary,,4,2. Results and Discussion,Table 2,Figure 2a,"Table 2, строка CuxCryOz/ITO Front",extracted,,
+D015,R027,DV-bif,MS1,M1,FF,70.8,%,champion,,,,,70.8,%,70.8,%,primary,,4,2. Results and Discussion,Table 2,Figure 2a,"Table 2, строка CuxCryOz/ITO Front",extracted,,
+D015,R028,DV-bif,MS1,M1,PCE,12.5,%,champion,,,,,12.5,%,12.5,%,primary,,4,2. Results and Discussion,Table 2,Figure 2a,"Table 2, строка CuxCryOz/ITO Front",extracted,,
+D015,R028-1,DV-bif,MS1,M1,PCE,12.5,%,champion,,,,,12.5,%,12.5,%,primary,,1,,,,best bifacial device has efﬁciencies 7.6% and 12.5%,extracted,R028,повторное упоминание
+D015,R029,DV-bif,MS1,M1,Rs,3.6,Ohm*cm2,champion,,,,,3.6,Ohm*cm2,3.6,Ohm*cm2,primary,,4,2. Results and Discussion,Table 2,Figure 2a,"Table 2, строка CuxCryOz/ITO Front",extracted,,
+D015,R030,DV-bif,MS1,M1,Rsh,5428.2,Ohm*cm2,champion,,,,,5428.2,Ohm*cm2,5428.2,Ohm*cm2,primary,,4,2. Results and Discussion,Table 2,Figure 2a,"Table 2, строка CuxCryOz/ITO Front",extracted,,
+D015,R031,DV-bif,MS2,M1,Voc,0.796,V,champion,,,,,796,mV,0.796,V,primary,,4,2. Results and Discussion,Table 2,Figure 2a,"Table 2, строка CuxCryOz/ITO Back",extracted,,
+D015,R032,DV-bif,MS2,M1,Jsc,15.8,mA/cm2,champion,,,,,15.8,mA/cm2,15.8,mA/cm2,primary,,4,2. Results and Discussion,Table 2,Figure 2a,"Table 2, строка CuxCryOz/ITO Back",extracted,,
+D015,R033,DV-bif,MS2,M1,FF,60.9,%,champion,,,,,60.9,%,60.9,%,primary,,4,2. Results and Discussion,Table 2,Figure 2a,"Table 2, строка CuxCryOz/ITO Back",extracted,,
+D015,R034,DV-bif,MS2,M1,PCE,7.6,%,champion,,,,,7.6,%,7.6,%,primary,,4,2. Results and Discussion,Table 2,Figure 2a,"Table 2, строка CuxCryOz/ITO Back",extracted,,
+D015,R034-1,DV-bif,MS2,M1,PCE,7.6,%,champion,,,,,7.6,%,7.6,%,primary,,1,,,,best bifacial device has efﬁciencies 7.6% and 12.5%,extracted,R034,повторное упоминание
+D015,R035,DV-bif,MS2,M1,Rs,5.0,Ohm*cm2,champion,,,,,5.0,Ohm*cm2,5.0,Ohm*cm2,primary,,4,2. Results and Discussion,Table 2,Figure 2a,"Table 2, строка CuxCryOz/ITO Back",extracted,,
+D015,R036,DV-bif,MS2,M1,Rsh,457.0,Ohm*cm2,champion,,,,,457.0,Ohm*cm2,457.0,Ohm*cm2,primary,,4,2. Results and Discussion,Table 2,Figure 2a,"Table 2, строка CuxCryOz/ITO Back",extracted,,
+D015,R037,DV-bif,,M1,bifaciality_factor,0.6,,champion,,,,,0.6,,0.6,,primary,,1,Abstract,,,yielding a bifaciality factor of 0.60,extracted,,Отношение КПД при освещении сзади и спереди
+D015,R038,,,,Voc,0.79,V,champion,,,,,790,mV,0.79,V,cited,[26],4,2. Results and Discussion,Table 2,,"Table 2, строка Cu-doped and ITO electrode Front",extracted,,Параметры эталонного прибора взяты из предыдущей публикации авторов (подпись к Table 2)
+D015,R039,,,,Jsc,21.8,mA/cm2,champion,,,,,21.8,mA/cm2,21.8,mA/cm2,cited,[26],4,2. Results and Discussion,Table 2,,"Table 2, строка Cu-doped and ITO electrode Front",extracted,,Параметры эталонного прибора взяты из предыдущей публикации авторов (подпись к Table 2)
+D015,R040,,,,FF,50.1,%,champion,,,,,50.1,%,50.1,%,cited,[26],4,2. Results and Discussion,Table 2,,"Table 2, строка Cu-doped and ITO electrode Front",extracted,,Параметры эталонного прибора взяты из предыдущей публикации авторов (подпись к Table 2)
+D015,R041,,,,PCE,8.6,%,champion,,,,,8.6,%,8.6,%,cited,[26],4,2. Results and Discussion,Table 2,,"Table 2, строка Cu-doped and ITO electrode Front",extracted,,Параметры эталонного прибора взяты из предыдущей публикации авторов (подпись к Table 2)
+D015,R042,,,,Rs,13.6,Ohm*cm2,champion,,,,,13.6,Ohm*cm2,13.6,Ohm*cm2,cited,[26],4,2. Results and Discussion,Table 2,,"Table 2, строка Cu-doped and ITO electrode Front",extracted,,Параметры эталонного прибора взяты из предыдущей публикации авторов (подпись к Table 2)
+D015,R043,,,,Rsh,3878,Ohm*cm2,champion,,,,,3878,Ohm*cm2,3878,Ohm*cm2,cited,[26],4,2. Results and Discussion,Table 2,,"Table 2, строка Cu-doped and ITO electrode Front",extracted,,Параметры эталонного прибора взяты из предыдущей публикации авторов (подпись к Table 2)
+D015,R044,,,,Voc,0.754,V,champion,,,,,754,mV,0.754,V,cited,[26],4,2. Results and Discussion,Table 2,,"Table 2, строка Cu-doped and ITO electrode Back",extracted,,Параметры эталонного прибора взяты из предыдущей публикации авторов (подпись к Table 2)
+D015,R045,,,,Jsc,7.9,mA/cm2,champion,,,,,7.9,mA/cm2,7.9,mA/cm2,cited,[26],4,2. Results and Discussion,Table 2,,"Table 2, строка Cu-doped and ITO electrode Back",extracted,,Параметры эталонного прибора взяты из предыдущей публикации авторов (подпись к Table 2)
+D015,R046,,,,FF,51.4,%,champion,,,,,51.4,%,51.4,%,cited,[26],4,2. Results and Discussion,Table 2,,"Table 2, строка Cu-doped and ITO electrode Back",extracted,,Параметры эталонного прибора взяты из предыдущей публикации авторов (подпись к Table 2)
+D015,R047,,,,PCE,3.0,%,champion,,,,,3.0,%,3.0,%,cited,[26],4,2. Results and Discussion,Table 2,,"Table 2, строка Cu-doped and ITO electrode Back",extracted,,Параметры эталонного прибора взяты из предыдущей публикации авторов (подпись к Table 2)
+D015,R048,,,,Rs,28.6,Ohm*cm2,champion,,,,,28.6,Ohm*cm2,28.6,Ohm*cm2,cited,[26],4,2. Results and Discussion,Table 2,,"Table 2, строка Cu-doped and ITO electrode Back",extracted,,Параметры эталонного прибора взяты из предыдущей публикации авторов (подпись к Table 2)
+D015,R049,,,,Rsh,747,Ohm*cm2,champion,,,,,747,Ohm*cm2,747,Ohm*cm2,cited,[26],4,2. Results and Discussion,Table 2,,"Table 2, строка Cu-doped and ITO electrode Back",extracted,,Параметры эталонного прибора взяты из предыдущей публикации авторов (подпись к Table 2)
+D015,R050,,,,PCE,2.9,%,,,,,,2.9,%,2.9,%,cited,[14],1,1. Introduction,,,zinc tin sulﬁde bifacial device has efﬁciencies 2.9% and 1.3%,extracted,,"CZTS, спереди / сзади"
+D015,R051,,,,PCE,1.3,%,,,,,,1.3,%,1.3,%,cited,[14],1,1. Introduction,,,zinc tin sulﬁde bifacial device has efﬁciencies 2.9% and 1.3%,extracted,,"CZTS, спереди / сзади"
+D015,R052,,,,PCE,7.9,%,,,,,,7.9,%,7.9,%,cited,[16],1,1. Introduction,,,"of 7.9% and 1.0%, respectively, for a CdTe bifacial",extracted,,"CdTe/ITO, спереди / сзади"
+D015,R053,,,,PCE,1.0,%,,,,,,1.0,%,1.0,%,cited,[16],1,1. Introduction,,,"of 7.9% and 1.0%, respectively, for a CdTe bifacial",extracted,,"CdTe/ITO, спереди / сзади"
+D015,R054,,,,PCE,10,%,,,,,,10,%,10,%,cited,[2],1,1. Introduction,,,obtaining 10% and 3.5% efﬁcien,extracted,,"CdTe с Cu/ITO, спереди / сзади"
+D015,R055,,,,PCE,3.5,%,,,,,,3.5,%,3.5,%,cited,[2],1,1. Introduction,,,obtaining 10% and 3.5% efﬁcien,extracted,,"CdTe с Cu/ITO, спереди / сзади"
+D017,R001,DV-R1,MS1,M-R1,Voc,0.686,V,,,,,,0.686,V,0.686,V,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка R1",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R002,DV-R1,MS1,M-R1,Jsc,35.3,mA/cm2,,,,,,35.3,mA/cm2,35.3,mA/cm2,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка R1",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R003,DV-R1,MS1,M-R1,FF,77.6,%,,,,,,77.6,%,77.6,%,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка R1",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R004,DV-R1,MS1,M-R1,PCE,18.8,%,,,,,,18.8,%,18.8,%,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка R1",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R005,DV-R1,MS1,M-R1,Voc_deficit,0.458,V,,,,,,0.458,V,0.458,V,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка R1",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R006,DV-R2,MS1,M-R2,Voc,0.679,V,,,,,,0.679,V,0.679,V,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка R2",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R007,DV-R2,MS1,M-R2,Jsc,36.3,mA/cm2,,,,,,36.3,mA/cm2,36.3,mA/cm2,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка R2",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R008,DV-R2,MS1,M-R2,FF,77.5,%,,,,,,77.5,%,77.5,%,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка R2",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R009,DV-R2,MS1,M-R2,PCE,19.1,%,,,,,,19.1,%,19.1,%,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка R2",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R010,DV-R2,MS1,M-R2,Voc_deficit,0.463,V,,,,,,0.463,V,0.463,V,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка R2",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R011,DV-G1,MS1,M-G1,Voc,0.687,V,,,,,,0.687,V,0.687,V,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка G1",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R012,DV-G1,MS1,M-G1,Jsc,35.2,mA/cm2,,,,,,35.2,mA/cm2,35.2,mA/cm2,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка G1",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R013,DV-G1,MS1,M-G1,FF,77.1,%,,,,,,77.1,%,77.1,%,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка G1",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R014,DV-G1,MS1,M-G1,PCE,18.7,%,,,,,,18.7,%,18.7,%,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка G1",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R014-1,DV-G1,MS1,M-G1,PCE,18.7,%,,,,,,18.7,%,18.7,%,primary,,5,,,,PCE is increased from 18.7% to 19.3%,extracted,R014,повторное упоминание
+D017,R015,DV-G1,MS1,M-G1,Voc_deficit,0.451,V,,,,,,0.451,V,0.451,V,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка G1",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R016,DV-G2,MS1,M-G2,Voc,0.695,V,,,,,,0.695,V,0.695,V,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка G2",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R017,DV-G2,MS1,M-G2,Jsc,35.6,mA/cm2,,,,,,35.6,mA/cm2,35.6,mA/cm2,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка G2",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R018,DV-G2,MS1,M-G2,FF,76.9,%,,,,,,76.9,%,76.9,%,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка G2",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R019,DV-G2,MS1,M-G2,PCE,19.0,%,,,,,,19.0,%,19.0,%,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка G2",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R020,DV-G2,MS1,M-G2,Voc_deficit,0.445,V,,,,,,0.445,V,0.445,V,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка G2",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R021,DV-I1,MS1,M-I1,Voc,0.703,V,,,,,,0.703,V,0.703,V,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка I1",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R022,DV-I1,MS1,M-I1,Jsc,35.0,mA/cm2,,,,,,35.0,mA/cm2,35.0,mA/cm2,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка I1",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R023,DV-I1,MS1,M-I1,FF,76.8,%,,,,,,76.8,%,76.8,%,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка I1",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R024,DV-I1,MS1,M-I1,PCE,19.0,%,,,,,,19.0,%,19.0,%,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка I1",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R025,DV-I1,MS1,M-I1,Voc_deficit,0.444,V,,,,,,0.444,V,0.444,V,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка I1",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R026,DV-I2,MS1,M-I2,Voc,0.693,V,,,,,,0.693,V,0.693,V,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка I2",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R027,DV-I2,MS1,M-I2,Jsc,35.6,mA/cm2,,,,,,35.6,mA/cm2,35.6,mA/cm2,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка I2",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R028,DV-I2,MS1,M-I2,FF,77.1,%,,,,,,77.1,%,77.1,%,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка I2",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R029,DV-I2,MS1,M-I2,PCE,19.0,%,,,,,,19.0,%,19.0,%,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка I2",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R030,DV-I2,MS1,M-I2,Voc_deficit,0.444,V,,,,,,0.444,V,0.444,V,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка I2",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R031,DV-I3,MS1,M-I3,Voc,0.697,V,,,,,,0.697,V,0.697,V,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка I3",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R032,DV-I3,MS1,M-I3,Jsc,35.8,mA/cm2,,,,,,35.8,mA/cm2,35.8,mA/cm2,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка I3",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R033,DV-I3,MS1,M-I3,FF,76.4,%,,,,,,76.4,%,76.4,%,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка I3",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R034,DV-I3,MS1,M-I3,PCE,19.1,%,,,,,,19.1,%,19.1,%,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка I3",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R035,DV-I3,MS1,M-I3,Voc_deficit,0.429,V,,,,,,0.429,V,0.429,V,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка I3",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R036,DV-I4,MS1,M-I4,Voc,0.685,V,,,,,,0.685,V,0.685,V,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка I4",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R037,DV-I4,MS1,M-I4,Jsc,36.7,mA/cm2,,,,,,36.7,mA/cm2,36.7,mA/cm2,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка I4",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R038,DV-I4,MS1,M-I4,FF,77.4,%,,,,,,77.4,%,77.4,%,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка I4",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R039,DV-I4,MS1,M-I4,PCE,19.5,%,,,,,,19.5,%,19.5,%,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка I4",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R040,DV-I4,MS1,M-I4,Voc_deficit,0.436,V,,,,,,0.436,V,0.436,V,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка I4",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R041,DV-O1,MS1,M-O1,Voc,0.707,V,,,,,,0.707,V,0.707,V,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка O1",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R042,DV-O1,MS1,M-O1,Jsc,36.0,mA/cm2,,,,,,36.0,mA/cm2,36.0,mA/cm2,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка O1",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R043,DV-O1,MS1,M-O1,FF,77.0,%,,,,,,77.0,%,77.0,%,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка O1",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R044,DV-O1,MS1,M-O1,PCE,19.6,%,,,,,,19.6,%,19.6,%,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка O1",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R045,DV-O1,MS1,M-O1,Voc_deficit,0.425,V,,,,,,0.425,V,0.425,V,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка O1",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R046,DV-O2,MS1,M-O2,Voc,0.723,V,,,,,,0.723,V,0.723,V,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка O2",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R047,DV-O2,MS1,M-O2,Jsc,35.2,mA/cm2,,,,,,35.2,mA/cm2,35.2,mA/cm2,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка O2",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R048,DV-O2,MS1,M-O2,FF,77.5,%,,,,,,77.5,%,77.5,%,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка O2",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R049,DV-O2,MS1,M-O2,PCE,19.7,%,,,,,,19.7,%,19.7,%,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка O2",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R049-1,DV-O2,MS1,M-O2,PCE,19.7,%,,,,,,19.7,%,19.7,%,primary,,5,,,,PCE of the champion cell in this study is about 19.7%,extracted,R049,повторное упоминание
+D017,R050,DV-O2,MS1,M-O2,Voc_deficit,0.427,V,,,,,,0.427,V,0.427,V,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка O2",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R051,DV-O3,MS1,M-O3,Voc,0.716,V,,,,,,0.716,V,0.716,V,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка O3",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R052,DV-O3,MS1,M-O3,Jsc,35.4,mA/cm2,,,,,,35.4,mA/cm2,35.4,mA/cm2,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка O3",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R053,DV-O3,MS1,M-O3,FF,76.2,%,,,,,,76.2,%,76.2,%,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка O3",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R054,DV-O3,MS1,M-O3,PCE,19.3,%,,,,,,19.3,%,19.3,%,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка O3",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R054-1,DV-O3,MS1,M-O3,PCE,19.3,%,,,,,,19.3,%,19.3,%,primary,,5,,,,PCE is increased from 18.7% to 19.3%,extracted,R054,повторное упоминание
+D017,R055,DV-O3,MS1,M-O3,Voc_deficit,0.419,V,,,,,,0.419,V,0.419,V,primary,,4,3.1 Back grading modification,TABLE 1,,"Table 1, строка O3",extracted,,"Тип агрегации не указан; Eg определялась по лучшей ячейке образца (с. 5), так что строка, вероятно, относится к ней"
+D017,R056,,,,PCE,23.35,%,,,,,,23.35,%,23.35,%,cited,ref. 1,1,1 Introduction,,,reached efficiencies of 23.35%,extracted,,Рекорд CIGS на стекле из литературы
+D017,R057,,,,PCE,20.8,%,,,,,,20.8,%,20.8,%,cited,ref. 2,1,1 Introduction,,,on glass and 20.8%,extracted,,Рекорд CIGS на гибкой подложке из литературы
+D018,R001,DV2,MS1,M2,PCE,10.4,%,,,,,,10.4,%,10.4,%,primary,,6,3 Results and Discussion,,FIGURE 6A,A solar cell with an efficiency,extracted,,Кривые на рис. 6A названы «Typical»
+D018,R002,DV2,MS1,M2,Jsc,31.0,mA/cm2,,,,,,31.0,mA/cm2,31.0,mA/cm2,primary,,6,3 Results and Discussion,,FIGURE 6A,A solar cell with an efficiency,extracted,,Кривые на рис. 6A названы «Typical»
+D018,R003,DV2,MS1,M2,Voc,0.493,V,,,,,,0.493,V,0.493,V,primary,,6,3 Results and Discussion,,FIGURE 6A,A solar cell with an efficiency,extracted,,Кривые на рис. 6A названы «Typical»
+D018,R004,DV2,MS1,M2,FF,66,%,,,,,,66,%,66,%,primary,,6,3 Results and Discussion,,FIGURE 6A,A solar cell with an efficiency,extracted,,Кривые на рис. 6A названы «Typical»
+D018,R005,DV1,MS1,M1,Jsc,31.3,mA/cm2,,,,,,31.3,mA/cm2,31.3,mA/cm2,primary,,7,3 Results and Discussion,,FIGURE 6A,"the JSC, VOC, FF, and ɳ were 31.3",extracted,,Кривые на рис. 6A названы «Typical»
+D018,R006,DV1,MS1,M1,Voc,0.41,V,,,,,,0.41,V,0.41,V,primary,,7,3 Results and Discussion,,FIGURE 6A,"the JSC, VOC, FF, and ɳ were 31.3",extracted,,Кривые на рис. 6A названы «Typical»
+D018,R007,DV1,MS1,M1,FF,59,%,,,,,,59,%,59,%,primary,,7,3 Results and Discussion,,FIGURE 6A,"the JSC, VOC, FF, and ɳ were 31.3",extracted,,Кривые на рис. 6A названы «Typical»
+D018,R008,DV1,MS1,M1,PCE,7.8,%,,,,,,7.8,%,7.8,%,primary,,7,3 Results and Discussion,,FIGURE 6A,"the JSC, VOC, FF, and ɳ were 31.3",extracted,,Кривые на рис. 6A названы «Typical»
+D019,R001,DV-R200-Mo,MS1,M-R200-Mo,Voc,0.20297,V,,,,,,0.20297,V,0.20297,V,primary,,6,Results and discussion,Table 1,,"Table 1, строка Mo 200",extracted,,
+D019,R002,DV-R200-Mo,MS1,M-R200-Mo,Jsc,8.4189,mA/cm2,,,,,,8.4189,mA/cm2,8.4189,mA/cm2,primary,,6,Results and discussion,Table 1,,"Table 1, строка Mo 200",extracted,,
+D019,R003,DV-R200-Mo,MS1,M-R200-Mo,FF,27.2369,%,,,,,,27.2369,%,27.2369,%,primary,,6,Results and discussion,Table 1,,"Table 1, строка Mo 200",extracted,,
+D019,R004,DV-R200-Mo,MS1,M-R200-Mo,PCE,0.465,%,,,,,,0.465,%,0.465,%,primary,,6,Results and discussion,Table 1,,"Table 1, строка Mo 200",extracted,,
+D019,R005,DV-R200-Mo,MS1,M-R200-Mo,Rs,18.105,Ohm*cm2,,,,,,18.105,Ohm*cm2,18.105,Ohm*cm2,primary,,6,Results and discussion,Table 1,,"Table 1, строка Mo 200",extracted,,
+D019,R006,DV-R200-Mo,MS1,M-R200-Mo,Rsh,26.703,Ohm*cm2,,,,,,26.703,Ohm*cm2,26.703,Ohm*cm2,primary,,6,Results and discussion,Table 1,,"Table 1, строка Mo 200",extracted,,
+D019,R007,DV-R200,MS1,M-R200,Voc,0.43951,V,,,,,,0.43951,V,0.43951,V,primary,,6,Results and discussion,Table 1,,"Table 1, строка MoSe2/Mo 200",extracted,,
+D019,R008,DV-R200,MS1,M-R200,Jsc,21.1832,mA/cm2,,,,,,21.1832,mA/cm2,21.1832,mA/cm2,primary,,6,Results and discussion,Table 1,,"Table 1, строка MoSe2/Mo 200",extracted,,
+D019,R009,DV-R200,MS1,M-R200,FF,36.0716,%,,,,,,36.0716,%,36.0716,%,primary,,6,Results and discussion,Table 1,,"Table 1, строка MoSe2/Mo 200",extracted,,
+D019,R010,DV-R200,MS1,M-R200,PCE,3.358,%,,,,,,3.358,%,3.358,%,primary,,6,Results and discussion,Table 1,,"Table 1, строка MoSe2/Mo 200",extracted,,
+D019,R011,DV-R200,MS1,M-R200,Rs,9.847,Ohm*cm2,,,,,,9.847,Ohm*cm2,9.847,Ohm*cm2,primary,,6,Results and discussion,Table 1,,"Table 1, строка MoSe2/Mo 200",extracted,,
+D019,R012,DV-R200,MS1,M-R200,Rsh,51.383,Ohm*cm2,,,,,,51.383,Ohm*cm2,51.383,Ohm*cm2,primary,,6,Results and discussion,Table 1,,"Table 1, строка MoSe2/Mo 200",extracted,,
+D019,R013,DV-T290,MS1,M-T290,Voc,0.44999,V,,,,,,0.44999,V,0.44999,V,primary,,6,Results and discussion,Table 1,,"Table 1, строка MoSe2/Mo 100",extracted,,
+D019,R013-1,DV-T290,MS1,M-T290,Voc,0.44999,V,,,,,,0.44999,V,0.44999,V,primary,,7,,,,"Table 2, строка MoSe2 290 (те же значения с округлением)",extracted,R013,повторное упоминание
+D019,R014,DV-T290,MS1,M-T290,Jsc,23.6606,mA/cm2,,,,,,23.6606,mA/cm2,23.6606,mA/cm2,primary,,6,Results and discussion,Table 1,,"Table 1, строка MoSe2/Mo 100",extracted,,
+D019,R014-1,DV-T290,MS1,M-T290,Jsc,23.6606,mA/cm2,,,,,,23.6606,mA/cm2,23.6606,mA/cm2,primary,,7,,,,"Table 2, строка MoSe2 290 (те же значения с округлением)",extracted,R014,повторное упоминание
+D019,R015,DV-T290,MS1,M-T290,FF,40.2727,%,,,,,,40.2727,%,40.2727,%,primary,,6,Results and discussion,Table 1,,"Table 1, строка MoSe2/Mo 100",extracted,,
+D019,R015-1,DV-T290,MS1,M-T290,FF,40.2727,%,,,,,,40.2727,%,40.2727,%,primary,,7,,,,"Table 2, строка MoSe2 290 (те же значения с округлением)",extracted,R015,повторное упоминание
+D019,R016,DV-T290,MS1,M-T290,PCE,4.288,%,,,,,,4.288,%,4.288,%,primary,,6,Results and discussion,Table 1,,"Table 1, строка MoSe2/Mo 100",extracted,,
+D019,R016-1,DV-T290,MS1,M-T290,PCE,4.288,%,,,,,,4.288,%,4.288,%,primary,,7,,,,"Table 2, строка MoSe2 290 (те же значения с округлением)",extracted,R016,повторное упоминание
+D019,R017,DV-T290,MS1,M-T290,Rs,8.488,Ohm*cm2,,,,,,8.488,Ohm*cm2,8.488,Ohm*cm2,primary,,6,Results and discussion,Table 1,,"Table 1, строка MoSe2/Mo 100",extracted,,
+D019,R017-1,DV-T290,MS1,M-T290,Rs,8.488,Ohm*cm2,,,,,,8.488,Ohm*cm2,8.488,Ohm*cm2,primary,,7,,,,"Table 2, строка MoSe2 290 (те же значения с округлением)",extracted,R017,повторное упоминание
+D019,R018,DV-T290,MS1,M-T290,Rsh,70.319,Ohm*cm2,,,,,,70.319,Ohm*cm2,70.319,Ohm*cm2,primary,,6,Results and discussion,Table 1,,"Table 1, строка MoSe2/Mo 100",extracted,,
+D019,R018-1,DV-T290,MS1,M-T290,Rsh,70.319,Ohm*cm2,,,,,,70.319,Ohm*cm2,70.319,Ohm*cm2,primary,,7,,,,"Table 2, строка MoSe2 290 (те же значения с округлением)",extracted,R018,повторное упоминание
+D019,R019,DV-T250,MS1,M-T250,Voc,0.4,V,,,,,,0.4,V,0.4,V,primary,,7,Results and discussion,Table 2,Fig. 6,"Table 2, строка MoSe2 250",extracted,,
+D019,R020,DV-T250,MS1,M-T250,Jsc,22.167,mA/cm2,,,,,,22.167,mA/cm2,22.167,mA/cm2,primary,,7,Results and discussion,Table 2,Fig. 6,"Table 2, строка MoSe2 250",extracted,,
+D019,R021,DV-T250,MS1,M-T250,FF,43.99,%,,,,,,43.99,%,43.99,%,primary,,7,Results and discussion,Table 2,Fig. 6,"Table 2, строка MoSe2 250",extracted,,
+D019,R022,DV-T250,MS1,M-T250,PCE,3.886,%,,,,,,3.886,%,3.886,%,primary,,7,Results and discussion,Table 2,Fig. 6,"Table 2, строка MoSe2 250",extracted,,
+D019,R023,DV-T250,MS1,M-T250,Rs,5.48,Ohm*cm2,,,,,,5.48,Ohm*cm2,5.48,Ohm*cm2,primary,,7,Results and discussion,Table 2,Fig. 6,"Table 2, строка MoSe2 250",extracted,,
+D019,R024,DV-T250,MS1,M-T250,Rsh,67.59,Ohm*cm2,,,,,,67.59,Ohm*cm2,67.59,Ohm*cm2,primary,,7,Results and discussion,Table 2,Fig. 6,"Table 2, строка MoSe2 250",extracted,,
+D019,R025,DV-T260,MS1,M-T260,Voc,0.43,V,champion,,,,,0.43,V,0.43,V,primary,,7,Results and discussion,Table 2,Fig. 6,"Table 2, строка MoSe2 260",extracted,,
+D019,R026,DV-T260,MS1,M-T260,Jsc,27.43,mA/cm2,champion,,,,,27.43,mA/cm2,27.43,mA/cm2,primary,,7,Results and discussion,Table 2,Fig. 6,"Table 2, строка MoSe2 260",extracted,,
+D019,R027,DV-T260,MS1,M-T260,FF,47.35,%,champion,,,,,47.35,%,47.35,%,primary,,7,Results and discussion,Table 2,Fig. 6,"Table 2, строка MoSe2 260",extracted,,
+D019,R028,DV-T260,MS1,M-T260,PCE,5.637,%,champion,,,,,5.637,%,5.637,%,primary,,7,Results and discussion,Table 2,Fig. 6,"Table 2, строка MoSe2 260",extracted,,
+D019,R028-1,DV-T260,MS1,M-T260,PCE,5.637,%,champion,,,,,5.637,%,5.637,%,primary,,2,,,,nanorod array showed a power conversion efficiency of 5.637%,extracted,R028,повторное упоминание
+D019,R029,DV-T260,MS1,M-T260,Rs,5.89,Ohm*cm2,champion,,,,,5.89,Ohm*cm2,5.89,Ohm*cm2,primary,,7,Results and discussion,Table 2,Fig. 6,"Table 2, строка MoSe2 260",extracted,,
+D019,R030,DV-T260,MS1,M-T260,Rsh,118.26,Ohm*cm2,champion,,,,,118.26,Ohm*cm2,118.26,Ohm*cm2,primary,,7,Results and discussion,Table 2,Fig. 6,"Table 2, строка MoSe2 260",extracted,,
+D019,R031,DV-T270,MS1,M-T270,Voc,0.42,V,,,,,,0.42,V,0.42,V,primary,,7,Results and discussion,Table 2,Fig. 6,"Table 2, строка MoSe2 270",extracted,,
+D019,R032,DV-T270,MS1,M-T270,Jsc,23.834,mA/cm2,,,,,,23.834,mA/cm2,23.834,mA/cm2,primary,,7,Results and discussion,Table 2,Fig. 6,"Table 2, строка MoSe2 270",extracted,,
+D019,R033,DV-T270,MS1,M-T270,FF,44.47,%,,,,,,44.47,%,44.47,%,primary,,7,Results and discussion,Table 2,Fig. 6,"Table 2, строка MoSe2 270",extracted,,
+D019,R034,DV-T270,MS1,M-T270,PCE,4.464,%,,,,,,4.464,%,4.464,%,primary,,7,Results and discussion,Table 2,Fig. 6,"Table 2, строка MoSe2 270",extracted,,
+D019,R035,DV-T270,MS1,M-T270,Rs,6.04,Ohm*cm2,,,,,,6.04,Ohm*cm2,6.04,Ohm*cm2,primary,,7,Results and discussion,Table 2,Fig. 6,"Table 2, строка MoSe2 270",extracted,,
+D019,R036,DV-T270,MS1,M-T270,Rsh,80.89,Ohm*cm2,,,,,,80.89,Ohm*cm2,80.89,Ohm*cm2,primary,,7,Results and discussion,Table 2,Fig. 6,"Table 2, строка MoSe2 270",extracted,,
+D019,R037,DV-T315-Mo,MS1,M-T315-Mo,Voc,0.37,V,,,,,,0.37,V,0.37,V,primary,,7,Results and discussion,Table 2,Fig. 6,"Table 2, строка Mo 315",extracted,,
+D019,R038,DV-T315-Mo,MS1,M-T315-Mo,Jsc,25.138,mA/cm2,,,,,,25.138,mA/cm2,25.138,mA/cm2,primary,,7,Results and discussion,Table 2,Fig. 6,"Table 2, строка Mo 315",extracted,,
+D019,R039,DV-T315-Mo,MS1,M-T315-Mo,FF,47.11,%,,,,,,47.11,%,47.11,%,primary,,7,Results and discussion,Table 2,Fig. 6,"Table 2, строка Mo 315",extracted,,
+D019,R040,DV-T315-Mo,MS1,M-T315-Mo,PCE,4.412,%,,,,,,4.412,%,4.412,%,primary,,7,Results and discussion,Table 2,Fig. 6,"Table 2, строка Mo 315",extracted,,
+D019,R041,DV-T315-Mo,MS1,M-T315-Mo,Rs,5.69,Ohm*cm2,,,,,,5.69,Ohm*cm2,5.69,Ohm*cm2,primary,,7,Results and discussion,Table 2,Fig. 6,"Table 2, строка Mo 315",extracted,,
+D019,R042,DV-T315-Mo,MS1,M-T315-Mo,Rsh,112.25,Ohm*cm2,,,,,,112.25,Ohm*cm2,112.25,Ohm*cm2,primary,,7,Results and discussion,Table 2,Fig. 6,"Table 2, строка Mo 315",extracted,,
+D019,R043,DV-T260,MS2,M-T260,PCE,5.484,%,champion,,,,,5.484,%,5.484,%,primary,,8,Results and discussion,,Fig. 8a,PCE of 5.484%,extracted,,Сертифицированное измерение лучшего прибора
+D019,R044,DV-T260,MS2,M-T260,Jsc,26.05,mA/cm2,champion,,,,,26.05,mA/cm2,26.05,mA/cm2,primary,,8,,,Fig. 8a,integrated EQE (25.89,extracted,,Jsc сертифицированной ВАХ (в лаборатории авторов — 27.430)
+D019,R045,DV-T260,MS3,M-T260,Jsc_EQE,25.89,mA/cm2,champion,,,,,25.89,mA/cm2,25.89,mA/cm2,primary,,8,,,Fig. 8b,integrated EQE (25.89,extracted,,
+D020,R001,DV1,MS1,M1,PCE,0.65,%,mean,,,,,0.65,%,0.65,%,primary,,4,2. Results and Discussion,,Figure 5,low average PCE (0.65%),extracted,,Число приборов в статистике не указано
+D020,R002,DV1,MS1,M1,Voc,0.519,V,mean,,,,,0.519,V,0.519,V,primary,,4,2. Results and Discussion,,Figure 5,low average PCE (0.65%),extracted,,Число приборов в статистике не указано
+D020,R003,DV1,MS1,M1,Jsc,5.78,mA/cm2,mean,,,,,5.78,mA/cm2,5.78,mA/cm2,primary,,4,2. Results and Discussion,,Figure 5,low average PCE (0.65%),extracted,,Число приборов в статистике не указано
+D020,R004,DV1,MS1,M1,FF,21.8,%,mean,,,,,0.218,fraction,21.8,%,primary,,4,2. Results and Discussion,,Figure 5,low average PCE (0.65%),extracted,,Число приборов в статистике не указано
+D020,R005,DV2,MS1,M2,PCE,1.63,%,mean,,,,,1.63,%,1.63,%,primary,,4,2. Results and Discussion,,Figure 5,the average PCE increased to 1.63%,extracted,,Число приборов в статистике не указано
+D020,R006,DV2,MS1,M2,Voc,0.47,V,mean,,,,,0.47,V,0.47,V,primary,,4,2. Results and Discussion,,Figure 5,the average PCE increased to 1.63%,extracted,,Число приборов в статистике не указано
+D020,R007,DV2,MS1,M2,Jsc,11.41,mA/cm2,mean,,,,,11.41,mA/cm2,11.41,mA/cm2,primary,,4,2. Results and Discussion,,Figure 5,the average PCE increased to 1.63%,extracted,,Число приборов в статистике не указано
+D020,R008,DV2,MS1,M2,FF,,,mean,,,,,,,,,primary,,4,2. Results and Discussion,,Figure 5,the average PCE increased to 1.63%,present_not_extractable,,"Средний FF для Sb2(S,Se)3 в тексте не назван — только на рис. 5d"
+D020,R009,DV3,MS1,M3,PCE,2.61,%,mean,,,,,2.61,%,2.61,%,primary,,4,2. Results and Discussion,,Figure 5,highest average PCE of 2.61%,extracted,,Число приборов в статистике не указано
+D020,R010,DV3,MS1,M3,Voc,0.492,V,mean,,,,,0.492,V,0.492,V,primary,,4,2. Results and Discussion,,Figure 5,highest average PCE of 2.61%,extracted,,Число приборов в статистике не указано
+D020,R011,DV3,MS1,M3,Jsc,12.28,mA/cm2,mean,,,,,12.28,mA/cm2,12.28,mA/cm2,primary,,4,2. Results and Discussion,,Figure 5,highest average PCE of 2.61%,extracted,,Число приборов в статистике не указано
+D020,R012,DV3,MS1,M3,FF,43.2,%,mean,,,,,0.432,fraction,43.2,%,primary,,4,2. Results and Discussion,,Figure 5,highest average PCE of 2.61%,extracted,,Число приборов в статистике не указано
+D020,R013,DV4,MS1,M3,PCE,4.15,%,champion,,,,,4.15,%,4.15,%,primary,,6,2. Results and Discussion,,Figure 6b,showed a champion PCE of,extracted,,
+D020,R014,DV4,MS1,M3,Voc,0.536,V,champion,,,,,0.536,V,0.536,V,primary,,6,2. Results and Discussion,,Figure 6b,showed a champion PCE of,extracted,,
+D020,R015,DV4,MS1,M3,Jsc,15.37,mA/cm2,champion,,,,,15.37,mA/cm2,15.37,mA/cm2,primary,,6,2. Results and Discussion,,Figure 6b,showed a champion PCE of,extracted,,
+D020,R016,DV4,MS1,M3,FF,50.4,%,champion,,,,,0.504,fraction,50.4,%,primary,,6,2. Results and Discussion,,Figure 6b,showed a champion PCE of,extracted,,
+D020,R017,DV3,MS1,M3,PCE,2.76,%,champion,,,,,2.76,%,2.76,%,primary,,6,2. Results and Discussion,,Figure 6b,without P3HT showed a much lower PCE of 2.76%,extracted,,
+D020,R017-1,DV3,MS1,M3,PCE,2.76,%,champion,,,,,2.76,%,2.76,%,primary,,1,,,,achieved a power conversion efficiency (PCE) of 2.76%,extracted,R017,повторное упоминание
+D020,R018,DV3,MS1,M3,Voc,0.467,V,champion,,,,,0.467,V,0.467,V,primary,,6,2. Results and Discussion,,Figure 6b,without P3HT showed a much lower PCE of 2.76%,extracted,,
+D020,R019,DV3,MS1,M3,Jsc,13.24,mA/cm2,champion,,,,,13.24,mA/cm2,13.24,mA/cm2,primary,,6,2. Results and Discussion,,Figure 6b,without P3HT showed a much lower PCE of 2.76%,extracted,,
+D020,R020,DV3,MS1,M3,FF,44.7,%,champion,,,,,0.447,fraction,44.7,%,primary,,6,2. Results and Discussion,,Figure 6b,without P3HT showed a much lower PCE of 2.76%,extracted,,
+D020,R021,,,,PCE,22,%,,,,,,22,%,22,%,cited,[1],1,1. Introduction,,,have overcome the power conversion efficiency (PCE) of 22%,extracted,,CdTe по литературе
+D020,R022,,,,PCE,10,%,,,,,,10,%,10,%,cited,[4],1,1. Introduction,,,promoted the PCE to over 10%,extracted,,"Sb2(S,Se)3 со Spiro-OMeTAD/Au по литературе"
+D021,R001,DV-A1,MS1,M-RFMS,Voc,0.305,V,mean,32,20,,,305,mV,0.305,V,primary,,12,,Table 4,,"Table 4, строка A1",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R002,DV-A1,MS1,M-RFMS,Voc,0.324,V,champion,,,,,324,mV,0.324,V,primary,,12,,Table 4,,"Table 4, строка A1",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R003,DV-A1,MS1,M-RFMS,Jsc,22.5,mA/cm2,mean,6.6,20,,,22.5,mA/cm2,22.5,mA/cm2,primary,,12,,Table 4,,"Table 4, строка A1",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R004,DV-A1,MS1,M-RFMS,Jsc,31.2,mA/cm2,champion,,,,,31.2,mA/cm2,31.2,mA/cm2,primary,,12,,Table 4,,"Table 4, строка A1",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R005,DV-A1,MS1,M-RFMS,FF,29.3,%,mean,2.2,20,,,29.3,%,29.3,%,primary,,12,,Table 4,,"Table 4, строка A1",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R006,DV-A1,MS1,M-RFMS,FF,32.0,%,champion,,,,,32.0,%,32.0,%,primary,,12,,Table 4,,"Table 4, строка A1",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R007,DV-A1,MS1,M-RFMS,PCE,2.03,%,mean,0.66,20,,,2.03,%,2.03,%,primary,,12,,Table 4,,"Table 4, строка A1",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R008,DV-A1,MS1,M-RFMS,PCE,3.24,%,champion,,,,,3.24,%,3.24,%,primary,,12,,Table 4,,"Table 4, строка A1",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R009,DV-A1,MS1,M-RFMS,Rs,6.86,Ohm*cm2,,,,,,6.86,Ohm*cm2,6.86,Ohm*cm2,primary,,12,,Table 4,,"Table 4, строка A1",extracted,,
+D021,R010,DV-A1,MS1,M-RFMS,Rsh,342.7,Ohm*cm2,,,,,,342.7,Ohm*cm2,342.7,Ohm*cm2,primary,,12,,Table 4,,"Table 4, строка A1",extracted,,
+D021,R011,DV-A2,MS1,M-RFMS,Voc,0.296,V,mean,62,20,,,296,mV,0.296,V,primary,,12,,Table 4,,"Table 4, строка A2",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R012,DV-A2,MS1,M-RFMS,Voc,0.327,V,champion,,,,,327,mV,0.327,V,primary,,12,,Table 4,,"Table 4, строка A2",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R013,DV-A2,MS1,M-RFMS,Jsc,9.15,mA/cm2,mean,7.66,20,,,9.15,mA/cm2,9.15,mA/cm2,primary,,12,,Table 4,,"Table 4, строка A2",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R014,DV-A2,MS1,M-RFMS,Jsc,20.95,mA/cm2,champion,,,,,20.95,mA/cm2,20.95,mA/cm2,primary,,12,,Table 4,,"Table 4, строка A2",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R015,DV-A2,MS1,M-RFMS,FF,37.2,%,mean,8,20,,,37.2,%,37.2,%,primary,,12,,Table 4,,"Table 4, строка A2",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R016,DV-A2,MS1,M-RFMS,FF,30.4,%,champion,,,,,30.4,%,30.4,%,primary,,12,,Table 4,,"Table 4, строка A2",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R017,DV-A2,MS1,M-RFMS,PCE,0.9,%,mean,0.6,20,,,0.9,%,0.9,%,primary,,12,,Table 4,,"Table 4, строка A2",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R018,DV-A2,MS1,M-RFMS,PCE,2.04,%,champion,,,,,2.04,%,2.04,%,primary,,12,,Table 4,,"Table 4, строка A2",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R019,DV-A2,MS1,M-RFMS,Rs,4.17,Ohm*cm2,,,,,,4.17,Ohm*cm2,4.17,Ohm*cm2,primary,,12,,Table 4,,"Table 4, строка A2",extracted,,
+D021,R020,DV-A2,MS1,M-RFMS,Rsh,149.2,Ohm*cm2,,,,,,149.2,Ohm*cm2,149.2,Ohm*cm2,primary,,12,,Table 4,,"Table 4, строка A2",extracted,,
+D021,R021,DV-A3,MS1,M-RFMS,Voc,0.343,V,mean,43,20,,,343,mV,0.343,V,primary,,12,,Table 4,,"Table 4, строка A3",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R022,DV-A3,MS1,M-RFMS,Voc,0.321,V,champion,,,,,321,mV,0.321,V,primary,,12,,Table 4,,"Table 4, строка A3",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R023,DV-A3,MS1,M-RFMS,Jsc,9.35,mA/cm2,mean,7.5,20,,,9.35,mA/cm2,9.35,mA/cm2,primary,,12,,Table 4,,"Table 4, строка A3",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R024,DV-A3,MS1,M-RFMS,Jsc,22.4,mA/cm2,champion,,,,,22.4,mA/cm2,22.4,mA/cm2,primary,,12,,Table 4,,"Table 4, строка A3",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R025,DV-A3,MS1,M-RFMS,FF,33.9,%,mean,4.5,20,,,33.9,%,33.9,%,primary,,12,,Table 4,,"Table 4, строка A3",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R026,DV-A3,MS1,M-RFMS,FF,26.5,%,champion,,,,,26.5,%,26.5,%,primary,,12,,Table 4,,"Table 4, строка A3",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R027,DV-A3,MS1,M-RFMS,PCE,0.93,%,mean,0.52,20,,,0.93,%,0.93,%,primary,,12,,Table 4,,"Table 4, строка A3",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R028,DV-A3,MS1,M-RFMS,PCE,1.91,%,champion,,,,,1.91,%,1.91,%,primary,,12,,Table 4,,"Table 4, строка A3",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R029,DV-A3,MS1,M-RFMS,Rs,18.34,Ohm*cm2,,,,,,18.34,Ohm*cm2,18.34,Ohm*cm2,primary,,12,,Table 4,,"Table 4, строка A3",extracted,,
+D021,R030,DV-A3,MS1,M-RFMS,Rsh,4566.6,Ohm*cm2,,,,,,4566.6,Ohm*cm2,4566.6,Ohm*cm2,primary,,12,,Table 4,,"Table 4, строка A3",extracted,,
+D021,R031,DV-A4,MS1,M-RFMS,Voc,0.373,V,mean,9,20,,,373,mV,0.373,V,primary,,12,,Table 4,,"Table 4, строка A4",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R032,DV-A4,MS1,M-RFMS,Voc,0.377,V,champion,,,,,377,mV,0.377,V,primary,,12,,Table 4,,"Table 4, строка A4",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R033,DV-A4,MS1,M-RFMS,Jsc,5.46,mA/cm2,mean,0.95,20,,,5.46,mA/cm2,5.46,mA/cm2,primary,,12,,Table 4,,"Table 4, строка A4",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R034,DV-A4,MS1,M-RFMS,Jsc,6.7,mA/cm2,champion,,,,,6.7,mA/cm2,6.7,mA/cm2,primary,,12,,Table 4,,"Table 4, строка A4",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R035,DV-A4,MS1,M-RFMS,FF,37.1,%,mean,1.9,20,,,37.1,%,37.1,%,primary,,12,,Table 4,,"Table 4, строка A4",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R036,DV-A4,MS1,M-RFMS,FF,40.6,%,champion,,,,,40.6,%,40.6,%,primary,,12,,Table 4,,"Table 4, строка A4",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R037,DV-A4,MS1,M-RFMS,PCE,0.76,%,mean,0.16,20,,,0.76,%,0.76,%,primary,,12,,Table 4,,"Table 4, строка A4",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R038,DV-A4,MS1,M-RFMS,PCE,1.02,%,champion,,,,,1.02,%,1.02,%,primary,,12,,Table 4,,"Table 4, строка A4",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R039,DV-A4,MS1,M-RFMS,Rs,9.05,Ohm*cm2,,,,,,9.05,Ohm*cm2,9.05,Ohm*cm2,primary,,12,,Table 4,,"Table 4, строка A4",extracted,,
+D021,R040,DV-A4,MS1,M-RFMS,Rsh,5754.4,Ohm*cm2,,,,,,5754.4,Ohm*cm2,5754.4,Ohm*cm2,primary,,12,,Table 4,,"Table 4, строка A4",extracted,,
+D021,R041,DV-A5,MS1,M-RFMS,Voc,0.342,V,mean,22,20,,,342,mV,0.342,V,primary,,12,,Table 4,,"Table 4, строка A5",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R042,DV-A5,MS1,M-RFMS,Voc,0.356,V,champion,,,,,356,mV,0.356,V,primary,,12,,Table 4,,"Table 4, строка A5",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R043,DV-A5,MS1,M-RFMS,Jsc,8.08,mA/cm2,mean,1.7,20,,,8.08,mA/cm2,8.08,mA/cm2,primary,,12,,Table 4,,"Table 4, строка A5",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R044,DV-A5,MS1,M-RFMS,Jsc,9.32,mA/cm2,champion,,,,,9.32,mA/cm2,9.32,mA/cm2,primary,,12,,Table 4,,"Table 4, строка A5",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R045,DV-A5,MS1,M-RFMS,FF,41.3,%,mean,5.4,20,,,41.3,%,41.3,%,primary,,12,,Table 4,,"Table 4, строка A5",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R046,DV-A5,MS1,M-RFMS,FF,44.0,%,champion,,,,,44.0,%,44.0,%,primary,,12,,Table 4,,"Table 4, строка A5",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R047,DV-A5,MS1,M-RFMS,PCE,1.15,%,mean,0.28,20,,,1.15,%,1.15,%,primary,,12,,Table 4,,"Table 4, строка A5",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R048,DV-A5,MS1,M-RFMS,PCE,1.47,%,champion,,,,,1.47,%,1.47,%,primary,,12,,Table 4,,"Table 4, строка A5",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R049,DV-A5,MS1,M-RFMS,Rs,3.6,Ohm*cm2,,,,,,3.6,Ohm*cm2,3.6,Ohm*cm2,primary,,12,,Table 4,,"Table 4, строка A5",extracted,,
+D021,R050,DV-A5,MS1,M-RFMS,Rsh,405.9,Ohm*cm2,,,,,,405.9,Ohm*cm2,405.9,Ohm*cm2,primary,,12,,Table 4,,"Table 4, строка A5",extracted,,
+D021,R051,DV-A6,MS1,M-RFMS,Voc,0.395,V,mean,13,20,,,395,mV,0.395,V,primary,,12,,Table 4,,"Table 4, строка A6",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R052,DV-A6,MS1,M-RFMS,Voc,0.381,V,champion,,,,,381,mV,0.381,V,primary,,12,,Table 4,,"Table 4, строка A6",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R053,DV-A6,MS1,M-RFMS,Jsc,3.67,mA/cm2,mean,1.18,20,,,3.67,mA/cm2,3.67,mA/cm2,primary,,12,,Table 4,,"Table 4, строка A6",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R054,DV-A6,MS1,M-RFMS,Jsc,5.58,mA/cm2,champion,,,,,5.58,mA/cm2,5.58,mA/cm2,primary,,12,,Table 4,,"Table 4, строка A6",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R055,DV-A6,MS1,M-RFMS,FF,35.3,%,mean,1.1,20,,,35.3,%,35.3,%,primary,,12,,Table 4,,"Table 4, строка A6",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R056,DV-A6,MS1,M-RFMS,FF,34.0,%,champion,,,,,34.0,%,34.0,%,primary,,12,,Table 4,,"Table 4, строка A6",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R057,DV-A6,MS1,M-RFMS,PCE,0.51,%,mean,0.14,20,,,0.51,%,0.51,%,primary,,12,,Table 4,,"Table 4, строка A6",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R058,DV-A6,MS1,M-RFMS,PCE,0.73,%,champion,,,,,0.73,%,0.73,%,primary,,12,,Table 4,,"Table 4, строка A6",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R059,DV-A6,MS1,M-RFMS,Rs,4.45,Ohm*cm2,,,,,,4.45,Ohm*cm2,4.45,Ohm*cm2,primary,,12,,Table 4,,"Table 4, строка A6",extracted,,
+D021,R060,DV-A6,MS1,M-RFMS,Rsh,26833.2,Ohm*cm2,,,,,,26833.2,Ohm*cm2,26833.2,Ohm*cm2,primary,,12,,Table 4,,"Table 4, строка A6",extracted,,
+D021,R061,DV-B1,MS1,M-PED,Voc,0.385,V,mean,19,20,,,385,mV,0.385,V,primary,,12,,Table 4,,"Table 4, строка B1",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R062,DV-B1,MS1,M-PED,Voc,0.355,V,champion,,,,,355,mV,0.355,V,primary,,12,,Table 4,,"Table 4, строка B1",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R063,DV-B1,MS1,M-PED,Jsc,0.74,mA/cm2,mean,0.2,20,,,0.74,mA/cm2,0.74,mA/cm2,primary,,12,,Table 4,,"Table 4, строка B1",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R064,DV-B1,MS1,M-PED,Jsc,1.25,mA/cm2,champion,,,,,1.25,mA/cm2,1.25,mA/cm2,primary,,12,,Table 4,,"Table 4, строка B1",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R065,DV-B1,MS1,M-PED,FF,42.6,%,mean,3.7,20,,,42.6,%,42.6,%,primary,,12,,Table 4,,"Table 4, строка B1",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R066,DV-B1,MS1,M-PED,FF,40.6,%,champion,,,,,40.6,%,40.6,%,primary,,12,,Table 4,,"Table 4, строка B1",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R067,DV-B1,MS1,M-PED,PCE,0.12,%,mean,0.02,20,,,0.12,%,0.12,%,primary,,12,,Table 4,,"Table 4, строка B1",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R068,DV-B1,MS1,M-PED,PCE,0.18,%,champion,,,,,0.18,%,0.18,%,primary,,12,,Table 4,,"Table 4, строка B1",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R069,DV-B1,MS1,M-PED,Rs,3.75,Ohm*cm2,,,,,,3.75,Ohm*cm2,3.75,Ohm*cm2,primary,,12,,Table 4,,"Table 4, строка B1",extracted,,
+D021,R070,DV-B1,MS1,M-PED,Rsh,21298.0,Ohm*cm2,,,,,,21298.0,Ohm*cm2,21298.0,Ohm*cm2,primary,,12,,Table 4,,"Table 4, строка B1",extracted,,
+D021,R071,DV-B2,MS1,M-RFMS,Voc,0.359,V,mean,3,20,,,359,mV,0.359,V,primary,,12,,Table 4,,"Table 4, строка B2",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R072,DV-B2,MS1,M-RFMS,Voc,0.361,V,champion,,,,,361,mV,0.361,V,primary,,12,,Table 4,,"Table 4, строка B2",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R073,DV-B2,MS1,M-RFMS,Jsc,9.07,mA/cm2,mean,0.47,20,,,9.07,mA/cm2,9.07,mA/cm2,primary,,12,,Table 4,,"Table 4, строка B2",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R074,DV-B2,MS1,M-RFMS,Jsc,9.05,mA/cm2,champion,,,,,9.05,mA/cm2,9.05,mA/cm2,primary,,12,,Table 4,,"Table 4, строка B2",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R075,DV-B2,MS1,M-RFMS,FF,41.1,%,mean,1.9,20,,,41.1,%,41.1,%,primary,,12,,Table 4,,"Table 4, строка B2",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R076,DV-B2,MS1,M-RFMS,FF,43.2,%,champion,,,,,43.2,%,43.2,%,primary,,12,,Table 4,,"Table 4, строка B2",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R077,DV-B2,MS1,M-RFMS,PCE,1.35,%,mean,0.06,20,,,1.35,%,1.35,%,primary,,12,,Table 4,,"Table 4, строка B2",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R078,DV-B2,MS1,M-RFMS,PCE,1.41,%,champion,,,,,1.41,%,1.41,%,primary,,12,,Table 4,,"Table 4, строка B2",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R079,DV-B2,MS1,M-RFMS,Rs,2.35,Ohm*cm2,,,,,,2.35,Ohm*cm2,2.35,Ohm*cm2,primary,,12,,Table 4,,"Table 4, строка B2",extracted,,
+D021,R080,DV-B2,MS1,M-RFMS,Rsh,3314.1,Ohm*cm2,,,,,,3314.1,Ohm*cm2,3314.1,Ohm*cm2,primary,,12,,Table 4,,"Table 4, строка B2",extracted,,
+D021,R081,DV-B3,MS1,M-RFMS,Voc,0.358,V,mean,7,20,,,358,mV,0.358,V,primary,,13,,Table 4 (cont.),,"Table 4, строка B3",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R082,DV-B3,MS1,M-RFMS,Voc,0.349,V,champion,,,,,349,mV,0.349,V,primary,,13,,Table 4 (cont.),,"Table 4, строка B3",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R083,DV-B3,MS1,M-RFMS,Jsc,9.89,mA/cm2,mean,2.6,20,,,9.89,mA/cm2,9.89,mA/cm2,primary,,13,,Table 4 (cont.),,"Table 4, строка B3",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R084,DV-B3,MS1,M-RFMS,Jsc,14.58,mA/cm2,champion,,,,,14.58,mA/cm2,14.58,mA/cm2,primary,,13,,Table 4 (cont.),,"Table 4, строка B3",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R085,DV-B3,MS1,M-RFMS,FF,45.0,%,mean,2.5,20,,,45.0,%,45.0,%,primary,,13,,Table 4 (cont.),,"Table 4, строка B3",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R086,DV-B3,MS1,M-RFMS,FF,44.5,%,champion,,,,,44.5,%,44.5,%,primary,,13,,Table 4 (cont.),,"Table 4, строка B3",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R087,DV-B3,MS1,M-RFMS,PCE,1.58,%,mean,0.38,20,,,1.58,%,1.58,%,primary,,13,,Table 4 (cont.),,"Table 4, строка B3",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R088,DV-B3,MS1,M-RFMS,PCE,2.27,%,champion,,,,,2.27,%,2.27,%,primary,,13,,Table 4 (cont.),,"Table 4, строка B3",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R089,DV-B3,MS1,M-RFMS,Rs,4.59,Ohm*cm2,,,,,,4.59,Ohm*cm2,4.59,Ohm*cm2,primary,,13,,Table 4 (cont.),,"Table 4, строка B3",extracted,,
+D021,R090,DV-B3,MS1,M-RFMS,Rsh,1633.4,Ohm*cm2,,,,,,1633.4,Ohm*cm2,1633.4,Ohm*cm2,primary,,13,,Table 4 (cont.),,"Table 4, строка B3",extracted,,
+D021,R091,DV-B4,MS1,M-RFMS,Voc,0.347,V,mean,7,20,,,347,mV,0.347,V,primary,,13,,Table 4 (cont.),,"Table 4, строка B4",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R092,DV-B4,MS1,M-RFMS,Voc,0.344,V,champion,,,,,344,mV,0.344,V,primary,,13,,Table 4 (cont.),,"Table 4, строка B4",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R093,DV-B4,MS1,M-RFMS,Jsc,14.65,mA/cm2,mean,3.3,20,,,14.65,mA/cm2,14.65,mA/cm2,primary,,13,,Table 4 (cont.),,"Table 4, строка B4",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R094,DV-B4,MS1,M-RFMS,Jsc,26.6,mA/cm2,champion,,,,,26.6,mA/cm2,26.6,mA/cm2,primary,,13,,Table 4 (cont.),,"Table 4, строка B4",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R095,DV-B4,MS1,M-RFMS,FF,48.8,%,mean,3.5,20,,,48.8,%,48.8,%,primary,,13,,Table 4 (cont.),,"Table 4, строка B4",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R096,DV-B4,MS1,M-RFMS,FF,42.2,%,champion,,,,,42.2,%,42.2,%,primary,,13,,Table 4 (cont.),,"Table 4, строка B4",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R097,DV-B4,MS1,M-RFMS,PCE,2.45,%,mean,0.39,20,,,2.45,%,2.45,%,primary,,13,,Table 4 (cont.),,"Table 4, строка B4",extracted,,Среднее ± отклонение; 20 ячеек на образец
+D021,R098,DV-B4,MS1,M-RFMS,PCE,3.85,%,champion,,,,,3.85,%,3.85,%,primary,,13,,Table 4 (cont.),,"Table 4, строка B4",extracted,,Значение в скобках — «record»; по согласованности Voc·Jsc·FF·PCE это параметры одной лучшей ячейки
+D021,R099,DV-B4,MS1,M-RFMS,Rs,1.81,Ohm*cm2,,,,,,1.81,Ohm*cm2,1.81,Ohm*cm2,primary,,13,,Table 4 (cont.),,"Table 4, строка B4",extracted,,
+D021,R100,DV-B4,MS1,M-RFMS,Rsh,460.2,Ohm*cm2,,,,,,460.2,Ohm*cm2,460.2,Ohm*cm2,primary,,13,,Table 4 (cont.),,"Table 4, строка B4",extracted,,
+D021,R101,DV-B4,MS1,M-RFMS,PCE,5.25,%,champion,,,,,5.25,%,5.25,%,primary,,13,3.4,,Figure 10,exhibited PCE = 5.25%,extracted,,Значения из подписи рис. 10 и текста; противоречат Table 4 для того же образца
+D021,R101-1,DV-B4,MS1,M-RFMS,PCE,5.25,%,champion,,,,,5.25,%,5.25,%,primary,,1,,,,achieved a maximum efficiency of 5.25%,extracted,R101,повторное упоминание
+D021,R101-2,DV-B4,MS1,M-RFMS,PCE,5.25,%,champion,,,,,5.25,%,5.25,%,primary,,3,,,,promising conversion efficiency of 5.25%,extracted,R101,повторное упоминание
+D021,R102,DV-B4,MS1,M-RFMS,Voc,0.343,V,champion,,,,,343,mV,0.343,V,primary,,13,3.4,,Figure 10,exhibited PCE = 5.25%,extracted,,Значения из подписи рис. 10 и текста; противоречат Table 4 для того же образца
+D021,R103,DV-B4,MS1,M-RFMS,Jsc,31.4,mA/cm2,champion,,,,,31.4,mA/cm2,31.4,mA/cm2,primary,,13,3.4,,Figure 10,exhibited PCE = 5.25%,extracted,,Значения из подписи рис. 10 и текста; противоречат Table 4 для того же образца
+D021,R104,DV-B4,MS1,M-RFMS,FF,49.0,%,champion,,,,,0.49,fraction,49.0,%,primary,,13,3.4,,Figure 10,exhibited PCE = 5.25%,extracted,,Значения из подписи рис. 10 и текста; противоречат Table 4 для того же образца
+D021,R105,DV-A1,MS1,M-RFMS,PCE,3.2,%,champion,,,,,3.2,%,3.2,%,primary,,13,,,Figure 10,Figure 10. The current density–voltage,extracted,,"Значения только на рисунке 10 (подписи на графике): «RFMS PCE=3.2%, Voc=312 mV, Jsc=28.6, FF=0.36»"
+D021,R105-1,DV-A1,MS1,M-RFMS,PCE,3.2,%,champion,,,,,3.2,%,3.2,%,primary,,5,,,,efficiency improvement from 1.28%,extracted,R105,повторное упоминание
+D021,R106,DV-A1,MS1,M-RFMS,Voc,0.312,V,champion,,,,,312,mV,0.312,V,primary,,13,,,Figure 10,Figure 10. The current density–voltage,extracted,,"Значения только на рисунке 10 (подписи на графике): «RFMS PCE=3.2%, Voc=312 mV, Jsc=28.6, FF=0.36»"
+D021,R107,DV-A1,MS1,M-RFMS,Jsc,28.6,mA/cm2,champion,,,,,28.6,mA/cm2,28.6,mA/cm2,primary,,13,,,Figure 10,Figure 10. The current density–voltage,extracted,,"Значения только на рисунке 10 (подписи на графике): «RFMS PCE=3.2%, Voc=312 mV, Jsc=28.6, FF=0.36»"
+D021,R108,DV-A1,MS1,M-RFMS,FF,36.0,%,champion,,,,,0.36,fraction,36.0,%,primary,,13,,,Figure 10,Figure 10. The current density–voltage,extracted,,"Значения только на рисунке 10 (подписи на графике): «RFMS PCE=3.2%, Voc=312 mV, Jsc=28.6, FF=0.36»"
+D021,R109,DV-R0,MS1,M-RFMS,PCE,1.28,%,,,,,,1.28,%,1.28,%,primary,,5,3.1,,Figure 2a,efficiency improvement from 1.28%,extracted,,"Совпадает со значением 1.28 %, которое ниже приписано ссылке [17]"
+D021,R110,DV-P0,MS1,M-PED,PCE,0.36,%,,,,,,0.36,%,0.36,%,primary,,5,3.1,,Figure 2b,(PCE) of only 0.36%,extracted,,
+D021,R111,,,,PCE,47.1,%,,,,,,47.1,%,47.1,%,cited,[1],1,,,,efficiency of 47.1%,extracted,,Многопереходные III-V — вне области
+D021,R112,,,,PCE,31.7,%,,,,,,31.7,%,31.7,%,cited,[8],2,,,,theoretical efficiency of 31.7%,extracted,,Теоретический предел Шокли — Квайссера
+D021,R113,,,,PCE,10.57,%,,,,,,10.57,%,10.57,%,cited,[9],2,,,,the highest experimental efficiency of 10.57%,extracted,,Рекорд Sb2Se3
+D021,R114,,,,PCE,9.2,%,,,,,,9.2,%,9.2,%,cited,[19–21],2,,,,demonstrated conversion efficiencies of 9.2% and 10.12%,extracted,,CSS
+D021,R115,,,,PCE,10.12,%,,,,,,10.12,%,10.12,%,cited,[22],2,,,,demonstrated conversion efficiencies of 9.2% and 10.12%,extracted,,IVD
+D021,R116,,,,PCE,2.1,%,,,,,,2.1,%,2.1,%,cited,[32],13,,,,previous benchmark of 2.1% for a PED,extracted,,PED Sb2Se3
+D021,R117,,,,PCE,1.28,%,,,,,,1.28,%,1.28,%,cited,[17],13,,,,previous benchmark of 2.1% for a PED,extracted,,RFMS Sb2Se3 на FTO
+D021,R118,,,,PCE,2.36,%,,,,,,2.36,%,2.36,%,cited,[17],13,,,,previous benchmark of 2.1% for a PED,extracted,,RFMS Sb2Se3 на CdS/FTO
+D021,R119,,,,PCE,6.06,%,,,,,,6.06,%,6.06,%,cited,[38],13,,,,highest reported efficiency for an RFMS-grown,extracted,,RFMS с доп. селенизацией
+D022,R001,DV1,MS1,M15,Voc,0.29,V,,,,,,0.29,V,0.29,V,primary,,4,2.1.3,Table 1,Figure 2c,"Table 1, строка FTO/ZnO (50 nm)/a-Si:H (15 nm)/MoO3 (10 nm)/ITO",extracted,,
+D022,R001-1,DV1,MS1,M15,Voc,0.29,V,,,,,,0.29,V,0.29,V,primary,,5,,,,"Table 2, строка FTO/ZnO (50 nm)/a-Si:H (15 nm)/MoO3 (10 nm)/ITO (повтор строки Table 1)",extracted,R001,повторное упоминание
+D022,R002,DV1,MS1,M15,Jsc,1.85,mA/cm2,,,,,,1.85,mA/cm2,1.85,mA/cm2,primary,,4,2.1.3,Table 1,Figure 2c,"Table 1, строка FTO/ZnO (50 nm)/a-Si:H (15 nm)/MoO3 (10 nm)/ITO",extracted,,
+D022,R002-1,DV1,MS1,M15,Jsc,1.85,mA/cm2,,,,,,1.85,mA/cm2,1.85,mA/cm2,primary,,5,,,,"Table 2, строка FTO/ZnO (50 nm)/a-Si:H (15 nm)/MoO3 (10 nm)/ITO (повтор строки Table 1)",extracted,R002,повторное упоминание
+D022,R003,DV1,MS1,M15,FF,31.0,%,,,,,,31.0,%,31.0,%,primary,,4,2.1.3,Table 1,Figure 2c,"Table 1, строка FTO/ZnO (50 nm)/a-Si:H (15 nm)/MoO3 (10 nm)/ITO",extracted,,
+D022,R003-1,DV1,MS1,M15,FF,31.0,%,,,,,,31.0,%,31.0,%,primary,,5,,,,"Table 2, строка FTO/ZnO (50 nm)/a-Si:H (15 nm)/MoO3 (10 nm)/ITO (повтор строки Table 1)",extracted,R003,повторное упоминание
+D022,R004,DV1,MS1,M15,PCE,0.21,%,,,,,,0.21,%,0.21,%,primary,,4,2.1.3,Table 1,Figure 2c,"Table 1, строка FTO/ZnO (50 nm)/a-Si:H (15 nm)/MoO3 (10 nm)/ITO",extracted,,
+D022,R004-1,DV1,MS1,M15,PCE,0.21,%,,,,,,0.21,%,0.21,%,primary,,5,,,,"Table 2, строка FTO/ZnO (50 nm)/a-Si:H (15 nm)/MoO3 (10 nm)/ITO (повтор строки Table 1)",extracted,R004,повторное упоминание
+D022,R005,DV2,MS1,M30,Voc,0.41,V,,,,,,0.41,V,0.41,V,primary,,4,2.1.3,Table 1,Figure 2c,"Table 1, строка FTO/ZnO (50 nm)/a-Si:H (30 nm)/MoO3 (10 nm)/ITO",extracted,,
+D022,R005-1,DV2,MS1,M30,Voc,0.41,V,,,,,,0.41,V,0.41,V,primary,,5,,,,"Table 2, строка FTO/ZnO (50 nm)/a-Si:H (30 nm)/MoO3 (10 nm)/ITO (повтор строки Table 1)",extracted,R005,повторное упоминание
+D022,R006,DV2,MS1,M30,Jsc,3.09,mA/cm2,,,,,,3.09,mA/cm2,3.09,mA/cm2,primary,,4,2.1.3,Table 1,Figure 2c,"Table 1, строка FTO/ZnO (50 nm)/a-Si:H (30 nm)/MoO3 (10 nm)/ITO",extracted,,
+D022,R006-1,DV2,MS1,M30,Jsc,3.09,mA/cm2,,,,,,3.09,mA/cm2,3.09,mA/cm2,primary,,5,,,,"Table 2, строка FTO/ZnO (50 nm)/a-Si:H (30 nm)/MoO3 (10 nm)/ITO (повтор строки Table 1)",extracted,R006,повторное упоминание
+D022,R007,DV2,MS1,M30,FF,41.4,%,,,,,,41.4,%,41.4,%,primary,,4,2.1.3,Table 1,Figure 2c,"Table 1, строка FTO/ZnO (50 nm)/a-Si:H (30 nm)/MoO3 (10 nm)/ITO",extracted,,
+D022,R007-1,DV2,MS1,M30,FF,41.4,%,,,,,,41.4,%,41.4,%,primary,,5,,,,"Table 2, строка FTO/ZnO (50 nm)/a-Si:H (30 nm)/MoO3 (10 nm)/ITO (повтор строки Table 1)",extracted,R007,повторное упоминание
+D022,R008,DV2,MS1,M30,PCE,0.51,%,,,,,,0.51,%,0.51,%,primary,,4,2.1.3,Table 1,Figure 2c,"Table 1, строка FTO/ZnO (50 nm)/a-Si:H (30 nm)/MoO3 (10 nm)/ITO",extracted,,
+D022,R008-1,DV2,MS1,M30,PCE,0.51,%,,,,,,0.51,%,0.51,%,primary,,5,,,,"Table 2, строка FTO/ZnO (50 nm)/a-Si:H (30 nm)/MoO3 (10 nm)/ITO (повтор строки Table 1)",extracted,R008,повторное упоминание
+D022,R009,DV3,MS1,M15,Voc,0.33,V,,,,,,0.33,V,0.33,V,primary,,4,2.1.3,Table 1,Figure 2c,"Table 1, строка FTO/ZnO (50 nm)/a-Si:H (15 nm)/MoO3 (20 nm)/ITO",extracted,,
+D022,R010,DV3,MS1,M15,Jsc,1.86,mA/cm2,,,,,,1.86,mA/cm2,1.86,mA/cm2,primary,,4,2.1.3,Table 1,Figure 2c,"Table 1, строка FTO/ZnO (50 nm)/a-Si:H (15 nm)/MoO3 (20 nm)/ITO",extracted,,
+D022,R011,DV3,MS1,M15,FF,30.8,%,,,,,,30.8,%,30.8,%,primary,,4,2.1.3,Table 1,Figure 2c,"Table 1, строка FTO/ZnO (50 nm)/a-Si:H (15 nm)/MoO3 (20 nm)/ITO",extracted,,
+D022,R012,DV3,MS1,M15,PCE,0.22,%,,,,,,0.22,%,0.22,%,primary,,4,2.1.3,Table 1,Figure 2c,"Table 1, строка FTO/ZnO (50 nm)/a-Si:H (15 nm)/MoO3 (20 nm)/ITO",extracted,,
+D022,R013,DV4,MS1,M30,Voc,0.46,V,,,,,,0.46,V,0.46,V,primary,,4,2.1.3,Table 1,Figure 2c,"Table 1, строка FTO/ZnO (50 nm)/a-Si:H (30 nm)/MoO3 (20 nm)/ITO",extracted,,
+D022,R014,DV4,MS1,M30,Jsc,3.5,mA/cm2,,,,,,3.5,mA/cm2,3.5,mA/cm2,primary,,4,2.1.3,Table 1,Figure 2c,"Table 1, строка FTO/ZnO (50 nm)/a-Si:H (30 nm)/MoO3 (20 nm)/ITO",extracted,,
+D022,R015,DV4,MS1,M30,FF,33.4,%,,,,,,33.4,%,33.4,%,primary,,4,2.1.3,Table 1,Figure 2c,"Table 1, строка FTO/ZnO (50 nm)/a-Si:H (30 nm)/MoO3 (20 nm)/ITO",extracted,,
+D022,R016,DV4,MS1,M30,PCE,0.52,%,,,,,,0.52,%,0.52,%,primary,,4,2.1.3,Table 1,Figure 2c,"Table 1, строка FTO/ZnO (50 nm)/a-Si:H (30 nm)/MoO3 (20 nm)/ITO",extracted,,
+D022,R017,DV1,MS2,M15,AVT,69,%,,,,,,69,%,69,%,primary,,5,2.2,Table 2,Figure 3,"Table 2, строка FTO/ZnO (50 nm)/a-Si:H (15 nm)/MoO3 (10 nm)/ITO",extracted,,Подпись к рис. 3 — «best devices»
+D022,R018,DV1,MS2,M15,CRI,89,,,,,,,89,,89,,primary,,5,2.2,Table 2,Figure 3,"Table 2, строка FTO/ZnO (50 nm)/a-Si:H (15 nm)/MoO3 (10 nm)/ITO",extracted,,Подпись к рис. 3 — «best devices»
+D022,R019,DV1,MS1,M15,LUE,0.15,%,,,,,,0.15,%,0.15,%,primary,,5,2.2,Table 2,Figure 3,"Table 2, строка FTO/ZnO (50 nm)/a-Si:H (15 nm)/MoO3 (10 nm)/ITO",extracted,,Подпись к рис. 3 — «best devices»
+D022,R020,DV2,MS2,M30,AVT,50,%,,,,,,50,%,50,%,primary,,5,2.2,Table 2,Figure 3,"Table 2, строка FTO/ZnO (50 nm)/a-Si:H (30 nm)/MoO3 (10 nm)/ITO",extracted,,Подпись к рис. 3 — «best devices»
+D022,R021,DV2,MS2,M30,CRI,74,,,,,,,74,,74,,primary,,5,2.2,Table 2,Figure 3,"Table 2, строка FTO/ZnO (50 nm)/a-Si:H (30 nm)/MoO3 (10 nm)/ITO",extracted,,Подпись к рис. 3 — «best devices»
+D022,R022,DV2,MS1,M30,LUE,0.25,%,,,,,,0.25,%,0.25,%,primary,,5,2.2,Table 2,Figure 3,"Table 2, строка FTO/ZnO (50 nm)/a-Si:H (30 nm)/MoO3 (10 nm)/ITO",extracted,,Подпись к рис. 3 — «best devices»
+D022,R023,DV5,MS2,M15,AVT,62,%,,,,,,62,%,62,%,primary,,5,2.2,Table 2,Figure 3,"Table 2, строка FTO/AZO (75 nm)/a-Si:H (15 nm)/MoO3 (10 nm)/ITO",extracted,,Подпись к рис. 3 — «best devices»
+D022,R024,DV5,MS2,M15,CRI,79,,,,,,,79,,79,,primary,,5,2.2,Table 2,Figure 3,"Table 2, строка FTO/AZO (75 nm)/a-Si:H (15 nm)/MoO3 (10 nm)/ITO",extracted,,Подпись к рис. 3 — «best devices»
+D022,R025,DV5,MS1,M15,Voc,0.43,V,,,,,,0.43,V,0.43,V,primary,,5,2.2,Table 2,Figure 3,"Table 2, строка FTO/AZO (75 nm)/a-Si:H (15 nm)/MoO3 (10 nm)/ITO",extracted,,Подпись к рис. 3 — «best devices»
+D022,R026,DV5,MS1,M15,Jsc,2.86,mA/cm2,,,,,,2.86,mA/cm2,2.86,mA/cm2,primary,,5,2.2,Table 2,Figure 3,"Table 2, строка FTO/AZO (75 nm)/a-Si:H (15 nm)/MoO3 (10 nm)/ITO",extracted,,Подпись к рис. 3 — «best devices»
+D022,R027,DV5,MS1,M15,FF,37.0,%,,,,,,37.0,%,37.0,%,primary,,5,2.2,Table 2,Figure 3,"Table 2, строка FTO/AZO (75 nm)/a-Si:H (15 nm)/MoO3 (10 nm)/ITO",extracted,,Подпись к рис. 3 — «best devices»
+D022,R028,DV5,MS1,M15,PCE,0.41,%,,,,,,0.41,%,0.41,%,primary,,5,2.2,Table 2,Figure 3,"Table 2, строка FTO/AZO (75 nm)/a-Si:H (15 nm)/MoO3 (10 nm)/ITO",extracted,,Подпись к рис. 3 — «best devices»
+D022,R029,DV5,MS1,M15,LUE,0.25,%,,,,,,0.25,%,0.25,%,primary,,5,2.2,Table 2,Figure 3,"Table 2, строка FTO/AZO (75 nm)/a-Si:H (15 nm)/MoO3 (10 nm)/ITO",extracted,,Подпись к рис. 3 — «best devices»

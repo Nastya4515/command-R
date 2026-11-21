@@ -34,8 +34,13 @@ out/
 logs/
 models/
 uploads/
-data/dev/
-data/test/
-data/sft/
+data/rag/dev/
+data/rag/test/
+data/rag/sft/
+data/solar/dev/
+data/solar/test/
 /TZ_developer_1.docx
 /TZ_original.pdf
+
+# generated reports
+reports/

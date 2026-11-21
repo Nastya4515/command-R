@@ -1,0 +1,54 @@
+﻿publication_id,issue_id,record_ids,check_name,description,source_page,source_fragment
+D001,I1,R003,unit_inconsistency,"В тексте FF контрольного прибора записан как «0.71%», в Table 1 — 0.71 (доля). Верная нормализация — 71 %.",3,a ﬁll factor (FF) of 0.71%
+D001,I2,,contradiction,"Материал верхнего электрода: в методике — Ag (100 nm, термическое напыление), в описании структуры прибора и на рис. 5A — Au.",3,FTO/compact-TiO2 (c-TiO2)/CsPbI2Br/P3HT/Au
+D001,I3,R041;R042;R032,contradiction,"Средние КПД, вероятно, перепутаны местами: среднее контрольных 14,66 % больше КПД лучшего контрольного прибора (13,66 %) и больше среднего легированных (12,96 %), хотя текст утверждает преимущество легирования.",5,"the mean PCEs of pristine and SrCl2-doped devices are 14.66 and 12.96%, respectively"
+D001,I4,R041;R042,ambiguity,Число приборов в статистике: 20 всего или 20 в каждой группе — из текста не следует.,4,Statistical distribution of PCEs of 20 individual PSCs
+D001,I5,R032;R041,champion_vs_mean,среднее 14.66 % больше значения лучшего прибора 13.66 %,,
+D002,I1,,comparability,"Освещение — галогенная лампа 1000 W/m2, а не стандартный спектр AM1.5G. Результаты нельзя сравнивать с измерениями других статей при стандартных условиях.",3,halogen lamp with an intensity of 1000 W/m2
+D002,I2,R007,plausibility,"FF = 87,04 % при Voc = 0,98 В — уровень мировых рекордов для перовскитов; вместе с нестандартным освещением это повод для замечания о правдоподобии.",5,"Table 1, строка NiO/GO"
+D002,I3,,derived_values,"Прирост «Voc of 0.127 V, Jsc of 3.1 mAcm−2, fill factor of 25.4%, and PCE of 7.5%» — разности строк Table 1, а не самостоятельные результаты.",5,improves Voc of 0.127 V
+D003,I1,R013;R014,possible_swap,"Интегральный по EQE ток лучше у контрольного прибора (24.0) чем у легированного (23.5), хотя по ВАХ наоборот; у Y-Sn3O4 расхождение с ВАХ больше 5 %. Возможно, значения перепутаны местами.",6,are 24.0 and 23.5
+D003,I2,,figure_only,"Приборы с 1 % и 10 % Y и распределения КПД по партиям есть только на рисунках (рис. 3D, 5B, S13); в тексте и таблицах чисел нет.",6,Figure 5B shows the efficiency distri
+D003,I3,R002;R014,eqe_consistency,Jsc по ВАХ 24.89 и по EQE 23.5 расходятся больше чем на 5 %,,
+D004,I1,R011;R012;R013;R014;R015,jv_consistency,"Для C-ED-1 произведение Voc·Jsc·FF = 10,40 % совпадает с максимальным КПД (10,32 %), а не со средним (9,90 %). Для остальных строк оно совпадает со средним. Значит, агрегация параметров ВАХ в Table 1 непостоянна от строки к строке.",11,"Table 1, строка C-ED-1"
+D004,I2,R003;R018,rounding_inconsistency,"В выводах FF контрольного прибора назван 57.4 %, в Table 1 — 57.49 %; FF лучшего — 58.6 % вместо 58.66 %.",12,fill factor 57.4 to 58.6%
+D004,I3,,missing_conditions,"Условия измерения ВАХ (спектр, интенсивность, площадь, направление развёртки) в статье не указаны; результаты нельзя проверить на сопоставимость.",3,Device Fabrication
+D005,I1,,missing_conditions,Площадь прибора не указана.,9,AM 1.5G illumination
+D007,I1,R011;R009,comparability,"Мини-модуль: Voc = 9.399 В относится ко всему модулю из последовательно соединённых ячеек, Jsc = 2.59 мА/см2 — к площади модуля. Эти значения нельзя сравнивать с ячейками и проверять по пределу Eg/q для одной ячейки.",6,an impressive PCE of 19.99%
+D007,I2,R014;R015,ambiguity,"В тексте — «1000 h of continuous operation», в подписи к рис. 8d — измерение каждые 12 ч при 15–20 % RH и комнатной температуре, что больше похоже на хранение. Условия старения неоднозначны.",5,tested every 12 h
+D007,I3,,missing_conditions,"Состав перовскита, площадь ячеек и условия измерения ВАХ вынесены в Supporting Information.",5,Detailed experi
+D008,I1,R001,ambiguity,"Значения 18.5 % и 15.8 % названы «forward bias scan», при этом в методике снимались обе развёртки, а на рис. 3a показаны обе. Из текста неясно, прямой это ход развёртки или нет.",5,to 15.8% for the sample w/o PbCl2
+D008,I2,,measurement_conditions,Интенсивность «1 sun» скорректирована по показаниям 1.2–1.28 sun на экране установки; спектр AM1.5G прямо не назван. Сопоставимость с другими статьями под вопросом.,3,corrected by calculating the 1.2
+D009,I1,,ambiguity,"Для Cs0 в тексте только «rapid decay in performance after 2,000 h» — числа нет, запись не создаётся.",5,"decay in performance after 2,000 h"
+D010,I1,,contradiction,"Структура прибора: в методике — i-ZnO/AZO и сетка Ag, в описании рис. 7 — SLG/Mo/.../CdS/ZnO/ITO/Al.",9,CdS/ZnO/ITO/Al
+D010,I2,,contradiction,"Подложка: в 2.1 — «Molybdenum-coated soda lime glasses», в 2.2 — «Mo-coated Na-free substrate». Для работы о легировании натрием это существенно.",2,Mo-coated Na-free substrate
+D012,I1,R019;R022,contradiction,"Voc лучшего прибора: в аннотации и тексте 0.465 V, в Table 2 — 456 mV. С КПД 4.82 % согласуется значение из таблицы (0.456·16.44·64.3/100 = 4.82), а 0.465 V даёт 4.92 %.",11,exhibited a Jsc of 16.44
+D012,I2,,contradiction,Толщины слоёв расходятся: i-ZnO 80 nm в методике и 100 nm в описании рис. 9; AZO ~300 nm в методике и 120 nm в описании рис. 9.,11,120-nm-thick metallic layer
+D012,I3,,typo,"В описании поперечного среза структура названа SLG/Mo/CIGS/CdS/i-ZnO/AZO/Ag, хотя поглотитель — CZTS.",11,SLG/Mo/CIGS/CdS
+D012,I4,,missing_conditions,Площадь приборов не указана.,3,simulated AM1.5G
+D012,I5,R004;R001;R002;R003,jv_consistency,PCE 2.36 % не согласуется с Voc·Jsc·FF/Pin = 3.11 % (расхождение 31.7 %),,
+D014,I1,R015;R023,dedup_trap,"Два разных прибора с одинаковым КПД 10.4 %: распылённый прибор из Table 1 (Voc 0.686 V, FF 65.9 %) и прибор интегрированного R2R-процесса (Voc 697 mV, FF 67 %). Объединять их нельзя.",7,The best PCE achieved
+D014,I2,,measurement_conditions,"Все результаты получены после current/light soaking — предварительной обработки прямым током под освещением; это условие измерения, влияющее на сопоставимость.",3,AM 1.5G
+D015,I1,,cited_in_table,"Строки эталонного прибора «Cu-doped and ITO electrode» в Table 2 стоят в таблице результатов, но по подписи взяты из прошлой работы [26] — это цитируемые, а не первичные значения.",4,Table 2. The photovoltaic parameters
+D015,I2,R028;R034,measurement_conditions,Двусторонний прибор измерен при освещении спереди и сзади — это разные условия измерения одного прибора; значения нельзя смешивать.,4,Table 2. The photovoltaic parameters
+D015,I3,,derived_values,"«improved by 3.6% over the reference» — относительный прирост (14.4 к 13.9), а не значение КПД.",2,improved by 3.6% over the reference device
+D017,I1,R031;R035,voc_deficit_consistency,"Eg/q − Voc = 0.426 В, а в статье дефицит 0.429 В",,
+D018,I1,,figure_only,"Результаты для промышленного поглотителя NICE Solar Energy (рис. 6B–E) даны только графиками, без чисел.",7,similar improvement in VOC
+D018,I2,,derived_values,"«improves the performance by more than 30%» и «increases the VOC by 80 mV» — относительные изменения, а не значения параметров.",7,increases the VOC by
+D018,I3,,typo,Карбонат цезия в тексте записан как «CsCO3» вместо Cs2CO3.,1,efficiency of respective solar cells improved by more than
+D018,I4,R001,rounding,"FF прибора с Cs-ST указан целым числом (66 %), поэтому произведение Voc·Jsc·FF (10.09 %) расходится с КПД 10.4 % на ~3 % — на границе порога проверки.",6,A solar cell with an efficiency
+D018,I5,R001;R003;R002;R004,jv_consistency,PCE 10.4 % не согласуется с Voc·Jsc·FF/Pin = 10.09 % (расхождение 3.0 %),,
+D019,I1,R016,dedup_trap,"Строка «MoSe2 290» в Table 2 и строка «MoSe2/Mo 100» в Table 1 — один и тот же прибор (4.288 %, 0.45 В, 23.66 мА/см2, Rs 8.49/8.488, Rsh 70.32/70.319). Новых записей по Table 2 для него нет.",7,Table 2 Photovoltaic characteristics
+D019,I2,,contradiction,"В методике температура подложки 250–290 °C, а в Table 2 есть прибор на Mo при 315 °C.",3,controlled in the range of 250
+D019,I3,,derived_values,"«1.225% higher PCE» — разность 5.637 − 4.412 в процентных пунктах, а не КПД.",7,substrate showed a 1.225% higher PCE
+D019,I4,,missing_conditions,Площадь прибора и интенсивность освещения не указаны.,3,1 mm-thick Al collection grid
+D021,I1,R101;R098;R105;R008,contradiction,"Лучший прибор B4: в тексте, аннотации и на рис. 10 — PCE 5.25 %, Voc 343 мВ, Jsc 31.4, FF 0.49; в Table 4 «record» для B4 — 3.85 %, 344 мВ, 26.6, 42.2 %. Для A1 аналогично: рис. 10 — 3.2 %/312 мВ/28.6/0.36, Table 4 — 3.24 %/324/31.2/32.0.",13,exhibited PCE = 5.25%
+D021,I2,,figure_mismatch,"Точки на рис. 9 (например, КПД A1 ≈ 2.6 %) не совпадают ни со средними, ни с рекордными значениями Table 4.",12,Table 4. Average and record
+D021,I3,,ambiguity,"КПД 1.28 % для RFMS-прибора без NaF (раздел 3.1) совпадает с цитируемым значением [17] в обсуждении — неясно, собственное это измерение или повтор литературных данных.",5,efficiency improvement from 1.28%
+D022,I1,,dedup_trap,"Первые две строки Table 2 — те же приборы, что строки 1–2 Table 1 (одинаковые Voc, Jsc, FF, PCE); новых записей не дают, добавляются только AVT, CRI, LUE.",5,Table 2. Summary of main results
+D022,I2,R007;R013,text_mix,"Фраза «values up to 41% and 0.46 V» объединяет максимумы разных приборов: FF 41.4 % у прибора с MoO3 10 nm, Voc 0.46 V — у прибора с MoO3 20 nm.",4,values up to 41% and 0.46 V
+D022,I3,,missing_conditions,Площадь приборов и интенсивность освещения не указаны (только «mask» и AM1.5G).,7,the sample was measured with a
+D022,I4,R004;R001;R002;R003,jv_consistency,PCE 0.21 % не согласуется с Voc·Jsc·FF/Pin = 0.17 % (расхождение 20.8 %),,
+D022,I5,R012;R009;R010;R011,jv_consistency,PCE 0.22 % не согласуется с Voc·Jsc·FF/Pin = 0.19 % (расхождение 14.1 %),,
+D022,I6,R016;R013;R014;R015,jv_consistency,PCE 0.52 % не согласуется с Voc·Jsc·FF/Pin = 0.54 % (расхождение 3.4 %),,
+D022,I7,R028;R025;R026;R027,jv_consistency,PCE 0.41 % не согласуется с Voc·Jsc·FF/Pin = 0.46 % (расхождение 11.0 %),,

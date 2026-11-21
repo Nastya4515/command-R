@@ -1,14 +1,23 @@
-# Конфигурация конвейера извлечения (кейс ВИНИТИ, область RAG)
+# Конфигурация конвейера извлечения (кейс ВИНИТИ, области RAG и Solar)
 # Все пути — относительно корня проекта. Путей в коде нет, всё отсюда.
 
 data:
-  dev_dir: data/dev
-  test_dir: data/test
+  # Активная область (по умолчанию RAG). Пути указывают на data/rag/*.
+  # Для области Solar те же ключи лежат в блоке solar ниже;
+  # выбор области в v2 — параметр запуска (--area rag|solar), профили: domains/<area>/profile.yaml
+  dev_dir: data/rag/dev
+  test_dir: data/rag/test
   uploads_dir: uploads
-  dev_gold_dir: data/dev_gold
-  template_dir: data/submission_template
-  checklist: data/CHECKLIST.txt
-  checker: data/tools/check_submission.py
+  dev_gold_dir: data/rag/dev_gold
+  template_dir: data/rag/submission_template
+  checklist: data/rag/CHECKLIST.txt
+  checker: data/rag/tools/check_submission.py
+  solar:
+    dev_dir: data/solar/dev
+    test_dir: data/solar/test
+    dev_gold_dir: data/solar/dev_gold
+    template_dir: data/solar/submission_template
+    checker: data/solar/tools/check_submission.py
 
 work:
   cache_dir: cache
@@ -17,25 +26,32 @@ work:
   reports_dir: reports
 
 model:
-  # mock — ответы из dev_gold (разработка без нейронки)
+  # mock — ответы из dev_gold (разработка без нейросети)
   # file — обмен requests.jsonl / responses.jsonl с командой ИИ
   # local — дообученная LoRA-модель (model.local_path)
-  # api — OpenRouter (ключ в .env: OPENROUTER_API_KEY)
+  # api — OpenAI-совместимый API (ключ в .env: OPENAI_API_KEY)
   client: api
   local_path: models/extractor-v1
+  # Лимит расхода на один прогон, USD; превышение прерывает прогон после
+  # завершения текущих запросов. null/0 — без лимита.
+  budget_usd: 10.0
   api:
     base_url: https://api.openai.com/v1
-    model: gpt-4o-mini
     max_parallel: 8
-    timeout: 90
+    timeout: 120
     max_retries: 5
-    max_tokens: 200
+    # Модели по ролям (см. ТЗ v2, D4)
+    model: gpt-4o-mini            # legacy-ключ для старого конвейера (v1)
+    model_document: gpt-4o        # шаг A: документ целиком, сущности
+    model_page: gpt-4o-mini       # шаг B: результаты по страницам/таблицам
+    model_vision: gpt-4o-mini     # OCR сканов и подписи на графиках
+    max_tokens: 4000              # JSON по странице/таблице; при обрыве — дробление
 
 pdf:
   scan_char_threshold: 50   # меньше символов на странице => скан
   ocr_enabled: true
-  ocr_backend: vision       # vision = OpenAI gpt-4o-mini (без установки); tesseract = системный
-  ocr_model: gpt-4o-mini
+  ocr_backend: vision       # vision = OpenAI (без установки); tesseract = системный
+  ocr_model: gpt-4o-mini    # legacy-ключ; в v2 используется model.api.model_vision
   ocr_lang: eng
 
 lines:
@@ -44,9 +60,9 @@ lines:
   stitch_tolerance: 3.5     # склейка половин строк таблиц, pt
 
 fragments:
-  max_table_rows: 12        # резка длинных таблиц
+  max_table_rows: 12        # резка длинных таблиц (старый конвейер; в v2 — вызов на таблицу)
   max_table_numbers: 60
-  text_window_words: 12     # окно вокруг числа в тексте
+  text_window_words: 12     # окно вокруг числа в тексте (старый конвейер)
 
 scoring:
   sample_errors: 20

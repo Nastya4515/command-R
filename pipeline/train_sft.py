@@ -25,7 +25,7 @@ BASE_MODEL = "Qwen/Qwen2.5-3B-Instruct"
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="QLoRA-дообучение экстрактора")
-    parser.add_argument("--data", default="data/sft", help="каталог с train.jsonl/val.jsonl")
+    parser.add_argument("--data", default="data/rag/sft", help="каталог с train.jsonl/val.jsonl")
     parser.add_argument("--out", default="models/extractor-v1")
     parser.add_argument("--epochs", type=float, default=3.0)
     parser.add_argument("--lr", type=float, default=1e-4)

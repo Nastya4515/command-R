@@ -7,7 +7,7 @@ JSONL в chat-формате: {"messages": [{system},{user},{assistant}], "pid",
 Сплит — по статьям, а не по примерам: иначе модель запомнит статью,
 и оценка покажет запоминание, а не обучение.
 
-Запуск: python -m pipeline.dataset [--val D002 D013 D021] [--out data/sft]
+Запуск: python -m pipeline.dataset [--val D002 D013 D021] [--out data/rag/sft]
 """
 from __future__ import annotations
 
@@ -55,7 +55,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Сборка SFT-датасета из dev_gold")
     parser.add_argument("--val", nargs="*", default=["D002", "D013", "D021"],
                         help="статьи в валидацию (по умолчанию сканы — самые тяжёлые)")
-    parser.add_argument("--out", default="data/sft", help="каталог для train.jsonl/val.jsonl")
+    parser.add_argument("--out", default="data/rag/sft", help="каталог для train.jsonl/val.jsonl")
     parser.add_argument("--config", default="config.yaml")
     args = parser.parse_args()
 

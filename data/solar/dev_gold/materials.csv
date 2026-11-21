@@ -1,0 +1,58 @@
+﻿publication_id,material_id,material_name_raw,formula_normalized,material_class,dimensionality,additives,bandgap_value,bandgap_unit,bandgap_method,note
+D001,M1,CsPbI2Br (pristine),CsPbI2Br,perovskite,3D,,1.9,eV,cited,"Значение ~1,9 эВ приведено во введении для CsPbI2Br по литературе (Sutton et al., 2016; Yan et al., 2018); для собственных плёнок указан только край поглощения ~650 нм (с. 3), ширина зоны не названа."
+D001,M2,0.001 M SrCl2–doped CsPbI2Br,CsPbI2Br,perovskite,3D,"SrCl2, 0.001 M в растворе прекурсора",1.9,eV,cited,"Значение ~1,9 эВ приведено во введении для CsPbI2Br по литературе (Sutton et al., 2016; Yan et al., 2018); для собственных плёнок указан только край поглощения ~650 нм (с. 3), ширина зоны не названа."
+D001,M3,0.005 M SrCl2–doped CsPbI2Br,CsPbI2Br,perovskite,3D,"SrCl2, 0.005 M в растворе прекурсора",1.9,eV,cited,"Значение ~1,9 эВ приведено во введении для CsPbI2Br по литературе (Sutton et al., 2016; Yan et al., 2018); для собственных плёнок указан только край поглощения ~650 нм (с. 3), ширина зоны не названа."
+D001,M4,0.01 M SrCl2–doped CsPbI2Br,CsPbI2Br,perovskite,3D,"SrCl2, 0.01 M в растворе прекурсора",1.9,eV,cited,"Значение ~1,9 эВ приведено во введении для CsPbI2Br по литературе (Sutton et al., 2016; Yan et al., 2018); для собственных плёнок указан только край поглощения ~650 нм (с. 3), ширина зоны не названа."
+D001,M5,0.05 M SrCl2–doped CsPbI2Br,CsPbI2Br,perovskite,3D,"SrCl2, 0.05 M в растворе прекурсора",1.9,eV,cited,"Значение ~1,9 эВ приведено во введении для CsPbI2Br по литературе (Sutton et al., 2016; Yan et al., 2018); для собственных плёнок указан только край поглощения ~650 нм (с. 3), ширина зоны не названа."
+D001,M6,0.01 M NiCl2–doped CsPbI2Br,CsPbI2Br,perovskite,3D,"NiCl2, 0.01 M (0,83 мол. % к Pb)",1.9,eV,cited,"Значение ~1,9 эВ приведено во введении для CsPbI2Br по литературе (Sutton et al., 2016; Yan et al., 2018); для собственных плёнок указан только край поглощения ~650 нм (с. 3), ширина зоны не названа."
+D002,M1,CH3NH3PbI3,CH3NH3PbI3 (MAPbI3),perovskite,3D,,,,,Ширина зоны перовскита не приведена
+D003,M1,"mixed Cs/FA/MA lead halide perovskite (PbI2, FAI, MAI, CsI, PbCl2, MABr in DMF/DMSO)",,perovskite,3D,"PbCl2, MABr (в прекурсоре)",,,,"Состав приведён только навесками прекурсоров; итоговая формула и ширина зоны перовскита не указаны. Ширина зоны 3.69/3.61 эВ относится к ETL (Sn3O4), а не к поглотителю."
+D004,M1,"Cs/FA/MA mixed-halide lead perovskite (CsI 0.087 M, FAI 1.47 M, MABr 0.23 M, PbI2 1.47 M, PbBr2 0.23 M)",,perovskite,3D,,,,,Ширина зоны перовскита не приведена; 1.8 эВ и 1.2 эВ во введении относятся к MoS2
+D005,M1,"Cs/FA/MA lead halide perovskite (1.73 M PbI2, 1.47 M FAI, 0.173 M MAI, 0.0519 M PbBr2, 0.0865 M CsI, 0.268 M MACl)",,perovskite,3D,MACl в прекурсоре; поверхностная обработка PEAI,,,,3D (PEAI surface treatment); Ширина зоны перовскита не приведена; Egopt в Table 1 относится к HTM
+D007,M1,perovskite (состав в Supporting Information),,perovskite,,,,,,"Состав и ширина зоны поглотителя — только в дополнительных материалах. 2.87 эВ в Table 1 — оптическая ширина зоны HTM, а не поглотителя."
+D008,M1,Cs0.15FA0.85PbI2.85Br0.15 (w/o PbCl2),Cs0.15FA0.85PbI2.85Br0.15,perovskite,3D,,,,,Ширина зоны поглотителя численно не приведена
+D008,M2,Cs0.15FA0.85PbI2.85Br0.15 (w/ PbCl2),Cs0.15FA0.85PbI2.85Br0.15,perovskite,3D,"PbCl2, 1.8 мол. % к PbI2, слой между PbI2 и FAI в каждом цикле",,,,Ширина зоны поглотителя численно не приведена
+D009,M1,Cs0 2D/3D tin halide perovskite (FAI:PEABr:SnF2:NH4SCN = 0.85:0.15:0.08:0.05 in SnI2 solution),,perovskite,2D-3D,"SnF2 8 mol%, NH4SCN 5 mol%, Sn powder",1.435,eV,,2D/3D (PEA-based 2D segments in 3D FASnI3); unspecified (Supplementary Fig. 17)
+D009,M2,Cs5 2D/3D tin halide perovskite (+5 mol% CsI),,perovskite,2D-3D,"CsI 5 mol%; SnF2 8 mol%, NH4SCN 5 mol%, Sn powder",1.415,eV,,2D/3D (PEA-based 2D segments in 3D FASnI3); unspecified (Supplementary Fig. 17)
+D010,M1,"CZTSSe (undoped, selenized 540 °C)","Cu2ZnSn(S,Se)4",kesterite,,,,eV,,Ширина зоны нелегированного поглотителя не приведена
+D010,M2,"(Na0.1Cu0.9)2ZnSn(S,Se)4, selenized 520 °C (sample T520)","(Na0.1Cu0.9)2ZnSn(S,Se)4",kesterite,,"Na (NaCl в прекурсоре, Na:Cu = 0.1:0.9)",1.03,eV,Tauc,"Tauc ((αhν)^2 vs hν), UV–Vis–NIR"
+D010,M3,"(Na0.1Cu0.9)2ZnSn(S,Se)4, selenized 540 °C (sample T540)","(Na0.1Cu0.9)2ZnSn(S,Se)4",kesterite,,"Na (NaCl в прекурсоре, Na:Cu = 0.1:0.9)",1.02,eV,Tauc,"Tauc ((αhν)^2 vs hν), UV–Vis–NIR"
+D010,M4,"(Na0.1Cu0.9)2ZnSn(S,Se)4, selenized 560 °C (sample T560)","(Na0.1Cu0.9)2ZnSn(S,Se)4",kesterite,,"Na (NaCl в прекурсоре, Na:Cu = 0.1:0.9)",1.0,eV,Tauc,"Tauc ((αhν)^2 vs hν), UV–Vis–NIR"
+D012,M5,"CZTS, DIO-5 mg/mL",Cu2ZnSnS4,kesterite,,"1,8-diiodooctane 5 mg/mL в электролите",1.62,eV,Tauc,"Tauc ((αhν)^2 vs hν), UV–Vis"
+D012,M10,"CZTS, DIO-10 mg/mL",Cu2ZnSnS4,kesterite,,"1,8-diiodooctane 10 mg/mL в электролите",1.61,eV,Tauc,"Tauc ((αhν)^2 vs hν), UV–Vis"
+D012,M15,"CZTS, DIO-15 mg/mL",Cu2ZnSnS4,kesterite,,"1,8-diiodooctane 15 mg/mL в электролите",1.55,eV,Tauc,"Tauc ((αhν)^2 vs hν), UV–Vis"
+D012,M20,"CZTS, DIO-20 mg/mL",Cu2ZnSnS4,kesterite,,"1,8-diiodooctane 20 mg/mL в электролите",1.51,eV,Tauc,"Tauc ((αhν)^2 vs hν), UV–Vis"
+D013,M0,"ACZTGSSe, 0Ge","(Ag,Cu)2Zn(Sn,Ge)(S,Se)4",kesterite,,,1.15,eV,PL,"В Table 3 две оценки: Eg,PL и Eg,EQE; в поле bandgap_value — Eg,PL"
+D013,M40,"ACZTGSSe, 40Ge","(Ag,Cu)2Zn(Sn,Ge)(S,Se)4",kesterite,,,1.21,eV,PL,"В Table 3 две оценки: Eg,PL и Eg,EQE; в поле bandgap_value — Eg,PL"
+D013,M60,"ACZTGSSe, 60Ge","(Ag,Cu)2Zn(Sn,Ge)(S,Se)4",kesterite,,,1.26,eV,PL,"В Table 3 две оценки: Eg,PL и Eg,EQE; в поле bandgap_value — Eg,PL"
+D013,M80,"ACZTGSSe, 80Ge","(Ag,Cu)2Zn(Sn,Ge)(S,Se)4",kesterite,,,1.43,eV,PL,"В Table 3 две оценки: Eg,PL и Eg,EQE; в поле bandgap_value — Eg,PL"
+D013,M100,"ACZTGSSe, 100Ge","(Ag,Cu)2Zn(Sn,Ge)(S,Se)4",kesterite,,,1.48,eV,PL,"В Table 3 две оценки: Eg,PL и Eg,EQE; в поле bandgap_value — Eg,PL"
+D014,M1,sintered CdTe nanocrystals (CdCl2-treated),CdTe,CdTe,,CdCl2 (ванна или лиганд pyr-CdCl3),,,,Ширина зоны поглотителя не приведена
+D015,M1,"CdTe (VTD, CdCl2-activated)",CdTe,CdTe,,CdCl2 activation; Cu-doping only in reference,,,,Ширина зоны CdTe не приведена; 3.2 эВ относится к буферу CuCrOx
+D017,M-R1,CIGS absorber R1 (reference process),"Cu(In,Ga)Se2",CIGS,,"NaF и RbF post-deposition treatments, по 20 мин в атмосфере Se при ~350 °C",1.144,eV,EQE,"Линейная экстраполяция (E·EQE)^2 от E в диапазоне 25–75 % максимума EQE, для лучшей ячейки образца"
+D017,M-R2,CIGS absorber R2 (reference process),"Cu(In,Ga)Se2",CIGS,,"NaF и RbF post-deposition treatments, по 20 мин в атмосфере Se при ~350 °C",1.142,eV,EQE,"Линейная экстраполяция (E·EQE)^2 от E в диапазоне 25–75 % максимума EQE, для лучшей ячейки образца"
+D017,M-G1,CIGS absorber G1 (Ga series (steeper Ga source cooling)),"Cu(In,Ga)Se2",CIGS,,"NaF и RbF post-deposition treatments, по 20 мин в атмосфере Se при ~350 °C",1.138,eV,EQE,"Линейная экстраполяция (E·EQE)^2 от E в диапазоне 25–75 % максимума EQE, для лучшей ячейки образца"
+D017,M-G2,CIGS absorber G2 (Ga series (steeper Ga source cooling)),"Cu(In,Ga)Se2",CIGS,,"NaF и RbF post-deposition treatments, по 20 мин в атмосфере Se при ~350 °C",1.14,eV,EQE,"Линейная экстраполяция (E·EQE)^2 от E в диапазоне 25–75 % максимума EQE, для лучшей ячейки образца"
+D017,M-I1,CIGS absorber I1 (In series (steeper In source heating)),"Cu(In,Ga)Se2",CIGS,,"NaF и RbF post-deposition treatments, по 20 мин в атмосфере Se при ~350 °C",1.147,eV,EQE,"Линейная экстраполяция (E·EQE)^2 от E в диапазоне 25–75 % максимума EQE, для лучшей ячейки образца"
+D017,M-I2,CIGS absorber I2 (In series (steeper In source heating)),"Cu(In,Ga)Se2",CIGS,,"NaF и RbF post-deposition treatments, по 20 мин в атмосфере Se при ~350 °C",1.137,eV,EQE,"Линейная экстраполяция (E·EQE)^2 от E в диапазоне 25–75 % максимума EQE, для лучшей ячейки образца"
+D017,M-I3,CIGS absorber I3 (In series (steeper In source heating)),"Cu(In,Ga)Se2",CIGS,,"NaF и RbF post-deposition treatments, по 20 мин в атмосфере Se при ~350 °C",1.123,eV,EQE,"Линейная экстраполяция (E·EQE)^2 от E в диапазоне 25–75 % максимума EQE, для лучшей ячейки образца"
+D017,M-I4,CIGS absorber I4 (In series (steeper In source heating)),"Cu(In,Ga)Se2",CIGS,,"NaF и RbF post-deposition treatments, по 20 мин в атмосфере Se при ~350 °C",1.121,eV,EQE,"Линейная экстраполяция (E·EQE)^2 от E в диапазоне 25–75 % максимума EQE, для лучшей ячейки образца"
+D017,M-O1,CIGS absorber O1 (early-stage In-free series),"Cu(In,Ga)Se2",CIGS,,"NaF и RbF post-deposition treatments, по 20 мин в атмосфере Se при ~350 °C",1.132,eV,EQE,"Линейная экстраполяция (E·EQE)^2 от E в диапазоне 25–75 % максимума EQE, для лучшей ячейки образца"
+D017,M-O2,CIGS absorber O2 (early-stage In-free series),"Cu(In,Ga)Se2",CIGS,,"NaF и RbF post-deposition treatments, по 20 мин в атмосфере Se при ~350 °C",1.15,eV,EQE,"Линейная экстраполяция (E·EQE)^2 от E в диапазоне 25–75 % максимума EQE, для лучшей ячейки образца"
+D017,M-O3,CIGS absorber O3 (early-stage In-free series),"Cu(In,Ga)Se2",CIGS,,"NaF и RbF post-deposition treatments, по 20 мин в атмосфере Se при ~350 °C",1.135,eV,EQE,"Линейная экстраполяция (E·EQE)^2 от E в диапазоне 25–75 % максимума EQE, для лучшей ячейки образца"
+D018,M1,"CIGS (PHRMS, untreated)","Cu(In,Ga)Se2",CIGS,,,,,,Ширина зоны поглотителя не приведена; 0.25 эВ — сдвиг VBM по UPS
+D018,M2,"CIGS (PHRMS, Cs-ST)","Cu(In,Ga)Se2",CIGS,,"cesium carbonate (в тексте «CsCO3»), 0.01 g/10 ml H2O, spin-coating; отжиг 400 °C 2 мин в вакууме",,,,Ширина зоны поглотителя не приведена; 0.25 эВ — сдвиг VBM по UPS
+D019,M-R200-Mo,"Sb2Se3, 200 Å/s, 290 °C, on Mo",Sb2Se3,Sb2Se3,,,,,,nanorod array; Ширина зоны не приведена
+D019,M-R200,"Sb2Se3 nanorods, 200 Å/s, 290 °C, on MoSe2/Mo",Sb2Se3,Sb2Se3,,,,,,nanorod array; Ширина зоны не приведена
+D019,M-T250,"Sb2Se3 nanorods, 100 Å/s, 250 °C, on MoSe2/Mo",Sb2Se3,Sb2Se3,,,,,,nanorod array; Ширина зоны не приведена
+D019,M-T260,"Sb2Se3 nanorods, 100 Å/s, 260 °C, on MoSe2/Mo",Sb2Se3,Sb2Se3,,,,,,nanorod array; Ширина зоны не приведена
+D019,M-T270,"Sb2Se3 nanorods, 100 Å/s, 270 °C, on MoSe2/Mo",Sb2Se3,Sb2Se3,,,,,,nanorod array; Ширина зоны не приведена
+D019,M-T290,"Sb2Se3 nanorods, 100 Å/s, 290 °C, on MoSe2/Mo",Sb2Se3,Sb2Se3,,,,,,nanorod array; Ширина зоны не приведена
+D019,M-T315-Mo,"Sb2Se3, 100 Å/s, 315 °C, on bare Mo",Sb2Se3,Sb2Se3,,,,,,nanorod array; Ширина зоны не приведена
+D020,M1,Sb2S3 (hydrothermal),Sb2S3,other,,,1.72,eV,,"Sb2S3 (вне перечня классов); Tauc, UV-vis"
+D020,M2,"Sb2(S, Se)3 (hydrothermal, selenourea)","Sb2(S,Se)3",Sb2Se3,,,1.58,eV,,"Sb2Se3 / Sb2(S,Se)3; Tauc, UV-vis; «about 1.58 eV»"
+D020,M3,"Sb2S3/Sb2(S, Se)3 bilayer (two-step hydrothermal)","Sb2S3/Sb2(S,Se)3",Sb2Se3,,,1.62,eV,,"Sb2Se3 / Sb2(S,Se)3; graded bilayer; Tauc, UV-vis; «about 1.62 eV»"
+D021,M-RFMS,"Sb2Se3 (RFMS, undoped)",Sb2Se3,Sb2Se3,,,,,,"«optimal optical bandgap of around 1.2 eV» — общее сведение о материале во введении, для образцов не измерялось"
+D021,M-PED,5%Cu:Sb2Se3 (PED),Sb2Se3:Cu (5 at.% Cu),Sb2Se3,,"Cu 5 at.% (в мишени, подтверждено EDX)",,,,
+D022,M15,"intrinsic a-Si:H, 15 nm (PE-CVD, SiH4 + CH4)",a-Si:H,thin-film Si,,CH4 в газовой смеси (SiH4:CH4 = 36:12 sccm),1.8,eV,cited,"ultrathin film; «reported direct bandgap of 1.8 eV in bulk» [46]; для 15 нм отмечено синее смещение края поглощения, число не дано"
+D022,M30,"intrinsic a-Si:H, 30 nm (PE-CVD, SiH4 + CH4)",a-Si:H,thin-film Si,,CH4 в газовой смеси (SiH4:CH4 = 36:12 sccm),1.8,eV,cited,"ultrathin film; «reported direct bandgap of 1.8 eV in bulk» [46]; для 15 нм отмечено синее смещение края поглощения, число не дано"

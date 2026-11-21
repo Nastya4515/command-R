@@ -1,0 +1,90 @@
+﻿publication_id,device_id,absorber_material_id,device_label,device_role,device_type,architecture,substrate_type,active_area,area_unit,area_definition,encapsulation,note
+D001,DV1,M1,pristine,control,cell,n-i-p,rigid,0.0625,cm2,aperture,,n-i-p (planar); aperture (metal mask)
+D001,DV2,M2,0.001 M SrCl2,target,cell,n-i-p,rigid,0.0625,cm2,aperture,,n-i-p (planar); aperture (metal mask)
+D001,DV3,M3,0.005 M SrCl2,target,cell,n-i-p,rigid,0.0625,cm2,aperture,,n-i-p (planar); aperture (metal mask)
+D001,DV4,M4,0.01 M SrCl2,target,cell,n-i-p,rigid,0.0625,cm2,aperture,,n-i-p (planar); aperture (metal mask)
+D001,DV5,M5,0.05 M SrCl2,target,cell,n-i-p,rigid,0.0625,cm2,aperture,,n-i-p (planar); aperture (metal mask)
+D001,DV6,M6,0.01 M NiCl2,target,cell,n-i-p,rigid,0.0625,cm2,aperture,,n-i-p (planar); aperture (metal mask)
+D002,DV1,M1,HTL NiO,control,cell,p-i-n,rigid,1,cm2,,,"p-i-n (planar, inverted)"
+D002,DV2,M1,HTL NiO/GO,target,cell,p-i-n,rigid,1,cm2,,,"p-i-n (planar, inverted)"
+D003,DV1,M1,Sn3O4 ETL (undoped),control,cell,n-i-p,rigid,0.04,cm2,aperture,,n-i-p (planar); aperture (mask 0.04 cm2; ITO/Ag overlap 2 mm × 2 mm)
+D003,DV2,M1,5% Y-Sn3O4 ETL,target,cell,n-i-p,rigid,0.04,cm2,aperture,,n-i-p (planar); aperture (mask 0.04 cm2; ITO/Ag overlap 2 mm × 2 mm)
+D004,DV1,M1,MoS2 from ED,control,cell,n-i-p,rigid,,,,,n-i-p (planar)
+D004,DV2,M1,MoS2 from BCC-ED,target,cell,n-i-p,rigid,,,,,n-i-p (planar)
+D004,DV3,M1,MoS2 from C-ED-1,target,cell,n-i-p,rigid,,,,,n-i-p (planar)
+D004,DV4,M1,MoS2 from C-ED-2,target,cell,n-i-p,rigid,,,,,n-i-p (planar)
+D005,DV1,M1,Spiro-OMeTAD,control,cell,n-i-p,rigid,,,,unencapsulated,n-i-p (planar)
+D005,DV2,M1,SF-MPA-MCz,target,cell,n-i-p,rigid,,,,unencapsulated,n-i-p (planar)
+D007,DV1,M1,"cell, spiro-OMeTAD",control,cell,n-i-p,rigid,,,,,n-i-p (planar)
+D007,DV2,M1,"cell, V1553",target,cell,n-i-p,rigid,,,,,n-i-p (planar)
+D007,DV3,M1,"mini-module, V1553",target,minimodule,n-i-p,rigid,30.24,cm2,designated illumination,,n-i-p (planar); designated illumination (estimated); Размер модуля 6.5 × 7 cm2
+D007,DV4,M1,"mini-module, spiro-OMeTAD",control,minimodule,n-i-p,rigid,,,,,n-i-p (planar); Размер модуля 6.5 × 7 cm2
+D008,DV1,M1,"w/o PbCl2, 0.09 cm2",control,cell,p-i-n,rigid,0.09,cm2,,,"p-i-n (planar, inverted); top metal contact"
+D008,DV2,M2,"w/ PbCl2, 0.09 cm2",target,cell,p-i-n,rigid,0.09,cm2,,,"p-i-n (planar, inverted); top metal contact"
+D008,DV3,M2,"w/ PbCl2, 0.36 cm2",target,cell,p-i-n,rigid,0.36,cm2,,,"p-i-n (planar, inverted); top metal contact"
+D009,DV1,M1,Cs0,control,cell,p-i-n,rigid,0.0576,cm2,aperture,unencapsulated,"p-i-n (planar, inverted); aperture (non-reflective metal shadow mask)"
+D009,DV2,M2,Cs5,target,cell,p-i-n,rigid,0.0576,cm2,aperture,unencapsulated,"p-i-n (planar, inverted); aperture (non-reflective metal shadow mask)"
+D010,DV1,M1,CZTSSe,control,cell,substrate,rigid,0.19,cm2,,,mechanically scribed cell
+D010,DV2,M3,"(Na0.1Cu0.9)2ZnSn(S,Se)4",target,cell,substrate,rigid,0.19,cm2,,,mechanically scribed cell
+D012,DV5,M5,DIO-5 mg/mL,target,cell,substrate,rigid,,,,,
+D012,DV10,M10,DIO-10 mg/mL,target,cell,substrate,rigid,,,,,
+D012,DV15,M15,DIO-15 mg/mL,target,cell,substrate,rigid,,,,,
+D012,DV20,M20,DIO-20 mg/mL,target,cell,substrate,rigid,,,,,
+D013,DV0,M0,0Ge,control,cell,substrate,rigid,0.23,cm2,,,
+D013,DV40,M40,40Ge,target,cell,substrate,rigid,0.23,cm2,,,
+D013,DV60,M60,60Ge,target,cell,substrate,rigid,0.23,cm2,,,
+D013,DV80,M80,80Ge,target,cell,substrate,rigid,0.23,cm2,,,
+D013,DV100,M100,100Ge,target,cell,substrate,rigid,0.23,cm2,,,
+D014,DV1,M1,spin-coating (Table 1),target,cell,superstrate,rigid,0.0594,cm2,aperture,,"superstrate (ITO/CdTe/ZnO, heterojunction); aperture (mask, nominal 6 mm2, measured 5.94 mm2)"
+D014,DV2,M1,doctor-blading (Table 1),target,cell,superstrate,rigid,0.0594,cm2,aperture,,"superstrate (ITO/CdTe/ZnO, heterojunction); aperture (mask, nominal 6 mm2, measured 5.94 mm2)"
+D014,DV3,M1,spray-coating (Table 1),target,cell,superstrate,rigid,0.0594,cm2,aperture,,"superstrate (ITO/CdTe/ZnO, heterojunction); aperture (mask, nominal 6 mm2, measured 5.94 mm2)"
+D014,DV4,M1,"standard process, +2 wt% pyr-CdCl3 ink",target,cell,superstrate,rigid,0.0594,cm2,aperture,,"superstrate (ITO/CdTe/ZnO, heterojunction); aperture (mask, nominal 6 mm2, measured 5.94 mm2)"
+D014,DV5,M1,integrated R2R-friendly process,target,cell,superstrate,rigid,0.0594,cm2,aperture,,"superstrate (ITO/CdTe/ZnO, heterojunction); aperture (mask, nominal 6 mm2, measured 5.94 mm2)"
+D015,DV-ref,M1,"Reference (Cu-doped, Au-contacted)",control,cell,superstrate,rigid,0.08,cm2,,,
+D015,DV-0,M1,"CuxCryOz/Au, buffer annealed 0 min",target,cell,superstrate,rigid,0.08,cm2,,,
+D015,DV-6,M1,"CuxCryOz/Au, buffer annealed 6 min",target,cell,superstrate,rigid,0.08,cm2,,,
+D015,DV-8,M1,"CuxCryOz/Au, buffer annealed 8 min",target,cell,superstrate,rigid,0.08,cm2,,,
+D015,DV-10,M1,"CuxCryOz/Au, buffer annealed 10 min",target,cell,superstrate,rigid,0.08,cm2,,,
+D015,DV-12,M1,"CuxCryOz/Au, buffer annealed 12 min",target,cell,superstrate,rigid,0.08,cm2,,,
+D015,DV-bif,M1,CuxCryOz/ITO (bifacial),target,cell,superstrate,rigid,0.08,cm2,,,
+D017,DV-R1,M-R1,R1,control,cell,substrate,rigid,0.57,cm2,,,cell defined by mechanical scribing (approximately)
+D017,DV-R2,M-R2,R2,control,cell,substrate,rigid,0.57,cm2,,,cell defined by mechanical scribing (approximately)
+D017,DV-G1,M-G1,G1,target,cell,substrate,rigid,0.57,cm2,,,cell defined by mechanical scribing (approximately)
+D017,DV-G2,M-G2,G2,target,cell,substrate,rigid,0.57,cm2,,,cell defined by mechanical scribing (approximately)
+D017,DV-I1,M-I1,I1,target,cell,substrate,rigid,0.57,cm2,,,cell defined by mechanical scribing (approximately)
+D017,DV-I2,M-I2,I2,target,cell,substrate,rigid,0.57,cm2,,,cell defined by mechanical scribing (approximately)
+D017,DV-I3,M-I3,I3,target,cell,substrate,rigid,0.57,cm2,,,cell defined by mechanical scribing (approximately)
+D017,DV-I4,M-I4,I4,target,cell,substrate,rigid,0.57,cm2,,,cell defined by mechanical scribing (approximately)
+D017,DV-O1,M-O1,O1,target,cell,substrate,rigid,0.57,cm2,,,cell defined by mechanical scribing (approximately)
+D017,DV-O2,M-O2,O2,target,cell,substrate,rigid,0.57,cm2,,,cell defined by mechanical scribing (approximately)
+D017,DV-O3,M-O3,O3,target,cell,substrate,rigid,0.57,cm2,,,cell defined by mechanical scribing (approximately)
+D018,DV1,M1,untreated,control,cell,substrate,rigid,0.25,cm2,,,"manually scribed, measured without front grid"
+D018,DV2,M2,Cs-ST,target,cell,substrate,rigid,0.25,cm2,,,"manually scribed, measured without front grid"
+D019,DV-R200-Mo,M-R200-Mo,"Sb2Se3, 200 Å/s, 290 °C, on Mo",control,cell,substrate,rigid,,,,,substrate (3D p–n junction nanorods)
+D019,DV-R200,M-R200,"Sb2Se3 nanorods, 200 Å/s, 290 °C, on MoSe2/Mo",target,cell,substrate,rigid,,,,,substrate (3D p–n junction nanorods)
+D019,DV-T250,M-T250,"Sb2Se3 nanorods, 100 Å/s, 250 °C, on MoSe2/Mo",target,cell,substrate,rigid,,,,,substrate (3D p–n junction nanorods)
+D019,DV-T260,M-T260,"Sb2Se3 nanorods, 100 Å/s, 260 °C, on MoSe2/Mo",target,cell,substrate,rigid,,,,,substrate (3D p–n junction nanorods)
+D019,DV-T270,M-T270,"Sb2Se3 nanorods, 100 Å/s, 270 °C, on MoSe2/Mo",target,cell,substrate,rigid,,,,,substrate (3D p–n junction nanorods)
+D019,DV-T290,M-T290,"Sb2Se3 nanorods, 100 Å/s, 290 °C, on MoSe2/Mo",target,cell,substrate,rigid,,,,,substrate (3D p–n junction nanorods)
+D019,DV-T315-Mo,M-T315-Mo,"Sb2Se3, 100 Å/s, 315 °C, on bare Mo",control,cell,substrate,rigid,,,,,substrate (3D p–n junction nanorods)
+D020,DV1,M1,Sb2S3/C,control,cell,superstrate,rigid,0.0625,cm2,aperture,,"superstrate (n-i-p, carbon back electrode); aperture (mask, «around 6.25 mm2»)"
+D020,DV2,M2,"Sb2(S,Se)3/C",target,cell,superstrate,rigid,0.0625,cm2,aperture,,"superstrate (n-i-p, carbon back electrode); aperture (mask, «around 6.25 mm2»)"
+D020,DV3,M3,"Sb2S3/Sb2(S,Se)3/C",target,cell,superstrate,rigid,0.0625,cm2,aperture,,"superstrate (n-i-p, carbon back electrode); aperture (mask, «around 6.25 mm2»)"
+D020,DV4,M3,"Sb2S3/Sb2(S,Se)3/P3HT/C",target,cell,superstrate,rigid,0.0625,cm2,aperture,,"superstrate (n-i-p, carbon back electrode); aperture (mask, «around 6.25 mm2»)"
+D021,DV-A1,M-RFMS,A1 (RFMS 1200 nm / PED 0 nm),target,cell,substrate,rigid,0.06,cm2,,,substrate (FTO back contact); «area of 6 mm2»
+D021,DV-A2,M-RFMS,A2 (RFMS 1100 nm / PED 100 nm),target,cell,substrate,rigid,0.06,cm2,,,substrate (FTO back contact); «area of 6 mm2»
+D021,DV-A3,M-RFMS,A3 (RFMS 950 nm / PED 250 nm),target,cell,substrate,rigid,0.06,cm2,,,substrate (FTO back contact); «area of 6 mm2»
+D021,DV-A4,M-RFMS,A4 (RFMS 800 nm / PED 400 nm),target,cell,substrate,rigid,0.06,cm2,,,substrate (FTO back contact); «area of 6 mm2»
+D021,DV-A5,M-RFMS,A5 (RFMS 400 nm / PED 800 nm),target,cell,substrate,rigid,0.06,cm2,,,substrate (FTO back contact); «area of 6 mm2»
+D021,DV-A6,M-RFMS,A6 (RFMS 200 nm / PED 1000 nm),target,cell,substrate,rigid,0.06,cm2,,,substrate (FTO back contact); «area of 6 mm2»
+D021,DV-B1,M-PED,B1 (RFMS 0 nm / PED 1200 nm),target,cell,substrate,rigid,0.06,cm2,,,substrate (FTO back contact); «area of 6 mm2»
+D021,DV-B2,M-RFMS,B2 (RFMS 200 nm / PED 1000 nm),target,cell,substrate,rigid,0.06,cm2,,,substrate (FTO back contact); «area of 6 mm2»
+D021,DV-B3,M-RFMS,B3 (RFMS 1000 nm / PED 200 nm),target,cell,substrate,rigid,0.06,cm2,,,substrate (FTO back contact); «area of 6 mm2»
+D021,DV-B4,M-RFMS,B4 (RFMS 1100 nm / PED 100 nm),target,cell,substrate,rigid,0.06,cm2,,,substrate (FTO back contact); «area of 6 mm2»
+D021,DV-R0,M-RFMS,RFMS Sb2Se3 without NaF,control,cell,substrate,rigid,0.06,cm2,,,substrate (FTO back contact); «area of 6 mm2»
+D021,DV-P0,M-PED,PED Cu:Sb2Se3 with NaF (section 3.1),target,cell,substrate,rigid,0.06,cm2,,,substrate (FTO back contact); «area of 6 mm2»
+D022,DV1,M15,FTO/ZnO (50 nm)/a-Si:H (15 nm)/MoO3 (10 nm)/ITO,target,cell,,rigid,,,,,transparent (glass/FTO/ETL/a-Si:H/MoO3/ITO); mask (площадь не указана)
+D022,DV2,M30,FTO/ZnO (50 nm)/a-Si:H (30 nm)/MoO3 (10 nm)/ITO,target,cell,,rigid,,,,,transparent (glass/FTO/ETL/a-Si:H/MoO3/ITO); mask (площадь не указана)
+D022,DV3,M15,FTO/ZnO (50 nm)/a-Si:H (15 nm)/MoO3 (20 nm)/ITO,target,cell,,rigid,,,,,transparent (glass/FTO/ETL/a-Si:H/MoO3/ITO); mask (площадь не указана)
+D022,DV4,M30,FTO/ZnO (50 nm)/a-Si:H (30 nm)/MoO3 (20 nm)/ITO,target,cell,,rigid,,,,,transparent (glass/FTO/ETL/a-Si:H/MoO3/ITO); mask (площадь не указана)
+D022,DV5,M15,FTO/AZO (75 nm)/a-Si:H (15 nm)/MoO3 (10 nm)/ITO,target,cell,,rigid,,,,,transparent (glass/FTO/ETL/a-Si:H/MoO3/ITO); mask (площадь не указана)
