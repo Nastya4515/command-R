@@ -1,0 +1,67 @@
+# Профиль области RAG (кейс ВИНИТИ, область 2)
+# Общий код конвейера v2 берёт всё предметное отсюда; ядро от области не зависит.
+area: rag
+title: "RAG — retrieval-augmented generation"
+
+# Нормализация цитат — как в data/rag/tools/check_submission.py (NFKC, склейка
+# переносов, схлопывание пробелов, регистр сохраняется). Для solar — 'solar'.
+quote_norm: rag
+
+# Схема сдачи (колонки, ключи, словари) — источник истины для экспорта
+schema_json: data/rag/submission_template/schema.json
+
+prompts:
+  step_a: domains/rag/prompts/step_a_system.md
+  step_b: domains/rag/prompts/step_b_system.md
+
+# Префиксы идентификаторов сущностей (нумерация внутри публикации)
+ids:
+  configurations: C
+  datasets: DS
+  tasks: T
+  experiments: E
+  results: R
+  issues: I
+
+# Экономия: страницы без единой цифры модели не отправляем
+skip_pages_without_digits: true
+
+# Справочник направления метрик (п. 3.5.3 ТЗ v2): подстрока названия (lower) -> направление
+metric_direction:
+  higher_is_better:
+    [accuracy, f1, em, exact match, recall, precision, hit, mrr, ndcg, map@, map,
+     bleu, rouge, meteor, auc, success rate, win rate, accuracy@, recall@, score]
+  lower_is_better:
+    [latency, error, hallucination, leakage, perplexity, response time, cost]
+
+# Метрики с ограниченной шкалой [0,1] или [0,100] — только их проверяет metric_scale
+bounded_metrics:
+  [accuracy, precision, recall, f1, exact match, em, hit, hits, mrr, ndcg]
+
+# Алиасы единиц -> каноническая форма
+unit_aliases:
+  percent: "%"
+  percentage: "%"
+  pct: "%"
+  proportion: fraction
+  sec: s
+  secs: s
+  second: s
+  seconds: s
+  minutes: min
+  minute: min
+  milliseconds: ms
+  millisecond: ms
+
+# Пересчёт единиц (п. 3.5.3): только время -> ms. Доли/проценты НЕ пересчитываются.
+unit_conversions:
+  s:  {target: ms, factor: 1000.0}
+  min: {target: ms, factor: 60000.0}
+
+# Правила проверок -> issues.csv (п. 3.5.5)
+checks:
+  metric_scale: true            # только bounded_metrics и известная шкала
+  metric_k: true                # @k в названии vs metric_k
+  unit_inconsistency: true      # единица противоречит значению/сырому виду
+  contradiction: true           # одно значение объекта расходится в разных местах
+  percentage_vs_percentage_point: true

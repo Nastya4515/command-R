@@ -201,6 +201,7 @@ class ApiClient(ModelClient):
                         "Content-Type": "application/json"}
         self.tokens_in = 0
         self.tokens_out = 0
+        self.last_usage: dict = {}
 
     @staticmethod
     def _load_key(base_url: str) -> str:
@@ -218,14 +219,16 @@ class ApiClient(ModelClient):
         import requests
 
         payload = {
-            "model": self.model,
+            "model": request.get("model", self.model),
             "messages": [
                 {"role": "system", "content": request["system"]},
                 {"role": "user", "content": request["user"]},
             ],
             "temperature": 0,
-            "max_tokens": self.max_tokens,
+            "max_tokens": int(request.get("max_tokens", self.max_tokens)),
         }
+        if request.get("json_mode"):
+            payload["response_format"] = {"type": "json_object"}
         delay = 2.0
         for attempt in range(self.max_retries):
             try:
@@ -237,7 +240,17 @@ class ApiClient(ModelClient):
                     usage = data.get("usage") or {}
                     self.tokens_in += usage.get("prompt_tokens", 0)
                     self.tokens_out += usage.get("completion_tokens", 0)
-                    return (data["choices"][0]["message"]["content"] or "").strip()
+                    self.last_usage = {
+                        "model": payload["model"],
+                        "prompt_tokens": usage.get("prompt_tokens", 0),
+                        "completion_tokens": usage.get("completion_tokens", 0),
+                    }
+                    content = (data["choices"][0]["message"]["content"] or "").strip()
+                    finish = (data["choices"][0].get("finish_reason") or "")
+                    if finish == "length":
+                        log.warning("API: ответ обрезан по max_tokens (запрос %s)", request.get("id"))
+                        self.last_usage["truncated"] = True
+                    return content
                 if resp.status_code in (429, 500, 502, 503, 504):
                     log.warning("API %s (попытка %d), пауза %.0f с",
                                 resp.status_code, attempt + 1, delay)
