@@ -48,6 +48,11 @@ def load_csvs(out_dir: Path = OUT_DIR, con=None) -> None:
     for table in TABLES:
         path = out_dir / f"{table}.csv"
         if not path.exists():
+            # пустая таблица с колонками из шаблона сдачи — сайт стартует без данных
+            with open(ROOT / "data" / "submission_template" / f"{table}.csv", encoding="utf-8-sig") as f:
+                cols = next(csv.reader(f))
+            conn.execute(f"CREATE TABLE IF NOT EXISTS {table} ("
+                         + ", ".join(f'"{c}" VARCHAR' for c in cols) + ")")
             continue
         conn.execute(f"CREATE OR REPLACE TABLE {table} AS SELECT * FROM read_csv(?, all_varchar=true)", [str(path)])
 
@@ -56,7 +61,7 @@ load_csvs()
 
 
 def _rows(sql: str, params: list | None = None) -> list[dict]:
-    cur = db.execute(sql, params or [])
+    cur = db.cursor().execute(sql, params or [])
     cols = [d[0] for d in cur.description]
     return [dict(zip(cols, row, strict=True)) for row in cur.fetchall()]
 
@@ -64,10 +69,10 @@ def _rows(sql: str, params: list | None = None) -> list[dict]:
 @app.get("/api/stats")
 def stats() -> dict:
     """Сводка для экрана «Обзор»."""
-    pubs = db.execute("SELECT count(*) FROM publications").fetchone()[0]
-    results = db.execute("SELECT count(*) FROM results").fetchone()[0]
-    issues = db.execute("SELECT count(*) FROM issues").fetchone()[0]
-    cited = db.execute(
+    pubs = db.cursor().execute("SELECT count(*) FROM publications").fetchone()[0]
+    results = db.cursor().execute("SELECT count(*) FROM results").fetchone()[0]
+    issues = db.cursor().execute("SELECT count(*) FROM issues").fetchone()[0]
+    cited = db.cursor().execute(
         "SELECT count(*) FROM results WHERE result_origin='cited'").fetchone()[0]
     return {"publications": pubs, "results": results, "issues": issues,
             "cited": cited, "dataset": DATASET}
@@ -76,11 +81,11 @@ def stats() -> dict:
 @app.get("/api/facets")
 def facets() -> dict:
     """Списки значений для фильтров."""
-    metrics = [r[0] for r in db.execute(
+    metrics = [r[0] for r in db.cursor().execute(
         "SELECT DISTINCT metric_name FROM results ORDER BY 1").fetchall()]
-    checks = [r[0] for r in db.execute(
+    checks = [r[0] for r in db.cursor().execute(
         "SELECT DISTINCT check_name FROM issues ORDER BY 1").fetchall()]
-    pubs = [r[0] for r in db.execute(
+    pubs = [r[0] for r in db.cursor().execute(
         "SELECT publication_id FROM publications ORDER BY 1").fetchall()]
     return {"metrics": metrics, "check_names": checks, "publications": pubs,
             "origins": ["primary", "cited"]}
@@ -124,7 +129,7 @@ def results(
     value_expr = "TRY_CAST(metric_value AS DOUBLE)" if sort_col == "metric_value" else sort_col
     where_sql = " AND ".join(where)
 
-    total = db.execute(f"SELECT count(*) FROM results r WHERE {where_sql}", params).fetchone()[0]
+    total = db.cursor().execute(f"SELECT count(*) FROM results r WHERE {where_sql}", params).fetchone()[0]
     rows = _rows(
         f"""SELECT * FROM results r WHERE {where_sql}
             ORDER BY {value_expr} {order} NULLS LAST
@@ -165,7 +170,7 @@ def publication(pid: str) -> dict:
         "publication": found[0],
         "configurations": _rows("SELECT * FROM configurations WHERE publication_id=?", [pid]),
         "datasets": _rows("SELECT * FROM datasets WHERE publication_id=?", [pid]),
-        "results_count": db.execute(
+        "results_count": db.cursor().execute(
             "SELECT count(*) FROM results WHERE publication_id=?", [pid]).fetchone()[0],
     }
 
@@ -178,7 +183,7 @@ def table_rows(table: str, pid: str = "", page: int = 1, per_page: int = 20) -> 
     where, params = "1=1", []
     if pid:
         where, params = "publication_id = ?", [pid]
-    total = db.execute(f"SELECT count(*) FROM {table} WHERE {where}", params).fetchone()[0]
+    total = db.cursor().execute(f"SELECT count(*) FROM {table} WHERE {where}", params).fetchone()[0]
     rows = _rows(f"SELECT * FROM {table} WHERE {where} LIMIT ? OFFSET ?",
                  params + [per_page, (page - 1) * per_page])
     return {"table": table, "total": total, "page": page, "per_page": per_page,
@@ -196,7 +201,7 @@ def issues(check_name: str = "", pid: str = "", page: int = 1, per_page: int = 5
         where.append("publication_id = ?")
         params.append(pid)
     where_sql = " AND ".join(where)
-    total = db.execute(f"SELECT count(*) FROM issues WHERE {where_sql}", params).fetchone()[0]
+    total = db.cursor().execute(f"SELECT count(*) FROM issues WHERE {where_sql}", params).fetchone()[0]
     rows = _rows(f"""SELECT * FROM issues WHERE {where_sql}
                      ORDER BY publication_id, issue_id LIMIT ? OFFSET ?""",
                  params + [per_page, (page - 1) * per_page])
