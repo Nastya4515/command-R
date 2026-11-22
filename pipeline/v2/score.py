@@ -28,7 +28,9 @@ _SYNONYMS = {"exactmatch": "em", "exact_match": "em"}
 
 
 def _norm_name(name: str) -> str:
-    n = re.sub(r"[@\d]+$", "", (name or "").lower())
+    n = (name or "").lower().replace("σ", "sigma")
+    n = re.sub(r"\s*\((%|pct|percent|percentage)\)", "", n)
+    n = re.sub(r"[@\d]+$", "", n)
     n = re.sub(r"[^a-z]+", "", n)
     return _SYNONYMS.get(n, n)
 

@@ -19,7 +19,8 @@ log = logging.getLogger(__name__)
 _SKIP = {"label", "unit", "cited_reference"}
 
 
-def _csv_rows(table: str, columns: list[str], items: list[dict]) -> list[dict]:
+def _csv_rows(table: str, columns: list[str], items: list[dict],
+              enums: dict[str, list[str]] | None = None) -> list[dict]:
     rows = []
     for item in items:
         row = {}
@@ -29,7 +30,14 @@ def _csv_rows(table: str, columns: list[str], items: list[dict]) -> list[dict]:
                 val = ""
             if isinstance(val, list):
                 val = "; ".join(str(v) for v in val)
-            row[col] = str(val)
+            val = str(val)
+            allowed = (enums or {}).get(col)
+            if allowed and val:
+                low = val.lower()
+                match = next((a for a in allowed if a.lower() == low), None)
+                if match is not None:
+                    val = match
+            row[col] = val
         rows.append(row)
     return rows
 
@@ -53,7 +61,9 @@ def run_set(area: str, set_name: str, cfg: dict, profile: dict,
     tables_data["issues"] = issues
 
     for table, columns in schema["tables"].items():
-        rows = _csv_rows(table, columns, tables_data.get(table, []))
+        enums = {k.split(".", 1)[1]: v for k, v in (schema.get("enums") or {}).items()
+                 if k.startswith(f"{table}.")}
+        rows = _csv_rows(table, columns, tables_data.get(table, []), enums)
         path = out_dir / f"{table}.csv"
         with open(path, "w", encoding="utf-8", newline="") as f:
             writer = csv.DictWriter(f, fieldnames=columns)

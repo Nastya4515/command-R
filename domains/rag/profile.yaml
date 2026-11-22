@@ -6,6 +6,8 @@ title: "RAG — retrieval-augmented generation"
 # Нормализация цитат — как в data/rag/tools/check_submission.py (NFKC, склейка
 # переносов, схлопывание пробелов, регистр сохраняется). Для solar — 'solar'.
 quote_norm: rag
+# Канонический словарь имён метрик — dev-эталон; имена вне словаря остаются как есть
+metric_vocab: data/rag/dev_gold/results.csv
 
 # Схема сдачи (колонки, ключи, словари) — источник истины для экспорта
 schema_json: data/rag/submission_template/schema.json

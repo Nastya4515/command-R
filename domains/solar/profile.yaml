@@ -5,6 +5,8 @@ title: "Тонкоплёночные солнечные элементы"
 # Нормализация цитат — как в data/solar/tools/check_submission.py
 # (lowercase, только [a-z0-9.%]; фрагменты «Table…/Supplementary…» не проверяются)
 quote_norm: solar
+# Канонический словарь имён метрик — dev-эталон; имена вне словаря остаются как есть
+metric_vocab: data/solar/dev_gold/results.csv
 
 schema_json: data/solar/submission_template/schema.json
 

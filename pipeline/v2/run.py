@@ -99,7 +99,7 @@ def main() -> None:
     parser.add_argument("--set", dest="set_name", choices=["dev", "test", "uploads"],
                         required=True)
     parser.add_argument("--only", nargs="*", help="только эти статьи, напр. D001 D002")
-    parser.add_argument("--step", choices=list("abcdef"), help="только один шаг")
+    parser.add_argument("--step", help="один шаг или комбинация: b, bcde, abcdef")
     parser.add_argument("--force", action="store_true", help="игнорировать кэш шага")
     parser.add_argument("--mock", action="store_true",
                         help="шаги A/B из dev_gold (только --set dev, без API)")
@@ -124,6 +124,9 @@ def main() -> None:
     else:
         llm = Llm(cfg)
     steps = args.step or "abcdef"
+    bad = set(steps) - set("abcdef")
+    if bad:
+        parser.error(f"неизвестные шаги: {''.join(sorted(bad))} (допустимы a,b,c,d,e,f)")
 
     t0 = time.time()
     interrupted = False
@@ -178,8 +181,15 @@ def main() -> None:
             log.exception("%s: статья не обработана", pid)
 
     if "f" in steps:
+        # Экспортируем ВСЕ статьи, обработанные в наборе (кэш), а не только из
+        # этого запуска: иначе параллельные прогоны затирают выгрузку друг друга.
+        set_cache = Path(cfg["work"]["cache_dir"]) / "v2" / args.area / args.set_name
+        export_pids = sorted(p.name for p in set_cache.iterdir()
+                             if (p / "step_a.json").exists()) if set_cache.exists() else []
+        if args.only:
+            export_pids = [p for p in export_pids if p in set(args.only)]
         publications, entities_by_pid, results, issues = [], {}, [], []
-        for pid in pids:
+        for pid in export_pids:
             wdir = extract_a.work_dir(cfg, args.area, args.set_name, pid)
             try:
                 step_a = json.loads((wdir / "step_a.json").read_text(encoding="utf-8"))

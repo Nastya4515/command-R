@@ -9,7 +9,9 @@ evaluation results.
 
 Each result object:
 {
-  "metric_name": string,          // as printed: "EM", "Answer F1", "NDCG@5", "latency"
+  "metric_name": string,          // FULL name as defined in the text: "Sentiment-Intensity
+                                  // sigma", "Tenure Coverage" — NOT an abbreviated column
+                                  // header like "Sent-Int σ" or "Tenure (%)"
   "metric_variant": string | null, // definition: "token-level", "macro", "judge-based", ...
   "metric_k": number | null,       // k from "@k" in the metric name, else null
   "raw_value": string,             // EXACTLY as printed: keep "~", "≈", "<", "±", ranges
@@ -41,6 +43,8 @@ Rules:
   hyperparameters (chunk size, top_k), dataset sizes, GPU counts — unless reported as a result.
 - source_fragment MUST be copied character-for-character from the page text (you may quote
   a table row or a sentence). Never paraphrase it. Never invent a value not present on the page.
+- A relative change (values like "+42.7%", "improvement of x%") is a SEPARATE result with
+  metric_name "<metric> relative change" and unit "relative_percent".
 - If a number appears only inside a chart/curve without a printed label, do NOT guess it.
 - One value per result object: if a table row has EM and F1, that is two result objects.
 - Latency and tokens-per-query are results too (metric_name like "latency", unit "ms" or "s").
