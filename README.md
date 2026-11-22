@@ -1,15 +1,22 @@
-# RAG Extraction — конвейер извлечения данных из научных статей
+# ВИНИТИ — конвейер извлечения данных из научных статей
 
-Кейс ВИНИТИ РАН, предметная область 2 (Retrieval-Augmented Generation).
+Кейс 5 ВИНИТИ РАН (хакатон «Глубокая генерация»): извлечение и структурирование
+данных из научных публикаций. Две предметные области:
 
-Система читает PDF научных статей, извлекает конфигурации RAG-систем и
-результаты их оценки (метрика, значение, страница, дословная цитата) и
-собирает 7 связанных CSV формата сдачи. Веб-интерфейс: поиск, фильтры,
-карточки записей, просмотр PDF на странице источника, загрузка новых статей.
+- **rag** — Retrieval-Augmented Generation (таблицы: publications, configurations,
+  datasets, tasks, experiments, results, issues);
+- **solar** — тонкоплёночные солнечные элементы (таблицы: publications, materials,
+  devices, layers, measurements, results, issues).
+
+Система читает PDF, извлекает сущности и численные результаты (метрика, значение,
+страница, дословная цитата), проверяет их встроенными правилами и собирает 7 CSV
+эталонного формата. Веб-интерфейс: переключение области и набора, все 7 таблиц,
+поиск и фильтры по результатам, карточки записей, PDF на странице источника,
+загрузка новых статей.
 
 ## Быстрый старт
 
-Требования: Python 3.11+, Node.js 18+, ключ OpenAI (для разметки новых статей).
+Требования: Python 3.11+, Node.js 18+, ключ OpenAI-совместимого API.
 
 ```bash
 # 1. Окружение Python
@@ -20,87 +27,80 @@ python -m venv .venv
 # 2. Ключи
 copy .env.example .env   # и вписать OPENAI_API_KEY
 
-# 3. Данные (выдают организаторы) — положить в data/:
-#    data/dev/*.pdf, data/test/*.pdf, data/dev_gold/*.csv
-#    data/submission_template/, data/tools/check_submission.py
+# 3. Данные организаторов — в data/<area>/:
+#    data/rag/{dev,test,dev_gold,submission_template,tools}/
+#    data/solar/{dev,test,dev_gold,submission_template,tools}/
 
 # 4. Бэкенд (порт 8000)
-npm run server
-# или: .venv/Scripts/python.exe -m uvicorn backend.main:app --port 8000
+.venv/Scripts/python.exe -m uvicorn backend.main:app --port 8000
 
 # 5. Фронтенд (порт 5173, прокси /api -> 8000)
 npm install
 npm run dev
 ```
 
-Открыть http://localhost:5173 — сайт стартует пустым; загрузите PDF на
-вкладке «Загрузка» (drag-and-drop), через несколько минут статья появится
-в базе. Демо-данные dev-набора: `POST http://localhost:8000/api/reload?out_dir=out/dev`.
+Открыть http://localhost:5173. Переключатель области и набора — в шапке.
+Загрузка своей статьи: вкладка «Загрузка», выбор области, drag-and-drop PDF;
+статья появляется в наборе `uploads` соответствующей области.
 
-## Конвейер
+## Конвейер v2
 
 ```bash
-# полный прогон набора (шаги: read_pdf -> fragments -> model -> assemble -> export -> check)
-.venv/Scripts/python.exe -m pipeline.run --set test
+# полный прогон набора области (шаги A–F)
+.venv/Scripts/python.exe -m pipeline.v2.run --area rag --set test
 
-# отдельные шаги / статьи
-.venv/Scripts/python.exe -m pipeline.run --set dev --only D001 --step fragments
+# отдельные статьи / шаги (a — документ, b — страницы, c — сверка цитат,
+# d — нормализация, e — проверки, f — экспорт + чекер организаторов)
+.venv/Scripts/python.exe -m pipeline.v2.run --area solar --set dev --only D001 --step bcde
 
 # оценка качества на dev (против dev_gold)
-.venv/Scripts/python.exe -m pipeline.score
-
-# проверка формата сдачи
-.venv/Scripts/python.exe data/tools/check_submission.py out/test test
+.venv/Scripts/python.exe -m pipeline.v2.score --area rag --only D001 D004 D005
 ```
 
-Каждый шаг кэшируется в `cache/` — повторный запуск продолжает с места сбоя,
-ответы модели не тратятся повторно. Прогон test (90 статей) ≈ $1 и 4–5 часов
-на gpt-4o-mini.
+Шаги конвейера:
 
-## Конфигурация (config.yaml)
+- **A. Документ** — библиография, in_scope, сущности области (конфигурации RAG /
+  материалы-устройства-слои-измерения Solar), один запрос на статью.
+- **B. Страницы** — результаты с дословными цитатами; плотные таблицы
+  разбираются построчно (строка + заголовок таблицы отдельным запросом).
+- **C. Сверка** — цитата ищется в тексте PDF нормой чекера организаторов
+  (NFKC, склейка переносов), значение — в цитате; не прошло — один
+  корректирующий запрос, затем отклонение в rejected.json.
+- **D. Нормализация** — единицы и пересчёты по профилю, канонизация имён
+  метрик по словарю dev-эталона, metric_direction, metric_k, duplicate_of.
+- **E. Проверки** — общие (metric_scale, unit_inconsistency, contradiction,
+  percentage_vs_percentage_point) + предметные Solar (jv_consistency,
+  voc_limit, диапазоны, eqe_consistency, champion_vs_mean).
+- **F. Экспорт** — 7 CSV строго по schema.json области + запуск чекера
+  организаторов (data/<area>/tools/check_submission.py).
 
-- `model.client`: `api` (OpenAI, по умолчанию) | `mock` (ответы из dev_gold,
-  разработка без нейросети) | `file` (обмен jsonl с командой ИИ) | `local` (LoRA).
-- `model.api`: модель, параллелизм (8), таймауты, повторы.
-- `pdf.ocr_backend: vision` — сканы и PDF с битой кодировкой шрифтов
-  автоматически уходят в vision-OCR (gpt-4o-mini), Tesseract не нужен.
+Предметная специфика — только в `domains/<area>/` (profile.yaml, промпты);
+ядро `pipeline/v2/` от области не зависит.
 
-## Проверки перед коммитом
+## Оценка качества (dev, против эталона организаторов)
 
-```bash
-.venv/Scripts/python.exe -m pytest tests/ -q     # 16 тестов
-.venv/Scripts/python.exe -m ruff check pipeline backend tests
-npx eslint src/App.jsx
-npx vite build
-```
+Замер на трёх статьях RAG (сопоставление: статья + страница + значение
+с допуском округления + нормализованное имя метрики):
+
+| Статья | Precision | Recall | F1 |
+|---|---|---|---|
+| D001 | 72,0% | 44,4% | 54,9% |
+| D004 | 23,7% | 15,9% | 19,1% |
+| D005 | 29,6% | 15,3% | 20,2% |
+
+Значения, читаемые только с графиков (source_figure), конвейер не
+оцифровывает — в эталоне это заметная доля recall-потерь. Отчёты: `reports/`.
 
 ## Структура
 
 ```
-pipeline/   read_pdf, fragments, model_client (api/mock/file/local),
-            assemble, checks, export, score, vision_ocr, dataset, train_sft
-backend/    FastAPI + DuckDB: 8 эндпоинтов + /api/upload (фоновая разметка)
-src/        React + Vite + Tailwind: Обзор/Данные/Замечания/Публикации/Загрузка
-data/       dev/ test/ (PDF, не в git), dev_gold/, submission_template/, tools/
-docs/       TZ_MVP.md — ТЗ на доработку MVP
-tests/      pytest (16 шт.)
+backend/main.py       FastAPI: CSV -> DuckDB -> REST (области, таблицы, загрузка)
+pipeline/v2/          ядро конвейера (profile, llm, pages, extract_a/b, verify,
+                      normalize, checks, checks_solar, export, score, run)
+domains/<area>/       профили областей: profile.yaml + промпты
+data/<area>/          данные организаторов (dev/test/dev_gold/шаблон/чекер)
+out/<area>/<set>/     результат прогона: 7 CSV
+cache/                кэш страниц и ответов модели
+src/                  React-интерфейс
+docs/                 ТЗ (TZ_v2.md), паспорта наборов
 ```
-
-Не в git: `.env` (ключи), `data/dev`, `data/test` (PDF организаторов),
-`cache/`, `out/`, `logs/`, `models/`, `uploads/`.
-
-## Траблшутинг
-
-| Симптом | Решение |
-|---|---|
-| «Бекенд недоступен» | `npm run server` не запущен или порт 8000 занят |
-| PDF открывается в браузере при дропе | старая страница — Ctrl+F5 |
-| Статья дала 0–5 результатов | проверьте, не обзорная ли она; сканы уходят в vision-OCR автоматически |
-| Сбой посреди прогона | просто перезапустите команду — кэш продолжит с места |
-| fontTools warnings | безобидны; `pip install fonttools` убирает |
-
-## Дообучение своей модели (опционально)
-
-`requirements-ml.txt` + `pipeline/dataset.py` (SFT-датасет из dev_gold) +
-`pipeline/train_sft.py` (QLoRA на Qwen2.5-3B, ~8 ГБ VRAM) +
-`model.client: local`. Подробности — в `docs/TZ_MVP.md`.
