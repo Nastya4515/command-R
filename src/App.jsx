@@ -278,7 +278,9 @@ export default function RAGDashboard() {
       
       {/* САЙДБАР */}
       <aside className="w-20 flex flex-col items-center py-6 border-r border-white/5 bg-[#0B0E14] z-30 shrink-0">
-        <img src={logoUrl} alt="Логотип" className="w-10 h-10 rounded-xl object-cover mb-10 shadow-[0_0_20px_rgba(0,210,255,0.4)]" />
+        <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center mb-10 shadow-[0_0_20px_rgba(0,210,255,0.4)] overflow-hidden">
+          <img src={logoUrl} alt="Логотип" className="w-8 h-8 object-contain" />
+        </div>
         <nav className="flex flex-col gap-6 flex-1 w-full">
           <button onClick={() => setActiveTab('overview')} className={`w-full flex justify-center py-3 relative transition-colors ${activeTab === 'overview' ? 'text-[#00D2FF]' : 'text-gray-500 hover:text-white'}`}><LayoutDashboard className="w-6 h-6" /></button>
           <button onClick={() => setActiveTab('upload')} className={`w-full flex justify-center py-3 relative transition-colors ${activeTab === 'upload' ? 'text-[#00D2FF]' : 'text-gray-500 hover:text-white'}`}><UploadCloud className="w-6 h-6" /></button>
