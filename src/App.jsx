@@ -27,6 +27,7 @@ export default function RAGDashboard() {
   const [tableData, setTableData] = useState({ columns: [], items: [], total: 0 });
   const [tablePage, setTablePage] = useState(1);
   const [uploadArea, setUploadArea] = useState('rag');
+  const [settingsOpen, setSettingsOpen] = useState(false);
 
   // Фильтры и поиск (серверные)
   const [searchQuery, setSearchQuery] = useState('');
@@ -289,7 +290,44 @@ export default function RAGDashboard() {
           <button onClick={() => setActiveTab('issues')} className={`w-full flex justify-center py-3 relative transition-colors ${activeTab === 'issues' ? 'text-[#00D2FF]' : 'text-gray-500 hover:text-white'}`}><AlertTriangle className="w-6 h-6" /></button>
           <button onClick={() => setActiveTab('pubs')} className={`w-full flex justify-center py-3 relative transition-colors ${activeTab === 'pubs' ? 'text-[#00D2FF]' : 'text-gray-500 hover:text-white'}`}><FileText className="w-6 h-6" /></button>
         </nav>
-        <button className="w-full flex justify-center py-3 text-gray-500 hover:text-white mt-auto"><Settings className="w-6 h-6" /></button>
+        <div className="relative w-full flex justify-center mt-auto">
+          <button
+            onClick={() => setSettingsOpen(v => !v)}
+            className={`w-full flex justify-center py-3 transition-colors ${settingsOpen ? 'text-[#00D2FF]' : 'text-gray-500 hover:text-white'}`}
+          >
+            <Settings className="w-6 h-6" />
+          </button>
+          {settingsOpen && areasInfo && (
+            <div className="absolute left-20 bottom-0 w-56 bg-[#151A24] border border-white/10 rounded-xl p-4 shadow-2xl z-50">
+              <div className="text-[10px] uppercase tracking-widest text-gray-500 mb-3">Настройки набора</div>
+              <label className="block text-xs text-gray-400 mb-1">Область</label>
+              <select
+                value={currentArea}
+                onChange={(e) => {
+                  const area = e.target.value;
+                  const info = areasInfo.areas.find(a => a.id === area);
+                  const setName = info?.sets?.includes(currentSet) ? currentSet : (info?.sets?.[0] || 'test');
+                  switchSelection(area, setName);
+                }}
+                className="w-full mb-3 bg-[#0B0E14] border border-white/10 text-xs text-gray-300 rounded-lg px-3 py-2 outline-none"
+              >
+                {areasInfo.areas.map(a => (
+                  <option key={a.id} value={a.id}>{AREA_LABELS[a.id] || a.id}</option>
+                ))}
+              </select>
+              <label className="block text-xs text-gray-400 mb-1">Набор</label>
+              <select
+                value={currentSet}
+                onChange={(e) => switchSelection(currentArea, e.target.value)}
+                className="w-full bg-[#0B0E14] border border-white/10 text-xs text-gray-300 rounded-lg px-3 py-2 outline-none"
+              >
+                {(areasInfo.areas.find(a => a.id === currentArea)?.sets || []).map(s => (
+                  <option key={s} value={s}>{s}</option>
+                ))}
+              </select>
+            </div>
+          )}
+        </div>
       </aside>
 
       {/* ОСНОВНАЯ ОБЛАСТЬ */}
@@ -306,33 +344,6 @@ export default function RAGDashboard() {
             </h1>
           </div>
           <div className="flex items-center gap-3">
-            {areasInfo && (
-              <>
-                <select
-                  value={currentArea}
-                  onChange={(e) => {
-                    const area = e.target.value;
-                    const info = areasInfo.areas.find(a => a.id === area);
-                    const setName = info?.sets?.includes(currentSet) ? currentSet : (info?.sets?.[0] || 'test');
-                    switchSelection(area, setName);
-                  }}
-                  className="bg-[#0B0E14] border border-white/10 text-xs text-gray-300 rounded-lg px-3 py-2 outline-none"
-                >
-                  {areasInfo.areas.map(a => (
-                    <option key={a.id} value={a.id}>{AREA_LABELS[a.id] || a.id}</option>
-                  ))}
-                </select>
-                <select
-                  value={currentSet}
-                  onChange={(e) => switchSelection(currentArea, e.target.value)}
-                  className="bg-[#0B0E14] border border-white/10 text-xs text-gray-300 rounded-lg px-3 py-2 outline-none"
-                >
-                  {(areasInfo.areas.find(a => a.id === currentArea)?.sets || []).map(s => (
-                    <option key={s} value={s}>{s}</option>
-                  ))}
-                </select>
-              </>
-            )}
             {stats && <span className="text-xs text-gray-500 font-mono">{stats.area}/{stats.dataset}</span>}
           </div>
         </header>
