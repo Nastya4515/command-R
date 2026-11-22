@@ -27,6 +27,11 @@ entity_links:
     device_id: {table: devices, by: device_label}
 
 # Поля идентичности результата для duplicate_of (повтор = все эти поля совпали)
+# Ссылки results -> сущности: несуществующие id очищаются при экспорте
+result_links:
+  - [devices, device_id]
+  - [materials, material_id]
+  - [measurements, measurement_id]
 dup_fields:
   [device_id, measurement_id, material_id, metric_name, metric_unit, aggregation,
    time_point, time_unit, result_origin, cited_publication_id]

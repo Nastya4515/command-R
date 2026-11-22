@@ -26,6 +26,12 @@ ids:
   issues: I
 
 # Поля идентичности результата для duplicate_of (13 полей чекера, metric_value отдельно)
+# Ссылки results -> сущности: несуществующие id очищаются при экспорте
+result_links:
+  - [configurations, config_id]
+  - [datasets, dataset_id]
+  - [tasks, task_id]
+  - [experiments, experiment_id]
 dup_fields:
   [experiment_id, config_id, dataset_id, task_id, metric_name, metric_variant,
    metric_k, metric_unit, aggregation, sample_size, result_origin, cited_publication_id]

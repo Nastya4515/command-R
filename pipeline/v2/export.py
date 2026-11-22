@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import csv
 import logging
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -57,6 +58,21 @@ def run_set(area: str, set_name: str, cfg: dict, profile: dict,
             for item in entities.get(table) or []:
                 row = {"publication_id": pid, **item}
                 tables_data[table].append(row)
+
+    # Санитария ссылок results -> сущности: ссылка на несуществующий id —
+    # ошибка чекера; безопаснее очистить, чем сдать битую ссылку.
+    for ent_table, ent_field in profile.get("result_links", []):
+        valid_ids = {r.get(ent_field) for r in tables_data.get(ent_table, [])}
+        for r in results:
+            ref = r.get(ent_field)
+            if ref and ref not in valid_ids:
+                r[ent_field] = ""
+    # metric_k — неотрицательное целое; мусор очищаем
+    for r in results:
+        k = str(r.get("metric_k") or "").strip()
+        if k and not re.fullmatch(r"\d+", k):
+            r["metric_k"] = ""
+
     tables_data["results"] = results
     tables_data["issues"] = issues
 
