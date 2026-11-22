@@ -32,6 +32,17 @@ result_links:
   - [devices, device_id]
   - [materials, material_id]
   - [measurements, measurement_id]
+# Алиасы enum-полей к допустимым значениям схемы; не нашлось — поле очищается
+enum_aliases:
+  results.aggregation: {average: mean, module: ""}
+  layers.layer_function: {buffer: interlayer}
+  devices.device_role: {champion: record}
+  devices.area_definition: {mask: aperture}
+  materials.dimensionality: {1D: ""}
+  measurements.stability_protocol: {ISOS-L1: ISOS-L, ISOS-L2: ISOS-L, ISOS-L3: ISOS-L,
+    ISOS-D1: ISOS-D, ISOS-D2: ISOS-D, ISOS-D3: ISOS-D, ISOS-T1: ISOS-T}
+  measurements.measurement_type: {impedance spectroscopy: "", EIS: "",
+    capacitance-voltage: "", admittance spectroscopy: "", PL: "", JV: J-V}
 dup_fields:
   [device_id, measurement_id, material_id, metric_name, metric_unit, aggregation,
    time_point, time_unit, result_origin, cited_publication_id]

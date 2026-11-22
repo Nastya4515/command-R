@@ -21,7 +21,8 @@ _SKIP = {"label", "unit", "cited_reference"}
 
 
 def _csv_rows(table: str, columns: list[str], items: list[dict],
-              enums: dict[str, list[str]] | None = None) -> list[dict]:
+              enums: dict[str, list[str]] | None = None,
+              enum_aliases: dict[str, str] | None = None) -> list[dict]:
     rows = []
     for item in items:
         row = {}
@@ -34,10 +35,12 @@ def _csv_rows(table: str, columns: list[str], items: list[dict],
             val = str(val)
             allowed = (enums or {}).get(col)
             if allowed and val:
-                low = val.lower()
-                match = next((a for a in allowed if a.lower() == low), None)
-                if match is not None:
-                    val = match
+                # алиас из профиля области (average -> mean и т.п.)
+                amap = (enum_aliases or {}).get(col, {})
+                val = amap.get(val, amap.get(val.lower(), val))
+                match = next((a for a in allowed if a.lower() == val.lower()), None)
+                # значение вне словаря схемы — очищаем, иначе ошибка чекера
+                val = match if match is not None else ""
             row[col] = val
         rows.append(row)
     return rows
@@ -79,7 +82,9 @@ def run_set(area: str, set_name: str, cfg: dict, profile: dict,
     for table, columns in schema["tables"].items():
         enums = {k.split(".", 1)[1]: v for k, v in (schema.get("enums") or {}).items()
                  if k.startswith(f"{table}.")}
-        rows = _csv_rows(table, columns, tables_data.get(table, []), enums)
+        aliases = {k.split(".", 1)[1]: v for k, v in (profile.get("enum_aliases") or {}).items()
+                   if k.startswith(f"{table}.")}
+        rows = _csv_rows(table, columns, tables_data.get(table, []), enums, aliases)
         path = out_dir / f"{table}.csv"
         with open(path, "w", encoding="utf-8", newline="") as f:
             writer = csv.DictWriter(f, fieldnames=columns)
