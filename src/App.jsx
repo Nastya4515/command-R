@@ -345,9 +345,9 @@ export default function RAGDashboard() {
               <NetworkGraph3D status="normal" onClick={() => setActiveTab('data')} />
               <div className="absolute inset-0 bg-gradient-to-r from-[#05080F] via-[#05080F]/70 to-transparent w-[60%] pointer-events-none z-10"></div>
               <div className="absolute top-16 left-16 z-20 max-w-md pointer-events-auto">
-                <div className="flex items-center gap-4 mb-4"><div className="h-[2px] w-12 bg-[#00D2FF]"></div><div className="text-[#00D2FF] text-xs font-mono tracking-[0.2em]">MULTIMODAL SYSTEM</div></div>
+                <div className="flex items-center gap-4 mb-4"><div className="h-[2px] w-12 bg-[#00D2FF]"></div><div className="text-[#00D2FF] text-xs font-mono tracking-[0.2em]">REFBASE AI</div></div>
                 <h2 className="text-5xl font-light text-white leading-tight mb-6">EXTRACTED<br /><span className="font-bold">KNOWLEDGE.</span></h2>
-                <p className="text-base text-gray-400 leading-relaxed mb-8">Единая база данных результатов RAG-экспериментов, извлечённых из научных статей.</p>
+                <p className="text-base text-gray-400 leading-relaxed mb-8">Единая база данных экспериментов из научных статей: метрики, значения и конфигурации — каждая цифра с цитатой и страницей первоисточника.</p>
                 <div className="flex gap-10 border-t border-white/10 pt-8 mt-8">
                   <div><div className="text-3xl font-mono text-white mb-1">{stats ? stats.publications : '—'}</div><div className="text-[10px] text-gray-500 uppercase tracking-widest">Статей</div></div>
                   <div><div className="text-3xl font-mono text-[#00D2FF] mb-1">{stats ? stats.results : '—'}</div><div className="text-[10px] text-gray-500 uppercase tracking-widest">Результатов</div></div>
