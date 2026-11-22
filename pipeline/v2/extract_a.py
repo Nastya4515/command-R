@@ -1,8 +1,9 @@
 """Шаг A. Документ целиком: библиография, in_scope, сущности области.
 
 Результат: cache/v2/<area>/<set>/<pid>/step_a.json
-  {"publication": {...}, "entities": {"configurations": [{...с config_id}], ...}}
-Идентификаторы (C1, DS1, T1, E1) назначает код, не модель.
+  {"publication": {...}, "entities": {<таблица>: [{...с id}]}}
+Состав сущностей и ключи берутся из профиля области (entity_tables + schema.keys).
+Идентификаторы назначает код, не модель.
 """
 from __future__ import annotations
 
@@ -14,10 +15,15 @@ from . import pages as pages_mod
 
 log = logging.getLogger(__name__)
 
-ENTITY_TABLES = ("configurations", "datasets", "tasks", "experiments")
 
-_KEY_FIELD = {"configurations": "config_id", "datasets": "dataset_id",
-              "tasks": "task_id", "experiments": "experiment_id"}
+def entity_tables(profile: dict) -> list[str]:
+    """Таблицы сущностей области (все таблицы сдачи кроме publications/results/issues)."""
+    return [t for t in profile["schema"]["tables"]
+            if t not in ("publications", "results", "issues")]
+
+
+def key_field(profile: dict, table: str) -> str:
+    return profile["schema"]["keys"][table]
 
 
 def work_dir(cfg: dict, area: str, set_name: str, pid: str) -> Path:
@@ -26,17 +32,34 @@ def work_dir(cfg: dict, area: str, set_name: str, pid: str) -> Path:
     return path
 
 
-def key_field(table: str) -> str:
-    return _KEY_FIELD[table]
-
-
 def assign_ids(entities: dict, profile: dict) -> dict:
-    """Канонические id по порядку: C1.., DS1.., T1.., E1..."""
-    for table in ENTITY_TABLES:
+    """Канонические id по порядку: C1.., DS1.. / M1.., DV1.. — по профилю."""
+    for table in entity_tables(profile):
         prefix = profile["ids"][table]
+        key = key_field(profile, table)
         for i, item in enumerate(entities.get(table) or [], start=1):
-            item[_KEY_FIELD[table]] = f"{prefix}{i}"
+            item[key] = f"{prefix}{i}"
     return entities
+
+
+def resolve_links(entities: dict, profile: dict) -> None:
+    """Ссылки между сущностями по label-полям (Solar: absorber_label -> M1 и т.п.)."""
+    for table, links in (profile.get("entity_links") or {}).items():
+        for field, spec in links.items():
+            target_table = spec["table"]
+            by = spec["by"]
+            tkey = key_field(profile, target_table)
+            index = {}
+            for item in entities.get(target_table) or []:
+                label = (item.get("label") or "").strip().lower()
+                if label:
+                    index[label] = item[tkey]
+            for item in entities.get(table) or []:
+                label = (item.pop(by, None) or "").strip().lower()
+                if label and label in index:
+                    item[field] = index[label]
+                else:
+                    item.setdefault(field, "")
 
 
 def _entity_brief(item: dict) -> str:
@@ -46,14 +69,14 @@ def _entity_brief(item: dict) -> str:
     return "; ".join(parts[:6])
 
 
-def entities_listing(entities: dict) -> str:
+def entities_listing(entities: dict, profile: dict) -> str:
     """Перечень сущностей с id — контекст для промпта шага B."""
     out = ["Entities of this paper (reference them by id):"]
-    for table in ENTITY_TABLES:
+    for table in entity_tables(profile):
         items = entities.get(table) or []
         if not items:
             continue
-        key = _KEY_FIELD[table]
+        key = key_field(profile, table)
         out.append(f"{table}:")
         out.extend(f"- {it[key]}: {_entity_brief(it)}" for it in items)
         out.append("")
@@ -88,15 +111,17 @@ def run_article(pid: str, cfg: dict, area: str, set_name: str, profile: dict,
     if publication["in_scope"] == "true":
         publication["exclusion_reason"] = ""
 
+    tables = entity_tables(profile)
     entities = {t: (data.get(t) or []) if isinstance(data.get(t), list) else []
-                for t in ENTITY_TABLES}
-    for table in ENTITY_TABLES:  # label не уходит в CSV — только для промпта шага B
+                for t in tables}
+    for table in tables:  # label не уходит в CSV — только для промпта шага B
         for item in entities[table]:
             item.setdefault("label", "")
     assign_ids(entities, profile)
+    resolve_links(entities, profile)
 
     result = {"publication": publication, "entities": entities}
     out_path.write_text(json.dumps(result, ensure_ascii=False, indent=1), encoding="utf-8")
-    log.info("%s: шаг A — in_scope=%s, конфигураций %d, наборов %d, задач %d, экспериментов %d",
-             pid, publication["in_scope"], *(len(entities[t]) for t in ENTITY_TABLES))
+    counts = ", ".join(f"{t}: {len(entities[t])}" for t in tables)
+    log.info("%s: шаг A — in_scope=%s, %s", pid, publication["in_scope"], counts)
     return result

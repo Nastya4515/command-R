@@ -20,8 +20,8 @@ from pathlib import Path
 
 from ..textnorm import contains_number
 from . import pages as pages_mod
-from .extract_a import ENTITY_TABLES, entities_listing, key_field, work_dir
-from .extract_b import RESULT_KEYS
+from .extract_a import entities_listing, entity_tables, key_field, work_dir
+from .extract_b import result_keys
 
 log = logging.getLogger(__name__)
 
@@ -69,8 +69,8 @@ class Verifier:
         self.n_pages = len(doc["pages"])
 
     def set_entities(self, entities: dict) -> None:
-        self.entities = {t: {it[key_field(t)] for it in entities.get(t) or []}
-                         for t in ENTITY_TABLES}
+        self.entities = {t: {it[key_field(self.profile, t)] for it in entities.get(t) or []}
+                         for t in entity_tables(self.profile)}
 
     def problems(self, r: dict) -> list[str]:
         """Список нарушений записи (пусто — запись валидна)."""
@@ -91,8 +91,8 @@ class Verifier:
             probs.append("пустое raw_value")
         elif frag and not contains_number(frag, raw):
             probs.append(f"число «{raw}» не найдено в цитате")
-        for table in ENTITY_TABLES:
-            field = key_field(table)
+        for table in entity_tables(self.profile):
+            field = key_field(self.profile, table)
             ref = (r.get(field) or "").strip()
             if ref and self.entities.get(table) and ref not in self.entities[table]:
                 probs.append(f"{field}={ref} нет среди сущностей шага A")
@@ -127,7 +127,7 @@ def run_article(pid: str, cfg: dict, area: str, set_name: str, profile: dict,
                             if isinstance(r.get("source_page"), int)})
         doc = pages_mod.load_pages(pid, cfg, area, pdf_dir)
         texts = {p["page"]: pages_mod.page_text(p) for p in doc["pages"]}
-        listing = entities_listing(step_a["entities"])
+        listing = entities_listing(step_a["entities"], profile)
         for pno in bad_pages:
             page_invalid = [(r, p) for r, p in invalid if r["source_page"] == pno]
             errors_txt = "\n".join(
@@ -147,7 +147,7 @@ def run_article(pid: str, cfg: dict, area: str, set_name: str, profile: dict,
                 for raw_r in data["results"]:
                     if not isinstance(raw_r, dict):
                         continue
-                    r = {k: raw_r.get(k) for k in RESULT_KEYS}
+                    r = {k: raw_r.get(k) for k in result_keys(profile)}
                     r["publication_id"] = pid
                     r["source_page"] = pno
                     probs = verifier.problems(r)

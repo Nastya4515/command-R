@@ -23,6 +23,11 @@ ids:
   results: R
   issues: I
 
+# Поля идентичности результата для duplicate_of (13 полей чекера, metric_value отдельно)
+dup_fields:
+  [experiment_id, config_id, dataset_id, task_id, metric_name, metric_variant,
+   metric_k, metric_unit, aggregation, sample_size, result_origin, cited_publication_id]
+
 # Экономия: страницы без единой цифры модели не отправляем
 skip_pages_without_digits: true
 

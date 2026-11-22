@@ -1,0 +1,100 @@
+# Профиль области Solar (кейс ВИНИТИ, область 1 — тонкоплёночные солнечные элементы)
+area: solar
+title: "Тонкоплёночные солнечные элементы"
+
+# Нормализация цитат — как в data/solar/tools/check_submission.py
+# (lowercase, только [a-z0-9.%]; фрагменты «Table…/Supplementary…» не проверяются)
+quote_norm: solar
+
+schema_json: data/solar/submission_template/schema.json
+
+prompts:
+  step_a: domains/solar/prompts/step_a_system.md
+  step_b: domains/solar/prompts/step_b_system.md
+
+# Таблицы сущностей (шаг A); порядок = порядок вкладок в интерфейсе
+entity_tables: [materials, devices, layers, measurements]
+
+# Ссылки между сущностями: поле таблицы заполняется кодом по label-полю из ответа модели
+entity_links:
+  devices:
+    absorber_material_id: {table: materials, by: absorber_label}
+  layers:
+    device_id: {table: devices, by: device_label}
+  measurements:
+    device_id: {table: devices, by: device_label}
+
+# Поля идентичности результата для duplicate_of (повтор = все эти поля совпали)
+dup_fields:
+  [device_id, measurement_id, material_id, metric_name, metric_unit, aggregation,
+   time_point, time_unit, result_origin, cited_publication_id]
+
+ids:
+  materials: M
+  devices: DV
+  layers: L
+  measurements: MS
+  results: R
+  issues: I
+
+skip_pages_without_digits: true
+
+# Направление метрик для отчётности (в сдаче поля metric_direction нет)
+metric_direction:
+  higher_is_better: [pce, voc, jsc, ff, t80, retained, stabilized, jmpp, vmpp, avt, cri, lue]
+  lower_is_better: [rs, voc_deficit, hi]
+
+bounded_metrics: []   # шкала процентов проверяется физическими правилами (range)
+
+unit_aliases:
+  percent: "%"
+  percentage: "%"
+  pct: "%"
+  "a/m2": A/m2
+  "ma/cm^2": mA/cm2
+  "ma/cm²": mA/cm2
+  "mv": mV
+  "ω·cm2": Ohm*cm2
+  "ohm·cm2": Ohm*cm2
+  "ohm cm2": Ohm*cm2
+  "μm": um
+  "µm": um
+  "hours": h
+  "hour": h
+  "days": day
+
+# Пересчёт в целевые единицы (п. 3.5.4 ТЗ v2). Шкала (%, V…) НЕ унифицируется
+# по названию метрики — только явные пересчёты единиц.
+unit_conversions:
+  mV:      {target: V, factor: 0.001}
+  fraction: {target: "%", factor: 100.0}   # только когда метрика — PCE/FF/HI (см. normalize)
+  "A/m2":  {target: mA/cm2, factor: 0.1}
+  "A/cm2": {target: mA/cm2, factor: 1000.0}
+  "µA/cm2": {target: mA/cm2, factor: 0.001}
+  "kOhm*cm2": {target: Ohm*cm2, factor: 1000.0}
+  "MOhm*cm2": {target: Ohm*cm2, factor: 1000000.0}
+  day:     {target: h, factor: 24.0}
+  min:     {target: h, factor: 0.0166666667}
+  um:      {target: nm, factor: 1000.0}    # толщины слоёв (в results редко)
+  mm2:     {target: cm2, factor: 0.01}
+
+# fraction -> % только для этих метрик (доля FF=0.71 -> 71%)
+fraction_to_percent_metrics: [PCE, FF, HI, retained_PCE, stabilized_PCE]
+
+# Физические проверки (п. 3.5.5 ТЗ v2; точные пороги range — допущение, п. 9)
+checks:
+  jv_consistency: true       # |Voc*Jsc*FF/Pin - PCE| / PCE > 3%
+  voc_limit: true            # Voc >= Eg/q
+  range: true                # Jsc/FF/PCE вне физических пределов
+  eqe_consistency: true      # |Jsc_EQE - Jsc| / Jsc > 5%
+  champion_vs_mean: true     # mean партии > champion той же партии
+  contradiction: true        # одно значение расходится в разных местах
+  unit_inconsistency: true
+  hysteresis_index: false    # нужен явный HI и оба хода — включаем при данных
+  comparability: false       # условия не AM1.5G — помечаем note, не issue
+
+range_limits:                # допущение (в материалах кейса порогов нет)
+  PCE: [0, 35]
+  FF: [0, 100]
+  Jsc: [0, 50]               # mA/cm2 для тонкоплёночных
+  Voc: [0, 5]                # V

@@ -11,7 +11,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-from .extract_a import ENTITY_TABLES
+from .extract_a import entity_tables
 
 log = logging.getLogger(__name__)
 
@@ -45,7 +45,7 @@ def run_set(area: str, set_name: str, cfg: dict, profile: dict,
     tables_data: dict[str, list[dict]] = {t: [] for t in schema["tables"]}
     tables_data["publications"] = publications
     for pid, entities in entities_by_pid.items():
-        for table in ENTITY_TABLES:
+        for table in entity_tables(profile):
             for item in entities.get(table) or []:
                 row = {"publication_id": pid, **item}
                 tables_data[table].append(row)

@@ -63,11 +63,19 @@ def normalize_unit(unit: str | None, raw_value: str, profile: dict) -> str:
     return u
 
 
-def convert(value: str, unit: str, profile: dict) -> tuple[str, str]:
-    """Пересчёт по профилю (unit_conversions). Возвращает (значение, единица)."""
+def convert(value: str, unit: str, profile: dict, metric_name: str = "") -> tuple[str, str]:
+    """Пересчёт по профилю (unit_conversions). Возвращает (значение, единица).
+
+    fraction -> % — только для метрик из fraction_to_percent_metrics (Solar: PCE/FF/HI);
+    для остальных метрик доля остаётся долей (шкала источника сохраняется).
+    """
     conv = profile.get("unit_conversions", {}).get(unit)
     if not conv:
         return value, unit
+    if unit == "fraction":
+        allowed = profile.get("fraction_to_percent_metrics")
+        if allowed is not None and metric_name not in allowed:
+            return value, unit
     num = normalize_number(value)
     if num is None:
         return value, unit
@@ -76,13 +84,9 @@ def convert(value: str, unit: str, profile: dict) -> tuple[str, str]:
     return out, conv["target"]
 
 
-def _dup_key(r: dict) -> tuple:
-    """13 полей чекера для duplicate_of (metric_value сравнивается отдельно)."""
-    return tuple((r.get(f) or "") for f in
-                 ["experiment_id", "config_id", "dataset_id", "task_id",
-                  "metric_name", "metric_variant", "metric_k", "metric_unit",
-                  "aggregation", "sample_size", "result_origin",
-                  "cited_publication_id"])
+def _dup_key(r: dict, profile: dict) -> tuple:
+    """Поля идентичности результата для duplicate_of (из профиля области)."""
+    return tuple((r.get(f) or "") for f in profile.get("dup_fields", []))
 
 
 def run_article(pid: str, cfg: dict, area: str, set_name: str, profile: dict,
@@ -112,7 +116,7 @@ def run_article(pid: str, cfg: dict, area: str, set_name: str, profile: dict,
         unit = normalize_unit(r.get("unit"), raw, profile)
         value = normalize_number(raw)  # None для диапазонов «1.2-1.4»
         if value is not None and unit:
-            value, unit = convert(value, unit, profile)
+            value, unit = convert(value, unit, profile, metric_name=name)
         raw_unit = (r.get("raw_unit") or "").strip()
         if raw_unit.lower() in profile.get("unit_aliases", {}):
             raw_unit = profile["unit_aliases"][raw_unit.lower()]
@@ -136,7 +140,7 @@ def run_article(pid: str, cfg: dict, area: str, set_name: str, profile: dict,
     seen: list[tuple[tuple, str, str]] = []  # (dup_key, value, result_id)
     prefix = profile["ids"]["results"]
     for n, r in enumerate(results, start=1):
-        key = _dup_key(r)
+        key = _dup_key(r, profile)
         value = r["metric_value"]
         dup_of = ""
         if value:

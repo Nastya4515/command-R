@@ -63,11 +63,11 @@ def mock_step_a(pid: str, gold: dict, profile: dict) -> dict:
                                       "year": "", "DOI": "", "authors": "",
                                       "in_scope": "true", "exclusion_reason": ""}
     entities = {}
-    for table in extract_a.ENTITY_TABLES:
+    for table in extract_a.entity_tables(profile):
         entities[table] = [dict(r) for r in gold[table]
                            if r["publication_id"] == pid]
         for it in entities[table]:
-            it.setdefault("label", it.get(extract_a.key_field(table), ""))
+            it.setdefault("label", it.get(extract_a.key_field(profile, table), ""))
     return {"publication": pub, "entities": entities}
 
 
@@ -163,8 +163,13 @@ def main() -> None:
             if "e" in steps:
                 normalized = json.loads((extract_a.work_dir(cfg, args.area, args.set_name, pid)
                                          / "normalized.json").read_text(encoding="utf-8"))
-                checks.run_article(pid, cfg, args.area, args.set_name, profile,
-                                   normalized, force=args.force)
+                if args.area == "solar":
+                    from pipeline.v2 import checks_solar
+                    checks_solar.run_article(pid, cfg, args.area, args.set_name, profile,
+                                             normalized, step_a=step_a, force=args.force)
+                else:
+                    checks.run_article(pid, cfg, args.area, args.set_name, profile,
+                                       normalized, force=args.force)
         except BudgetExceeded as exc:
             log.error("%s — прогон остановлен на %s", exc, pid)
             interrupted = True

@@ -34,6 +34,9 @@ Each result object:
 Rules:
 - Only quantitative evaluation results of systems: quality metrics (EM, F1, accuracy, recall,
   NDCG, BLEU, ...), latency, throughput, token/cost metrics reported as results.
+- COMPLETENESS IS CRITICAL: if the page contains a results table, extract EVERY data row of
+  EVERY such table — all systems, all datasets, all metrics. Do not summarize, do not pick
+  the "best" or "representative" rows, do not stop early. A dense table can yield 50-200 results.
 - IGNORE: years, page numbers, section numbers, citation indices, author counts,
   hyperparameters (chunk size, top_k), dataset sizes, GPU counts — unless reported as a result.
 - source_fragment MUST be copied character-for-character from the page text (you may quote

@@ -45,7 +45,7 @@ model:
     model_document: gpt-4o        # шаг A: документ целиком, сущности
     model_page: gpt-4o-mini       # шаг B: результаты по страницам/таблицам
     model_vision: gpt-4o-mini     # OCR сканов и подписи на графиках
-    max_tokens: 4000              # JSON по странице/таблице; при обрыве — дробление
+    max_tokens: 8000              # JSON по странице/куску таблицы; при обрыве — дробление
 
 pdf:
   scan_char_threshold: 50   # меньше символов на странице => скан
