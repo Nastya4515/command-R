@@ -278,7 +278,7 @@ export default function RAGDashboard() {
       
       {/* САЙДБАР */}
       <aside className="w-20 flex flex-col items-center py-6 border-r border-white/5 bg-[#0B0E14] z-30 shrink-0">
-        <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center mb-10 shadow-[0_0_20px_rgba(0,210,255,0.4)] overflow-hidden">
+        <div className="w-10 h-10 bg-[#00D2FF] rounded-xl flex items-center justify-center mb-10 shadow-[0_0_20px_rgba(0,210,255,0.4)] overflow-hidden">
           <img src={logoUrl} alt="Логотип" className="w-8 h-8 object-contain" />
         </div>
         <nav className="flex flex-col gap-6 flex-1 w-full">
