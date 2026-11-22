@@ -26,7 +26,6 @@ export default function RAGDashboard() {
   const [activeTable, setActiveTable] = useState('results');
   const [tableData, setTableData] = useState({ columns: [], items: [], total: 0 });
   const [tablePage, setTablePage] = useState(1);
-  const [uploadArea, setUploadArea] = useState('rag');
   const [settingsOpen, setSettingsOpen] = useState(false);
 
   // Фильтры и поиск (серверные)
@@ -235,7 +234,7 @@ export default function RAGDashboard() {
     formData.append('file', file);
 
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', `${API}/upload?area=${uploadArea}`);
+    xhr.open('POST', `${API}/upload?area=${currentArea}`);
     xhr.upload.onprogress = (e) => {
       if (e.lengthComputable) setUploadProgress(Math.round((e.loaded / e.total) * 100));
     };
@@ -391,15 +390,6 @@ export default function RAGDashboard() {
                   <UploadCloud className="w-8 h-8 text-[#00D2FF] mb-4" />
                   <h3 className="text-white font-medium mb-2">Загрузить PDF</h3>
                   <p className="text-xs text-gray-500 mb-4">Файл отправится на сервер и пройдёт конвейер извлечения</p>
-                  <select
-                    value={uploadArea}
-                    onChange={(e) => setUploadArea(e.target.value)}
-                    onClick={(e) => e.stopPropagation()}
-                    className="mb-4 bg-[#0B0E14] border border-white/10 text-xs text-gray-300 rounded-lg px-3 py-2 outline-none"
-                  >
-                    <option value="rag">Область: RAG</option>
-                    <option value="solar">Область: Solar</option>
-                  </select>
                   <button className="px-6 py-2 bg-[#00D2FF] text-black font-bold text-xs uppercase rounded-lg">Выбрать файл</button>
                 </div>
 
