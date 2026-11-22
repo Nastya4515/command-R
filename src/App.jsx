@@ -4,18 +4,28 @@ import {
   Search, FileText, X, CheckCircle2, 
   AlertTriangle, Filter, UploadCloud, Loader2, Terminal,
   Download, ArrowUpDown, ChevronLeft, ChevronRight,
-  Network, SearchX
+  Network, SearchX, Table2
 } from 'lucide-react';
 import NetworkGraph3D from './NetworkGraph3D';
 
 const API = '/api';
 const PER_PAGE = 10;
+const AREA_LABELS = { rag: 'RAG', solar: 'Solar' };
 
 export default function RAGDashboard() {
   const [activeTab, setActiveTab] = useState('overview'); 
   const [selectedResult, setSelectedResult] = useState(null);
   const [selectedDetail, setSelectedDetail] = useState(null);
   const [isPdfOpen, setIsPdfOpen] = useState(false);
+
+  // Области и наборы (мультиобластной режим v2)
+  const [areasInfo, setAreasInfo] = useState(null);
+  const [currentArea, setCurrentArea] = useState('rag');
+  const [currentSet, setCurrentSet] = useState('test');
+  const [activeTable, setActiveTable] = useState('results');
+  const [tableData, setTableData] = useState({ columns: [], items: [], total: 0 });
+  const [tablePage, setTablePage] = useState(1);
+  const [uploadArea, setUploadArea] = useState('rag');
 
   // Фильтры и поиск (серверные)
   const [searchQuery, setSearchQuery] = useState('');
@@ -74,10 +84,43 @@ export default function RAGDashboard() {
   const updateFilter = (setter) => (value) => { setter(value); setCurrentPage(1); };
 
   // Сводка и фасеты — один раз
-  useEffect(() => {
+  const refreshData = () => {
     fetch(`${API}/stats`).then(r => r.json()).then(setStats).catch(() => setApiError('Бекенд недоступен (uvicorn запущен?)'));
     fetch(`${API}/facets`).then(r => r.json()).then(setFacets).catch(() => {});
+  };
+  useEffect(() => {
+    fetch(`${API}/areas`).then(r => r.json()).then(d => {
+      setAreasInfo(d);
+      setCurrentArea(d.current.area);
+      setCurrentSet(d.current.set);
+    }).catch(() => {});
+    refreshData();
   }, []);
+
+  // Переключение области/набора на сервере
+  const switchSelection = (area, setName) => {
+    fetch(`${API}/select?area=${area}&set_name=${setName}`, { method: 'POST' })
+      .then(r => r.json())
+      .then(() => {
+        setCurrentArea(area);
+        setCurrentSet(setName);
+        setCurrentPage(1);
+        setTablePage(1);
+        setActiveTable('results');
+        refreshData();
+      })
+      .catch(() => {});
+  };
+
+  // Универсальный просмотр любой из 7 таблиц области
+  useEffect(() => {
+    if (activeTab !== 'tables') return;
+    const params = new URLSearchParams({ page: String(tablePage), per_page: '20' });
+    fetch(`${API}/tables/${activeTable}?${params}`)
+      .then(r => r.json())
+      .then(setTableData)
+      .catch(() => setTableData({ columns: [], items: [], total: 0 }));
+  }, [activeTab, activeTable, tablePage, currentArea, currentSet]);
 
   // Загрузка результатов при изменении фильтров/сортировки/страницы
   useEffect(() => {
@@ -190,7 +233,7 @@ export default function RAGDashboard() {
     formData.append('file', file);
 
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', `${API}/upload`);
+    xhr.open('POST', `${API}/upload?area=${uploadArea}`);
     xhr.upload.onprogress = (e) => {
       if (e.lengthComputable) setUploadProgress(Math.round((e.loaded / e.total) * 100));
     };
@@ -239,6 +282,7 @@ export default function RAGDashboard() {
           <button onClick={() => setActiveTab('overview')} className={`w-full flex justify-center py-3 relative transition-colors ${activeTab === 'overview' ? 'text-[#00D2FF]' : 'text-gray-500 hover:text-white'}`}><LayoutDashboard className="w-6 h-6" /></button>
           <button onClick={() => setActiveTab('upload')} className={`w-full flex justify-center py-3 relative transition-colors ${activeTab === 'upload' ? 'text-[#00D2FF]' : 'text-gray-500 hover:text-white'}`}><UploadCloud className="w-6 h-6" /></button>
           <button onClick={() => setActiveTab('data')} className={`w-full flex justify-center py-3 relative transition-colors ${activeTab === 'data' ? 'text-[#00D2FF]' : 'text-gray-500 hover:text-white'}`}><Database className="w-6 h-6" /></button>
+          <button onClick={() => setActiveTab('tables')} className={`w-full flex justify-center py-3 relative transition-colors ${activeTab === 'tables' ? 'text-[#00D2FF]' : 'text-gray-500 hover:text-white'}`}><Table2 className="w-6 h-6" /></button>
           <button onClick={() => setActiveTab('issues')} className={`w-full flex justify-center py-3 relative transition-colors ${activeTab === 'issues' ? 'text-[#00D2FF]' : 'text-gray-500 hover:text-white'}`}><AlertTriangle className="w-6 h-6" /></button>
           <button onClick={() => setActiveTab('pubs')} className={`w-full flex justify-center py-3 relative transition-colors ${activeTab === 'pubs' ? 'text-[#00D2FF]' : 'text-gray-500 hover:text-white'}`}><FileText className="w-6 h-6" /></button>
         </nav>
@@ -253,11 +297,41 @@ export default function RAGDashboard() {
               {activeTab === 'overview' && 'Системный обзор'}
               {activeTab === 'upload' && 'Обработка PDF (Multimodal AI)'}
               {activeTab === 'data' && 'Единая база знаний'}
+              {activeTab === 'tables' && 'Таблицы набора'}
               {activeTab === 'issues' && 'Замечания проверки'}
               {activeTab === 'pubs' && 'Публикации'}
             </h1>
           </div>
-          {stats && <span className="text-xs text-gray-500 font-mono">dataset: {stats.dataset}</span>}
+          <div className="flex items-center gap-3">
+            {areasInfo && (
+              <>
+                <select
+                  value={currentArea}
+                  onChange={(e) => {
+                    const area = e.target.value;
+                    const info = areasInfo.areas.find(a => a.id === area);
+                    const setName = info?.sets?.includes(currentSet) ? currentSet : (info?.sets?.[0] || 'test');
+                    switchSelection(area, setName);
+                  }}
+                  className="bg-[#0B0E14] border border-white/10 text-xs text-gray-300 rounded-lg px-3 py-2 outline-none"
+                >
+                  {areasInfo.areas.map(a => (
+                    <option key={a.id} value={a.id}>{AREA_LABELS[a.id] || a.id}</option>
+                  ))}
+                </select>
+                <select
+                  value={currentSet}
+                  onChange={(e) => switchSelection(currentArea, e.target.value)}
+                  className="bg-[#0B0E14] border border-white/10 text-xs text-gray-300 rounded-lg px-3 py-2 outline-none"
+                >
+                  {(areasInfo.areas.find(a => a.id === currentArea)?.sets || []).map(s => (
+                    <option key={s} value={s}>{s}</option>
+                  ))}
+                </select>
+              </>
+            )}
+            {stats && <span className="text-xs text-gray-500 font-mono">{stats.area}/{stats.dataset}</span>}
+          </div>
         </header>
 
         <div className="flex-1 relative overflow-hidden">
@@ -304,7 +378,16 @@ export default function RAGDashboard() {
                 >
                   <UploadCloud className="w-8 h-8 text-[#00D2FF] mb-4" />
                   <h3 className="text-white font-medium mb-2">Загрузить PDF</h3>
-                  <p className="text-xs text-gray-500 mb-4">Файл отправится на сервер, затем ИИ определит область</p>
+                  <p className="text-xs text-gray-500 mb-4">Файл отправится на сервер и пройдёт конвейер извлечения</p>
+                  <select
+                    value={uploadArea}
+                    onChange={(e) => setUploadArea(e.target.value)}
+                    onClick={(e) => e.stopPropagation()}
+                    className="mb-4 bg-[#0B0E14] border border-white/10 text-xs text-gray-300 rounded-lg px-3 py-2 outline-none"
+                  >
+                    <option value="rag">Область: RAG</option>
+                    <option value="solar">Область: Solar</option>
+                  </select>
                   <button className="px-6 py-2 bg-[#00D2FF] text-black font-bold text-xs uppercase rounded-lg">Выбрать файл</button>
                 </div>
 
@@ -470,6 +553,50 @@ export default function RAGDashboard() {
                   </div>
                 </div>
 
+              </div>
+            </div>
+          )}
+
+          {/* ТАБЛИЦЫ НАБОРА (все 7 по схеме области) */}
+          {activeTab === 'tables' && areasInfo && (
+            <div className="absolute inset-0 p-8 flex flex-col overflow-hidden bg-[#0B0E14]">
+              <div className="flex items-center gap-2 mb-6 shrink-0 bg-[#151A24] p-4 rounded-xl border border-white/10 flex-wrap">
+                {(areasInfo.areas.find(a => a.id === currentArea)?.tables || []).map(t => (
+                  <button
+                    key={t}
+                    onClick={() => { setActiveTable(t); setTablePage(1); }}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-colors ${activeTable === t ? 'bg-[#00D2FF] text-black font-bold' : 'bg-white/5 text-gray-400 hover:text-white'}`}
+                  >
+                    {t}
+                  </button>
+                ))}
+                <span className="text-xs text-gray-500 ml-auto">Всего: <span className="text-white">{tableData.total}</span></span>
+              </div>
+              <div className="flex-1 overflow-auto border border-white/10 rounded-xl bg-[#151A24]/50 flex flex-col">
+                <table className="w-full text-left border-collapse">
+                  <thead className="bg-[#151A24] sticky top-0 border-b border-white/10 z-10">
+                    <tr className="text-[10px] uppercase tracking-widest text-gray-500">
+                      {tableData.columns.map(c => <th key={c} className="p-3 font-normal whitespace-nowrap">{c}</th>)}
+                    </tr>
+                  </thead>
+                  <tbody className="text-xs font-mono">
+                    {tableData.items.map((row, i) => (
+                      <tr key={i} className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                        {tableData.columns.map(c => (
+                          <td key={c} className="p-3 text-gray-300 max-w-[280px] truncate" title={row[c]}>{row[c] || '—'}</td>
+                        ))}
+                      </tr>
+                    ))}
+                    {tableData.items.length === 0 && (
+                      <tr><td colSpan={tableData.columns.length || 1} className="p-12 text-center text-gray-500 italic">Таблица пуста</td></tr>
+                    )}
+                  </tbody>
+                </table>
+                <div className="mt-auto p-4 border-t border-white/10 bg-[#151A24] flex items-center justify-end gap-2 shrink-0 rounded-b-xl">
+                  <button onClick={() => setTablePage(p => Math.max(p - 1, 1))} disabled={tablePage === 1} className="p-1.5 rounded bg-[#0B0E14] border border-white/10 text-gray-400 hover:text-white disabled:opacity-30 transition-colors"><ChevronLeft className="w-4 h-4" /></button>
+                  <span className="text-xs font-mono text-gray-300 px-2">Стр. {tablePage} из {Math.ceil(tableData.total / 20) || 1}</span>
+                  <button onClick={() => setTablePage(p => Math.min(p + 1, Math.ceil(tableData.total / 20)))} disabled={tablePage >= Math.ceil(tableData.total / 20)} className="p-1.5 rounded bg-[#0B0E14] border border-white/10 text-gray-400 hover:text-white disabled:opacity-30 transition-colors"><ChevronRight className="w-4 h-4" /></button>
+                </div>
               </div>
             </div>
           )}
