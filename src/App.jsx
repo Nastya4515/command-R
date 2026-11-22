@@ -343,9 +343,7 @@ export default function RAGDashboard() {
               {activeTab === 'pubs' && 'Публикации'}
             </h1>
           </div>
-          <div className="flex items-center gap-3">
-            {stats && <span className="text-xs text-gray-500 font-mono">{stats.area}/{stats.dataset}</span>}
-          </div>
+          <div className="flex items-center gap-3"></div>
         </header>
 
         <div className="flex-1 relative overflow-hidden">
